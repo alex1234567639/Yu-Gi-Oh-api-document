@@ -157,7 +157,6 @@ response:
             "status":         0,
             "to_top":         true,
         },
-        ...
     ],
 
     "_comment_id": "自動生成的數字",
