@@ -69,6 +69,7 @@ response:
 {}
 ```
 
+### SeriesIntroduction
 #### /seriesIntroduction/articleList
 request:
 ```json
