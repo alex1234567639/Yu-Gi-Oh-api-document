@@ -8,6 +8,7 @@
 | /productIntroduction/articleList       | 新增取得卡表介紹文章api                   | 2021/07/14 |
 | /rules/articleList                     | 新增取得規則相關文章api                   | 2021/07/14 |
 | /seriesStory/articleList               | 新增取得卡片故事文章api                   | 2021/07/14 |
+| /calander/list                         | 新增日曆表api                           | 2021/07/14 |
 
 ***
 
@@ -23,6 +24,7 @@
 | [/productIntroduction/articleList](#productIntroductionarticleList)        | 取得卡表介紹文章            |
 | [/rules/articleList](#rulesarticleList)                                    | 取得規則相關文章            |
 | [/seriesStory/articleList](#seriesStoryarticleList)                        | 取得卡片故事文章            |
+| [/calander/list](#calanderlist)                                            | 取得日曆表                 |
 
 ***
 
@@ -49,6 +51,7 @@ response:
             "content":        "string", 
             "status":         0,
             "to_top":         true,
+            "tag":            "array"
         },
     ],
 
@@ -57,7 +60,7 @@ response:
     "_comment_photo": "btoa()編碼的Base64字串",
     "_comment_content": "副文本編輯產出的html字串",
     "_comment_status": "0=上架中, 1=下架中",
-    "_comment_to_top": "true=置頂, false=非置頂"
+    "_comment_to_top": "true=置頂, false=非置頂",
 }
 ```
 
@@ -86,6 +89,7 @@ response:
             "last_edit_date": "string",
             "photo":          "string",
             "content":        "string", 
+            "tag":            "array",
             "status":         0,
             "to_top":         true,
         },
@@ -124,6 +128,7 @@ response:
             "last_edit_date": "string",
             "photo":          "string",
             "content":        "string", 
+            "tag":            "array",
             "status":         0,
             "to_top":         true,
         },
@@ -162,6 +167,7 @@ response:
             "last_edit_date": "string",
             "photo":          "string",
             "content":        "string", 
+            "tag":            "array",
             "status":         0,
             "to_top":         true,
         },
@@ -200,6 +206,7 @@ response:
             "last_edit_date": "string",
             "photo":          "string",
             "content":        "string", 
+            "tag":            "array",
             "status":         0,
             "to_top":         true,
         },
@@ -234,6 +241,7 @@ response:
             "last_edit_date": "string",
             "photo":          "string",
             "content":        "string", 
+            "tag":            "array",
             "status":         0,
             "to_top":         true,
         },
@@ -243,5 +251,30 @@ response:
     "_comment_content": "副文本編輯產出的html字串",
     "_comment_status": "0=上架中, 1=下架中",
     "_comment_to_top": "true=置頂, false=非置頂"
+}
+```
+
+### Calendar
+#### /calander/list
+request:
+```json
+{}
+```
+
+response:
+```json
+{
+    "*list":
+    [
+        {
+            "title":   "string",
+            "date":    "string",
+            "url":     "string",
+            "type":    0,
+        },
+    ],
+
+    "_comment_date": "格式為YYYY-MM-DD HH:mm:ss",
+    "_comment_type": "0=賽事, 1=發售日期"
 }
 ```
