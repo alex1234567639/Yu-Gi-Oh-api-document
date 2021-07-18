@@ -44,6 +44,7 @@ response:
     "*list":
     [
         {
+            "id":             0,
             "title":          "string",
             "publish_date":   "string", 
             "last_edit_date": "string",
@@ -83,6 +84,7 @@ response:
     "*list":
     [
         {
+            "id":             0,
             "type":           0,
             "title":          "string",
             "publish_date":   "string", 
@@ -122,6 +124,7 @@ response:
     "*list":
     [
         {
+            "id":             0,
             "type":           0,
             "title":          "string",
             "publish_date":   "string", 
@@ -161,6 +164,7 @@ response:
     "*list":
     [
         {
+            "id":             0,
             "type":           0,
             "title":          "string",
             "publish_date":   "string", 
@@ -173,7 +177,7 @@ response:
         },
     ],
 
-    "_comment_type": "0=補充包, 1=預組",
+    "_comment_type": "0=補充包, 1=預組, 2=禮盒商品, 3=活動贈品",
     "_comment_photo": "btoa()編碼的Base64字串",
     "_comment_content": "副文本編輯產出的html字串",
     "_comment_status": "0=上架中, 1=下架中",
@@ -200,6 +204,7 @@ response:
     "*list":
     [
         {
+            "id":             0,
             "type":           0,
             "title":          "string",
             "publish_date":   "string", 
@@ -236,6 +241,7 @@ response:
     "*list":
     [
         {
+            "id":             0,
             "title":          "string",
             "publish_date":   "string", 
             "last_edit_date": "string",
@@ -267,14 +273,14 @@ response:
     "*list":
     [
         {
-            "title":   "string",
-            "date":    "string",
-            "url":     "string",
-            "type":    0,
+            "title": "string",
+            "date":  "string",
+            "url":   "string",
+            "type":  0,
         },
     ],
 
     "_comment_date": "格式為YYYY-MM-DD HH:mm:ss",
-    "_comment_type": "0=賽事, 1=發售日期"
+    "_comment_type": "0=賽事, 1=發售日期, 2=其他相關活動"
 }
 ```
