@@ -5,7 +5,7 @@
 | /metaDeck/articleList                  | 新增取得上位卡表文章api                   | 2021/07/11 |
 | /seriesIntroduction/articleList        | 新增取得系列介紹文章api                   | 2021/07/11 |
 | /usefulCardIntroduction/articleList    | 新增取得泛用卡介紹文章api                 | 2021/07/11 |
-| /productIntroduction/articleList       | 新增取得卡表介紹文章api                   | 2021/07/14 |
+| /productInformation/articleList        | 新增取得卡表資料文章api                   | 2021/07/14 |
 | /rules/articleList                     | 新增取得規則相關文章api                   | 2021/07/14 |
 | /seriesStory/articleList               | 新增取得卡片故事文章api                   | 2021/07/14 |
 | /calander/list                         | 新增日曆表api                           | 2021/07/14 |
@@ -21,7 +21,7 @@
 | [/metaDeck/articleList](#metaDeckarticleList)                              | 取得上位卡表文章            |
 | [/seriesIntroduction/articleList](#seriesIntroductionarticleList)          | 取得系列介紹文章            |
 | [/usefulCardIntroduction/articleList](#usefulCardIntroductionarticleList)  | 取得泛用卡介紹文章          |
-| [/productIntroduction/articleList](#productIntroductionarticleList)        | 取得卡表介紹文章            |
+| [/productInformation/articleList](#productInformationarticleList)          | 取得卡表資料文章            |
 | [/rules/articleList](#rulesarticleList)                                    | 取得規則相關文章            |
 | [/seriesStory/articleList](#seriesStoryarticleList)                        | 取得卡片故事文章            |
 | [/calander/list](#calanderlist)                                            | 取得日曆表                 |
@@ -145,8 +145,8 @@ response:
 }
 ```
 
-### Production Introduction
-#### /productIntroduction/articleList
+### Product Information
+#### /productInformation/articleList
 request:
 ```json
 {
@@ -177,7 +177,7 @@ response:
         },
     ],
 
-    "_comment_type": "0=補充包, 1=預組, 2=禮盒商品, 3=活動贈品",
+    "_comment_type": "0=補充包, 1=預組套牌, 2=禮盒商品, 3=活動贈品",
     "_comment_photo": "btoa()編碼的Base64字串",
     "_comment_content": "副文本編輯產出的html字串",
     "_comment_status": "0=上架中, 1=下架中",

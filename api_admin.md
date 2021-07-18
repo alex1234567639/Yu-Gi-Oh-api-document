@@ -7,7 +7,7 @@
 | /seriesIntroduction/             | 新增系列介紹相關api                      | 2021/07/10 |
 | /usefulCardIntroduction/         | 新增泛用卡介紹相關api                    | 2021/07/15 |
 | /metaDeck/                       | 新增上位卡表相關api                      | 2021/07/15 |
-| /productIntroduction/            | 新增卡表介紹相關api                      | 2021/07/15 |
+| /productInformation/            | 新增卡表資料相關api                      | 2021/07/15 |
 | /rules/                          | 新增規則相關api                         | 2021/07/15 |
 | /seriesStory/                    | 新增卡片故事相關api                      | 2021/07/15 |
 | /calander/                       | 新增日曆表相關api                        | 2021/07/15 |
@@ -32,9 +32,9 @@
 | [/metaDeck/articleList](#metaDeckarticleList)                              | 取得上位卡表文章            |
 | [/metaDeck/addArticle](#metaDeckaddArticle)                                | 新增上位卡表文章            |
 | [/metaDeck/editArticle](#metaDeckeditArticle)                              | 編輯上位卡表文章            |
-| [/productIntroduction/articleList](#productIntroductionarticleList)        | 取得卡表介紹文章            |
-| [/productIntroduction/addArticle](#productIntroductionaddArticle)          | 新增卡表介紹文章            |
-| [/productIntroduction/editArticle](#productIntroductioneditArticle)        | 編輯卡表介紹文章            |
+| [/productInformation/articleList](#productInformationarticleList)        | 取得卡表資料文章            |
+| [/productInformation/addArticle](#productInformationaddArticle)          | 新增卡表資料文章            |
+| [/productInformation/editArticle](#productInformationeditArticle)        | 編輯卡表資料文章            |
 | [/rules/articleList](#rulesarticleList)                                    | 取得規則相關文章            |
 | [/rules/addArticle](#rulesaddArticle)                                      | 新增規則相關文章            |
 | [/rules/editArticle](#ruleseditArticle)                                    | 編輯規則相關文章            |
@@ -362,8 +362,8 @@ request:
 ```
 
 
-### Product Introduction
-#### /productIntroduction/articleList
+### Product Information
+#### /productInformation/articleList
 request:
 ```json
 {
@@ -396,7 +396,7 @@ response:
     ],
 
     "_comment_id": "自動生成的數字",
-    "_comment_type": "0=補充包, 1=預組, 2=禮盒商品, 3=活動贈品",
+    "_comment_type": "0=補充包, 1=預組套牌, 2=禮盒商品, 3=活動贈品",
     "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
     "_commemt_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss",
     "_comment_photo": "btoa()編碼的Base64字串",
@@ -406,7 +406,7 @@ response:
 }
 ```
 
-#### /productIntroduction/addArticle
+#### /productInformation/addArticle
 request:
 ```json
 {
@@ -417,7 +417,7 @@ request:
     "*photo":        "string",
     "*content":      "string", 
 
-    "_comment_type": "0=補充包, 1=預組, 2=禮盒商品, 3=活動贈品",
+    "_comment_type": "0=補充包, 1=預組套牌, 2=禮盒商品, 3=活動贈品",
     "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
     "_comment_photo": "btoa()編碼的Base64字串",
     "_comment_content": "副文本編輯產出的html字串"
@@ -429,7 +429,7 @@ response:
 {}
 ```
 
-#### /productIntroduction/editArticle
+#### /productInformation/editArticle
 request:
 ```json
 {
@@ -443,7 +443,7 @@ request:
     "*status":       0,
     "*to_top":       true,
 
-    "_comment_type": "0=補充包, 1=預組, 2=禮盒商品, 3=活動贈品",
+    "_comment_type": "0=補充包, 1=預組套牌, 2=禮盒商品, 3=活動贈品",
     "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
     "_comment_photo": "btoa()編碼的Base64字串",
     "_comment_content": "副文本編輯產出的html字串",
