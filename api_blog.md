@@ -45,7 +45,9 @@ response:
     [
         {
             "id":             0,
-            "title":          "string",
+            "author_id":      0,
+            "author_name":    "string",
+            "title":          "string",  
             "publish_date":   "string", 
             "last_edit_date": "string",
             "photo":          "string",
@@ -85,6 +87,8 @@ response:
     [
         {
             "id":             0,
+            "author_id":      0,
+            "author_name":    "string",
             "type":           0,
             "title":          "string",
             "publish_date":   "string", 
@@ -125,6 +129,8 @@ response:
     [
         {
             "id":             0,
+            "author_id":      0,
+            "author_name":    "string",
             "type":           0,
             "title":          "string",
             "publish_date":   "string", 
@@ -150,11 +156,12 @@ response:
 request:
 ```json
 {
-    "page":  0,
-    "limit": 0,
-    "type":  0,
+    "page":    0,
+    "limit":   0,
+    "type":    0,
+    "subtype": 0,
 
-    "_comment_type": "0=補充包, 1=預組"
+    "_comment_type": "0=RD, 1=補充包, 2=預組套牌, 3=禮盒, 4=活動贈品"
 }
 ```
 
@@ -165,7 +172,10 @@ response:
     [
         {
             "id":             0,
+            "author_id":      0,
+            "author_name":    "string",
             "type":           0,
+            "subtype":        0,
             "title":          "string",
             "publish_date":   "string", 
             "last_edit_date": "string",
@@ -177,7 +187,7 @@ response:
         },
     ],
 
-    "_comment_type": "0=補充包, 1=預組套牌, 2=禮盒商品, 3=活動贈品",
+    "_comment_type": "0=RD, 1=補充包, 2=預組套牌, 3=禮盒, 4=活動贈品",
     "_comment_photo": "btoa()編碼的Base64字串",
     "_comment_content": "副文本編輯產出的html字串",
     "_comment_status": "0=上架中, 1=下架中",
@@ -205,6 +215,8 @@ response:
     [
         {
             "id":             0,
+            "author_id":      0,
+            "author_name":    "string",
             "type":           0,
             "title":          "string",
             "publish_date":   "string", 
@@ -242,6 +254,8 @@ response:
     [
         {
             "id":             0,
+            "author_id":      0,
+            "author_name":    "string",
             "title":          "string",
             "publish_date":   "string", 
             "last_edit_date": "string",
@@ -281,6 +295,7 @@ response:
     ],
 
     "_comment_date": "格式為YYYY-MM-DD HH:mm:ss",
+    "_comment_photo": "btoa()編碼的Base64字串",
     "_comment_type": "0=賽事, 1=發售日期, 2=其他相關活動"
 }
 ```
