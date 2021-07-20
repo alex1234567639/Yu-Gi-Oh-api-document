@@ -289,6 +289,7 @@ response:
         {
             "title": "string",
             "date":  "string",
+            "photo": "string", 
             "url":   "string",
             "type":  0,
         },
