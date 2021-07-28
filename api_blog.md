@@ -9,6 +9,7 @@
 | /rules/articleList                     | 新增取得規則相關文章api                   | 2021/07/14 |
 | /seriesStory/articleList               | 新增取得卡片故事文章api                   | 2021/07/14 |
 | /calander/list                         | 新增日曆表api                           | 2021/07/14 |
+| /banner/list                           | 新增banner列表api                       | 2021/07/28 |
 
 ***
 
@@ -25,7 +26,8 @@
 | [/rules/articleList](#rulesarticleList)                                    | 取得規則相關文章            |
 | [/seriesStory/articleList](#seriesStoryarticleList)                        | 取得卡片故事文章            |
 | [/calander/list](#calanderlist)                                            | 取得日曆表                 |
-
+| [/banner/list](#bannerlist)                                                | 取得banner列表             |
+ 
 ***
 
 ### Meta Deck
@@ -298,5 +300,35 @@ response:
     "_comment_date": "格式為YYYY-MM-DD HH:mm:ss",
     "_comment_photo": "btoa()編碼的Base64字串",
     "_comment_type": "0=賽事, 1=發售日期, 2=其他相關活動"
+}
+```
+
+### Banner
+#### /banner/list
+request:
+```json
+{
+    "type": 0,
+
+    "_comment_type": "0=pc, 1=手機"
+}
+```
+
+response:
+```json
+{
+    "*list":
+    [
+        {
+            "title":    "string",
+            "subtitle": "string",
+            "date":     "string",
+            "photo":    "string", 
+            "url":      "string",
+        },
+    ],
+
+    "_comment_date": "格式為YYYY-MM-DD HH:mm:ss",
+    "_comment_photo": "btoa()編碼的Base64字串"
 }
 ```
