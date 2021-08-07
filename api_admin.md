@@ -11,6 +11,9 @@
 | /rules/                          | 新增規則相關api                         | 2021/07/15 |
 | /seriesStory/                    | 新增卡片故事相關api                      | 2021/07/15 |
 | /calander/                       | 新增日曆表相關api                        | 2021/07/15 |
+| /subtype/                       | 新增subtype api                        | 2021/08/04 |
+| /tag/                       | 新增tag api                        | 2021/08/04 |
+| /admin/                       | 新增admin list/add/edit api                        | 2021/08/04 |
 
 ***
 
@@ -23,6 +26,9 @@
 | [/admin/login](#adminLogin)                                                | 登入                      |
 | [/admin/logout](#adminlogout)                                              | 登出                      |
 | [/admin/resetpassword](#adminresetpassword)                                | 重設密碼                   |
+| [/admin/list](#adminlist)                                | 取得帳號                   |
+| [/admin/add](#adminadd)                                | 新增帳號                   |
+| [/admin/edit](#adminedit)                                | 編輯帳號                   |
 | [/seriesIntroduction/articleList](#seriesIntroductionarticleList)          | 取得系列介紹文章            |
 | [/seriesIntroduction/addArticle](#seriesIntroductionaddArticle)            | 新增系列介紹文章            |
 | [/seriesIntroduction/editArticle](#seriesIntroductioneditArticle)          | 編輯系列介紹文章            |
@@ -44,6 +50,11 @@
 | [/calander/articleList](#calanderarticleList)                              | 取得日曆表                 |
 | [/calander/addArticle](#calanderaddArticle)                                | 新增日曆表                 |
 | [/calander/editArticle](#calandereditArticle)                              | 編輯日曆表                 |
+| [/subtype/articleList](#subtypearticleList)                              | 取得sunbtype                 |
+| [/subtype/addArticle](#subtypeaddArticle)                                | 新增sunbtype                 |
+| [/subtype/editArticle](#subtypeeditArticle)                              | 編輯sunbtype                 |
+| [/tag/articleList](#tagarticleList)                              | 取得sunbtype                 |
+| [/tag/editArticle](#tageditArticle)                              | 編輯sunbtype                 |
 
 
 ***
@@ -94,6 +105,92 @@ response:
 {}
 ```
 
+#### /admin/list
+request:
+```json
+{
+    "*token": "string",
+    "page":   0,
+    "limit":  0,
+    "*filter": {
+        "type":   0,
+        "status": 0,
+        "name" : "string",
+    },
+
+    "_comment_type": "0=管理者, 1=一般用戶",
+    "_comment_status": "0=正常, 1=停用中"
+}
+```
+
+response:
+```json
+{
+    "*list":
+    [
+        {
+            "id":             0,
+            "type":           0,
+            "name":          "string",
+            "create_date":   "string", 
+            "photo":         "string",
+            "status":         0,
+            
+        },
+    ],
+
+    "_comment_id": "自動生成的數字",
+    "_comment_type": "0=管理者, 1=一般用戶",
+    "_comment_status": "0=正常, 1=停用中"
+}
+```
+
+#### /admin/add
+
+request:
+```json
+{
+    "*id":             0,
+    "*type":           0,
+    "*name":          "string",
+    "*create_date":   "string", 
+    "*photo":         "string",
+    "*status":         0,
+
+    "_comment_type": "0=主題牌組, 1=外掛系列",
+    "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
+    "_comment_photo": "btoa()編碼的Base64字串",
+    "_comment_content": "副文本編輯產出的html字串"
+}
+```
+
+response:
+```json
+{}
+```
+
+#### /admin/edit
+
+request:
+```json
+{
+    "*id":             0,
+    "*type":           0,
+    "*name":          "string",
+    "*create_date":   "string", 
+    "*photo":         "string",
+    "*status":         0,
+
+    "_comment_type": "0=主題牌組, 1=外掛系列",
+    "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
+    "_comment_photo": "btoa()編碼的Base64字串",
+    "_comment_content": "副文本編輯產出的html字串"
+}
+```
+
+
+
+
 ### Series Introduction
 #### /seriesIntroduction/articleList
 request:
@@ -105,6 +202,8 @@ request:
     "*filter": {
         "type":   0,
         "status": 0,
+        "begin_date" : "string",
+        "end_date" : "string"
     },
 
     "_comment_type": "0=主題牌組, 1=外掛系列"
@@ -126,6 +225,10 @@ response:
             "content":        "string", 
             "status":         0,
             "to_top":         true,
+            "author_name":        "string", 
+            "author_id":        0, 
+            "tag":        [], 
+            
         },
     ],
 
@@ -150,6 +253,9 @@ request:
     "*publish_date": "string", 
     "*photo":        "string",
     "*content":      "string", 
+    "*author_name":  "string", 
+    "*author_id":    0, 
+    "*tag":          [], 
 
     "_comment_type": "0=主題牌組, 1=外掛系列",
     "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
@@ -176,6 +282,9 @@ request:
     "*content":      "string", 
     "*status":       0,
     "*to_top":       true,
+    "*author_name":  "string", 
+    "*author_id":    0, 
+    "*tag":          [], 
 
     "_comment_type": "0=主題牌組, 1=外掛系列",
     "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
@@ -197,6 +306,8 @@ request:
     "*filter": {
         "type":   0,
         "status": 0,
+        "begin_date" : "string",
+        "end_date" : "string"
     },
 
     "_comment_type": "0=單卡介紹, 1=戰術分析"
@@ -218,6 +329,9 @@ response:
             "content":        "string", 
             "status":         0,
             "to_top":         true,
+            "*author_name":  "string", 
+            "*author_id":    0, 
+            "*tag":          [], 
         },
     ],
 
@@ -242,6 +356,9 @@ request:
     "*publish_date": "string", 
     "*photo":        "string",
     "*content":      "string", 
+    "*author_name":  "string", 
+    "*author_id":    0, 
+    "*tag":          [], 
 
     "_comment_type": "0=單卡介紹, 1=戰術分析",
     "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
@@ -268,6 +385,9 @@ request:
     "*content":      "string", 
     "*status":       0,
     "*to_top":       true,
+    "*author_name":  "string", 
+    "*author_id":    0, 
+    "*tag":          [], 
 
     "_comment_type": "0=單卡介紹, 1=戰術分析",
     "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
@@ -288,6 +408,8 @@ request:
     "limit":  0,
     "*filter": {
         "status": 0,
+        "begin_date" : "string",
+        "end_date" : "string"
     }
 }
 ```
@@ -306,6 +428,9 @@ response:
             "content":        "string", 
             "status":         0,
             "to_top":         true,
+            "*author_name":  "string", 
+            "*author_id":    0, 
+            "*tag":          [], 
         },
     ],
 
@@ -328,6 +453,9 @@ request:
     "*publish_date": "string", 
     "*photo":        "string",
     "*content":      "string", 
+    "*author_name":  "string",  
+    "*author_id":    0, 
+    "*tag":          [], 
 
     "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
     "_comment_photo": "btoa()編碼的Base64字串",
@@ -352,6 +480,9 @@ request:
     "*content":      "string", 
     "*status":       0,
     "*to_top":       true,
+    "*author_name":  "string", 
+    "*author_id":    0, 
+    "*tag":          [], 
 
     "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
     "_comment_photo": "btoa()編碼的Base64字串",
@@ -373,6 +504,8 @@ request:
     "*filter": {
         "type":   0,
         "status": 0,
+        "begin_date" : "string",
+        "end_date" : "string"
     }
 }
 ```
@@ -385,6 +518,7 @@ response:
         {
             "id":             0,
             "type":           0,
+            "*subtype":       0,
             "title":          "string",
             "publish_date":   "string", 
             "last_edit_date": "string",
@@ -392,11 +526,14 @@ response:
             "content":        "string", 
             "status":         0,
             "to_top":         true,
+            "*author_name":  "string", 
+            "*author_id":    0, 
+            "*tag":          [], 
         },
     ],
 
     "_comment_id": "自動生成的數字",
-    "_comment_type": "0=補充包, 1=預組, 2=禮盒商品, 3=活動贈品",
+    "_comment_type": "0=RD, 1=補充包, 2=預組套牌, 3=禮盒, 4=活動商品",
     "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
     "_commemt_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss",
     "_comment_photo": "btoa()編碼的Base64字串",
@@ -412,12 +549,16 @@ request:
 {
     "*token":        "string",
     "*type":           0,
+    "*subtype":        0,
     "*title":        "string",
     "*publish_date": "string", 
     "*photo":        "string",
     "*content":      "string", 
+    "*author_name":  "string", 
+    "*author_id":    0, 
+    "*tag":          [], 
 
-    "_comment_type": "0=補充包, 1=預組, 2=禮盒商品, 3=活動贈品",
+    "_comment_type": "0=RD, 1=補充包, 2=預組套牌, 3=禮盒, 4=活動商品",
     "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
     "_comment_photo": "btoa()編碼的Base64字串",
     "_comment_content": "副文本編輯產出的html字串"
@@ -436,14 +577,18 @@ request:
     "*token":        "string",
     "*id":           0,
     "*type":         0,
+    "*subtype":        0,
     "*title":        "string",
     "*publish_date": "string",
     "*photo":        "string",
     "*content":      "string", 
     "*status":       0,
     "*to_top":       true,
+    "*author_name":  "string", 
+    "*author_id":    0, 
+    "*tag":          [], 
 
-    "_comment_type": "0=補充包, 1=預組, 2=禮盒商品, 3=活動贈品",
+    "_comment_type": "0=RD, 1=補充包, 2=預組套牌, 3=禮盒, 4=活動商品",
     "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
     "_comment_photo": "btoa()編碼的Base64字串",
     "_comment_content": "副文本編輯產出的html字串",
@@ -465,6 +610,8 @@ request:
     "*filter": {
         "type":   0,
         "status": 0,
+        "begin_date" : "string",
+        "end_date" : "string"
     },
 
     "_comment_type": "0=禁限卡表, 1=判例說明"
@@ -486,6 +633,9 @@ response:
             "content":        "string", 
             "status":         0,
             "to_top":         true,
+            "*author_name":  "string", 
+            "*author_id":    0, 
+            "*tag":          [], 
         },
     ],
 
@@ -510,6 +660,9 @@ request:
     "*publish_date": "string", 
     "*photo":        "string",
     "*content":      "string", 
+    "*author_name":  "string", 
+    "*author_id":    0, 
+    "*tag":          [], 
 
     "_comment_type": "0=禁限卡表, 1=判例說明",
     "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
@@ -536,6 +689,9 @@ request:
     "*content":      "string", 
     "*status":       0,
     "*to_top":       true,
+    "*author_name":  "string", 
+    "*author_id":    0, 
+    "*tag":          [], 
 
     "_comment_type": "0=禁限卡表, 1=判例說明",
     "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
@@ -556,6 +712,8 @@ request:
     "limit":  0,
     "*filter": {
         "status": 0,
+        "begin_date" : "string",
+        "end_date" : "string"
     }
 }
 ```
@@ -574,6 +732,9 @@ response:
             "content":        "string", 
             "status":         0,
             "to_top":         true,
+            "*author_name":  "string",  
+            "*author_id":    0, 
+            "*tag":          [], 
         },
     ],
 
@@ -596,6 +757,9 @@ request:
     "*publish_date": "string", 
     "*photo":        "string",
     "*content":      "string", 
+    "*author_name":  "string", 
+    "*author_id":    0, 
+    "*tag":          [], 
 
     "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
     "_comment_photo": "btoa()編碼的Base64字串",
@@ -620,6 +784,9 @@ request:
     "*content":      "string", 
     "*status":       0,
     "*to_top":       true,
+    "*author_name":  "string", 
+    "*author_id":    0, 
+    "*tag":          [], 
 
     "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
     "_comment_photo": "btoa()編碼的Base64字串",
@@ -703,9 +870,109 @@ request:
     "*url":     "string",
     "*content": "string", 
     "＊type":   0,
+    "*photo":   "string",
 
     "_comment_type": "0=賽事, 1=發售日期, 2=其他相關活動",
     "_comment_date": "格式為YYYY-MM-DD HH:mm:ss",
     "_comment_content": "副文本編輯產出的html字串"
+}
+```
+
+### Subtype
+#### /subtype/articleList
+
+request:
+```json
+{
+    "*token": "string",
+    "page":   0,
+    "limit":  0,
+    "*filter": {
+            "maintype": 0,
+    }
+}
+```
+
+response:
+```json
+{
+    "*list":
+    [
+        {
+            "id":    0,
+            "subtype": "string",
+            "maintype":  0,
+        },
+    ],
+}
+```
+
+
+#### /subtype/addArticle
+
+request:
+```json
+{
+    "*token":   "string",
+    "*subtype":   "string",
+    "maintype":   0,
+
+}
+```
+
+response:
+```json
+{}
+```
+
+#### /subtype/editArticle
+
+request:
+```json
+{
+    "*token":   "string",
+    "id":       0,
+    "*subtype":   "string",
+    "maintype":   0,
+}
+```
+
+### tag
+#### /tag/articleList
+
+request:
+```json
+{
+    "*token": "string",
+    "page":   0,
+    "limit":  0,
+    "*filter": {
+            "tag":  "string",
+    }
+}
+```
+
+response:
+```json
+{
+    "*list":
+    [
+        {
+            "id":    0,
+            "tag": "string",
+        },
+    ],
+}
+```
+
+
+#### /tag/editArticle
+
+request:
+```json
+{
+    "*token":   "string",
+    "id":       0,
+    "*tag":   "string",
 }
 ```
