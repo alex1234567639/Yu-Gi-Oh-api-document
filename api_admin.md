@@ -533,11 +533,7 @@ response:
     ],
 
     "_comment_id": "自動生成的數字",
-<<<<<<< HEAD
-    "_comment_type": "0=補充包, 1=預組套牌, 2=禮盒商品, 3=活動贈品",
-=======
     "_comment_type": "0=RD, 1=補充包, 2=預組套牌, 3=禮盒, 4=活動商品",
->>>>>>> eric
     "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
     "_commemt_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss",
     "_comment_photo": "btoa()編碼的Base64字串",
@@ -562,11 +558,7 @@ request:
     "*author_id":    0, 
     "*tag":          [], 
 
-<<<<<<< HEAD
-    "_comment_type": "0=補充包, 1=預組套牌, 2=禮盒商品, 3=活動贈品",
-=======
     "_comment_type": "0=RD, 1=補充包, 2=預組套牌, 3=禮盒, 4=活動商品",
->>>>>>> eric
     "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
     "_comment_photo": "btoa()編碼的Base64字串",
     "_comment_content": "副文本編輯產出的html字串"
@@ -596,11 +588,7 @@ request:
     "*author_id":    0, 
     "*tag":          [], 
 
-<<<<<<< HEAD
-    "_comment_type": "0=補充包, 1=預組套牌, 2=禮盒商品, 3=活動贈品",
-=======
     "_comment_type": "0=RD, 1=補充包, 2=預組套牌, 3=禮盒, 4=活動商品",
->>>>>>> eric
     "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
     "_comment_photo": "btoa()編碼的Base64字串",
     "_comment_content": "副文本編輯產出的html字串",
