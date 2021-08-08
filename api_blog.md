@@ -11,6 +11,7 @@
 | /calander/list                         | 新增日曆表api                           | 2021/07/14 |
 | /banner/list                           | 新增banner列表api                       | 2021/07/28 |
 | /banner/list                           | 修改banner列表api欄位                    | 2021/07/28 |
+| /search                                | 新增search api                         | 2021/08/08 |
 
 ***
 
@@ -28,6 +29,7 @@
 | [/seriesStory/articleList](#seriesStoryarticleList)                        | 取得卡片故事文章            |
 | [/calander/list](#calanderlist)                                            | 取得日曆表                 |
 | [/banner/list](#bannerlist)                                                | 取得banner列表             |
+| [/search](#search)                                                         | Search文章                |
  
 ***
 
@@ -330,5 +332,20 @@ response:
     "_comment_date": "格式為YYYY-MM-DD HH:mm:ss",
     "_comment_photo": "btoa()編碼的Base64字串",
     "_comment_url": "連結"
+}
+```
+
+### Search
+#### /search
+request:
+```json
+{
+    "content":         "string",
+    "*article_type":   0,
+    "article_subtype": 0,
+
+    "_comment_content": "搜尋的文字",
+    "_comment_article_type": "0=系列介紹, 1=泛用卡介紹, 2=卡表資料, 3=上位卡表, 4=卡片故事, 5=規則相關",
+    "_comment_subtype": "article_type各自的子類型"
 }
 ```
