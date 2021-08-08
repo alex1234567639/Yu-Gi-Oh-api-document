@@ -10,6 +10,7 @@
 | /seriesStory/articleList               | 新增取得卡片故事文章api                   | 2021/07/14 |
 | /calander/list                         | 新增日曆表api                           | 2021/07/14 |
 | /banner/list                           | 新增banner列表api                       | 2021/07/28 |
+| /banner/list                           | 修改banner列表api欄位                    | 2021/07/28 |
 
 ***
 
@@ -299,6 +300,7 @@ response:
 
     "_comment_date": "格式為YYYY-MM-DD HH:mm:ss",
     "_comment_photo": "btoa()編碼的Base64字串",
+    "_comment_url": "連結",
     "_comment_type": "0=賽事, 1=發售日期, 2=其他相關活動"
 }
 ```
@@ -307,11 +309,7 @@ response:
 #### /banner/list
 request:
 ```json
-{
-    "type": 0,
-
-    "_comment_type": "0=pc, 1=手機"
-}
+{}
 ```
 
 response:
@@ -320,15 +318,17 @@ response:
     "*list":
     [
         {
-            "title":    "string",
-            "subtitle": "string",
-            "date":     "string",
-            "photo":    "string", 
-            "url":      "string",
+            "title":        "string",
+            "subtitle":     "string",
+            "date":         "string",
+            "photo_pc":     "string", 
+            "photo_mobile": "string", 
+            "url":          "string",
         },
     ],
 
     "_comment_date": "格式為YYYY-MM-DD HH:mm:ss",
-    "_comment_photo": "btoa()編碼的Base64字串"
+    "_comment_photo": "btoa()編碼的Base64字串",
+    "_comment_url": "連結"
 }
 ```
