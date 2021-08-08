@@ -11,7 +11,7 @@
 | /rules/                          | 新增規則相關api                         | 2021/07/15 |
 | /seriesStory/                    | 新增卡片故事相關api                      | 2021/07/15 |
 | /calander/                       | 新增日曆表相關api                        | 2021/07/15 |
-| /subtype/                       | 新增subtype api                        | 2021/08/04 |
+| /productionInformation_subtype/                       | 新增productionInformation_subtype api                        | 2021/08/04 |
 | /tag/                       | 新增tag api                        | 2021/08/04 |
 | /admin/                       | 新增admin list/add/edit api                        | 2021/08/04 |
 
@@ -50,11 +50,11 @@
 | [/calander/articleList](#calanderarticleList)                              | 取得日曆表                 |
 | [/calander/addArticle](#calanderaddArticle)                                | 新增日曆表                 |
 | [/calander/editArticle](#calandereditArticle)                              | 編輯日曆表                 |
-| [/subtype/articleList](#subtypearticleList)                              | 取得sunbtype                 |
-| [/subtype/addArticle](#subtypeaddArticle)                                | 新增sunbtype                 |
-| [/subtype/editArticle](#subtypeeditArticle)                              | 編輯sunbtype                 |
-| [/tag/articleList](#tagarticleList)                              | 取得sunbtype                 |
-| [/tag/editArticle](#tageditArticle)                              | 編輯sunbtype                 |
+| [/productionInformation_subtype/articleList](#productionInformation_subtypearticleList)                              | 取得sunbtype                 |
+| [/productionInformation_subtype/addArticle](#productionInformation_subtypeaddArticle)                                | 新增sunbtype                 |
+| [/productionInformation_subtype/editArticle](#productionInformation_subtypeeditArticle)                              | 編輯sunbtype                 |
+| [/tag/articleList](#tagarticleList)                              | tag                 |
+| [/tag/editArticle](#tageditArticle)                              | tag                 |
 
 
 ***
@@ -116,6 +116,7 @@ request:
         "type":   0,
         "status": 0,
         "name" : "string",
+        "acount" : "string"
     },
 
     "_comment_type": "0=管理者, 1=一般用戶",
@@ -135,13 +136,17 @@ response:
             "create_date":   "string", 
             "photo":         "string",
             "status":         0,
-            
+            "acount" :       "string",
+            "password" :     "sting"
         },
     ],
 
     "_comment_id": "自動生成的數字",
     "_comment_type": "0=管理者, 1=一般用戶",
-    "_comment_status": "0=正常, 1=停用中"
+    "_comment_status": "0=正常, 1=停用中",
+    "_comment_name": "length = 20",
+    "_comment_acount": "max length = 16, min length = 8",
+    "_comment_password": "max length = 16, min length = 8",
 }
 ```
 
@@ -156,11 +161,16 @@ request:
     "*create_date":   "string", 
     "*photo":         "string",
     "*status":         0,
+    "acount" :       "string",
+    "password" :     "sting",
 
     "_comment_type": "0=主題牌組, 1=外掛系列",
     "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
     "_comment_photo": "btoa()編碼的Base64字串",
-    "_comment_content": "副文本編輯產出的html字串"
+    "_comment_content": "副文本編輯產出的html字串",
+    "_comment_name": "length = 20",
+    "_comment_acount": "length = 16",
+    "_comment_password": "max length = 16, min length = 8",
 }
 ```
 
@@ -187,7 +197,10 @@ request:
     "_comment_content": "副文本編輯產出的html字串"
 }
 ```
-
+response:
+```json
+{}
+```
 
 
 
@@ -206,7 +219,8 @@ request:
         "end_date" : "string"
     },
 
-    "_comment_type": "0=主題牌組, 1=外掛系列"
+    "_comment_type": "0=主題牌組, 1=外掛系列",
+    "_comment_begin_date": "搜尋publish_date range"
 }
 ```
 
@@ -295,6 +309,11 @@ request:
 }
 ```
 
+response:
+```json
+{}
+```
+
 ### Useful Card Introduction
 #### /usefulCardIntroduction/articleList
 request:
@@ -310,7 +329,8 @@ request:
         "end_date" : "string"
     },
 
-    "_comment_type": "0=單卡介紹, 1=戰術分析"
+    "_comment_type": "0=單卡介紹, 1=戰術分析",
+    "_comment_begin_date": "搜尋publish_date range"
 }
 ```
 
@@ -396,6 +416,11 @@ request:
     "_comment_status": "0=上架中, 1=下架中",
     "_comment_to_top": "true=置頂, false=非置頂"
 }
+```
+
+response:
+```json
+{}
 ```
 
 ### Meta Deck
@@ -492,6 +517,10 @@ request:
 }
 ```
 
+response:
+```json
+{}
+```
 
 ### Product Information
 #### /productInformation/articleList
@@ -518,7 +547,7 @@ response:
         {
             "id":             0,
             "type":           0,
-            "*subtype":       0,
+            "*productionInformation_subtype":       0,
             "title":          "string",
             "publish_date":   "string", 
             "last_edit_date": "string",
@@ -549,7 +578,7 @@ request:
 {
     "*token":        "string",
     "*type":           0,
-    "*subtype":        0,
+    "*productionInformation_subtype":        0,
     "*title":        "string",
     "*publish_date": "string", 
     "*photo":        "string",
@@ -577,7 +606,7 @@ request:
     "*token":        "string",
     "*id":           0,
     "*type":         0,
-    "*subtype":        0,
+    "*productionInformation_subtype":        0,
     "*title":        "string",
     "*publish_date": "string",
     "*photo":        "string",
@@ -597,6 +626,10 @@ request:
 }
 ```
 
+response:
+```json
+{}
+```
 
 
 ### Rules
@@ -702,6 +735,11 @@ request:
 }
 ```
 
+response:
+```json
+{}
+```
+
 ### Series Story
 #### /seriesStory/articleList
 request:
@@ -796,7 +834,10 @@ request:
 }
 ```
 
-
+response:
+```json
+{}
+```
 
 
 ### Calander
@@ -878,8 +919,13 @@ request:
 }
 ```
 
-### Subtype
-#### /subtype/articleList
+response:
+```json
+{}
+```
+
+### productionInformation_subtype
+#### /productionInformation_subtype/articleList
 
 request:
 ```json
@@ -900,7 +946,7 @@ response:
     [
         {
             "id":    0,
-            "subtype": "string",
+            "productionInformation_subtype": "string",
             "maintype":  0,
         },
     ],
@@ -908,13 +954,13 @@ response:
 ```
 
 
-#### /subtype/addArticle
+#### /productionInformation_subtype/addArticle
 
 request:
 ```json
 {
     "*token":   "string",
-    "*subtype":   "string",
+    "*productionInformation_subtype":   "string",
     "maintype":   0,
 
 }
@@ -925,16 +971,21 @@ response:
 {}
 ```
 
-#### /subtype/editArticle
+#### /productionInformation_subtype/editArticle
 
 request:
 ```json
 {
     "*token":   "string",
     "id":       0,
-    "*subtype":   "string",
+    "*productionInformation_subtype":   "string",
     "maintype":   0,
 }
+```
+
+response:
+```json
+{}
 ```
 
 ### tag
@@ -965,6 +1016,10 @@ response:
 }
 ```
 
+response:
+```json
+{}
+```
 
 #### /tag/editArticle
 
@@ -975,4 +1030,9 @@ request:
     "id":       0,
     "*tag":   "string",
 }
+```
+
+response:
+```json
+{}
 ```
