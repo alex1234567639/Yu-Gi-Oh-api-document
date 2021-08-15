@@ -7,14 +7,21 @@
 | /seriesIntroduction/             | 新增系列介紹相關api                      | 2021/07/10 |
 | /usefulCardIntroduction/         | 新增泛用卡介紹相關api                    | 2021/07/15 |
 | /metaDeck/                       | 新增上位卡表相關api                      | 2021/07/15 |
-| /productInformation/            | 新增卡表資料相關api                      | 2021/07/15 |
+| /productInformation/             | 新增卡表資料相關api                      | 2021/07/15 |
 | /rules/                          | 新增規則相關api                         | 2021/07/15 |
 | /seriesStory/                    | 新增卡片故事相關api                      | 2021/07/15 |
 | /calander/                       | 新增日曆表相關api                        | 2021/07/15 |
+<<<<<<< HEAD
 | /productionInformation_subtype/                       | 新增productionInformation_subtype api                        | 2021/08/04 |
 | /tag/                       | 新增tag api                        | 2021/08/04 |
 | /admin/                       | 新增admin list/add/edit api                        | 2021/08/04 |
 | /banner/                       | 新增banner api                        | 2021/08/14 |
+=======
+| /productionInformation_subtype/  | 新增productionInformation_subtype api  | 2021/08/04 |
+| /tag/                            | 新增tag api                            | 2021/08/04 |
+| /admin/                          | 新增admin list/add/edit api            | 2021/08/04 |
+
+>>>>>>> master
 ***
 
 # admin-server
@@ -26,9 +33,9 @@
 | [/admin/login](#adminLogin)                                                | 登入                      |
 | [/admin/logout](#adminlogout)                                              | 登出                      |
 | [/admin/resetpassword](#adminresetpassword)                                | 重設密碼                   |
-| [/admin/list](#adminlist)                                | 取得帳號                   |
-| [/admin/add](#adminadd)                                | 新增帳號                   |
-| [/admin/edit](#adminedit)                                | 編輯帳號                   |
+| [/admin/list](#adminlist)                                                  | 取得帳號                   |
+| [/admin/add](#adminadd)                                                    | 新增帳號                   |
+| [/admin/edit](#adminedit)                                                  | 編輯帳號                   |
 | [/seriesIntroduction/articleList](#seriesIntroductionarticleList)          | 取得系列介紹文章            |
 | [/seriesIntroduction/addArticle](#seriesIntroductionaddArticle)            | 新增系列介紹文章            |
 | [/seriesIntroduction/editArticle](#seriesIntroductioneditArticle)          | 編輯系列介紹文章            |
@@ -38,9 +45,9 @@
 | [/metaDeck/articleList](#metaDeckarticleList)                              | 取得上位卡表文章            |
 | [/metaDeck/addArticle](#metaDeckaddArticle)                                | 新增上位卡表文章            |
 | [/metaDeck/editArticle](#metaDeckeditArticle)                              | 編輯上位卡表文章            |
-| [/productInformation/articleList](#productInformationarticleList)        | 取得卡表資料文章            |
-| [/productInformation/addArticle](#productInformationaddArticle)          | 新增卡表資料文章            |
-| [/productInformation/editArticle](#productInformationeditArticle)        | 編輯卡表資料文章            |
+| [/productInformation/articleList](#productInformationarticleList)          | 取得卡表資料文章            |
+| [/productInformation/addArticle](#productInformationaddArticle)            | 新增卡表資料文章            |
+| [/productInformation/editArticle](#productInformationeditArticle)          | 編輯卡表資料文章            |
 | [/rules/articleList](#rulesarticleList)                                    | 取得規則相關文章            |
 | [/rules/addArticle](#rulesaddArticle)                                      | 新增規則相關文章            |
 | [/rules/editArticle](#ruleseditArticle)                                    | 編輯規則相關文章            |
@@ -53,11 +60,16 @@
 | [/productionInformation_subtype/articleList](#productionInformation_subtypearticleList)                              | 取得sunbtype                 |
 | [/productionInformation_subtype/addArticle](#productionInformation_subtypeaddArticle)                                | 新增sunbtype                 |
 | [/productionInformation_subtype/editArticle](#productionInformation_subtypeeditArticle)                              | 編輯sunbtype                 |
+<<<<<<< HEAD
 | [/tag/articleList](#tagarticleList)                              | tag                 |
 | [/tag/editArticle](#tageditArticle)                              | tag                 |
 | [/banner/articleList](#bannerarticleList)                              | 取得sunbtype                 |
 | [/banner/addArticle](#banneraddArticle)                                | 新增sunbtype                 |
 | [/banner/editArticle](#bannereditArticle)                              | 編輯sunbtype                 |
+=======
+| [/tag/articleList](#tagarticleList)                                        | tag                       |
+| [/tag/editArticle](#tageditArticle)                                        | tag                       |
+>>>>>>> master
 
 
 ***
@@ -116,9 +128,9 @@ request:
     "page":   0,
     "limit":  0,
     "*filter": {
-        "type":   0,
-        "status": 0,
-        "name" : "string",
+        "type":    0,
+        "status":  0,
+        "name" :   "string",
         "acount" : "string"
     },
 
@@ -133,14 +145,14 @@ response:
     "*list":
     [
         {
-            "id":             0,
-            "type":           0,
-            "name":          "string",
-            "create_date":   "string", 
-            "photo":         "string",
-            "status":         0,
-            "acount" :       "string",
-            "password" :     "sting"
+            "id":          0,
+            "type":        0,
+            "name":        "string",
+            "create_date": "string", 
+            "photo":       "string",
+            "status":      0,
+            "acount":      "string",
+            "password":    "sting"
         },
     ],
 
@@ -158,14 +170,14 @@ response:
 request:
 ```json
 {
-    "*id":             0,
-    "*type":           0,
-    "*name":          "string",
-    "*create_date":   "string", 
-    "*photo":         "string",
-    "*status":         0,
-    "acount" :       "string",
-    "password" :     "sting",
+    "*id":          0,
+    "*type":        0,
+    "*name":        "string",
+    "*create_date": "string", 
+    "*photo":       "string",
+    "*status":      0,
+    "acount":       "string",
+    "password":     "sting",
 
     "_comment_type": "0=主題牌組, 1=外掛系列",
     "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
@@ -187,12 +199,12 @@ response:
 request:
 ```json
 {
-    "*id":             0,
-    "*type":           0,
-    "*name":          "string",
-    "*create_date":   "string", 
-    "*photo":         "string",
-    "*status":         0,
+    "*id":          0,
+    "*type":        0,
+    "*name":        "string",
+    "*create_date": "string", 
+    "*photo":       "string",
+    "*status":      0,
 
     "_comment_type": "0=主題牌組, 1=外掛系列",
     "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
@@ -216,10 +228,10 @@ request:
     "page":   0,
     "limit":  0,
     "*filter": {
-        "type":   0,
-        "status": 0,
-        "begin_date" : "string",
-        "end_date" : "string"
+        "type":       0,
+        "status":     0,
+        "begin_date": "string",
+        "end_date":   "string"
     },
 
     "_comment_type": "0=主題牌組, 1=外掛系列",
@@ -242,9 +254,9 @@ response:
             "content":        "string", 
             "status":         0,
             "to_top":         true,
-            "author_name":        "string", 
-            "author_id":        0, 
-            "tag":        [], 
+            "author_name":    "string", 
+            "author_id":      0, 
+            "tag":            [], 
             
         },
     ],
@@ -326,10 +338,10 @@ request:
     "page":   0,
     "limit":  0,
     "*filter": {
-        "type":   0,
-        "status": 0,
-        "begin_date" : "string",
-        "end_date" : "string"
+        "type":       0,
+        "status":     0,
+        "begin_date": "string",
+        "end_date":   "string"
     },
 
     "_comment_type": "0=單卡介紹, 1=戰術分析",
@@ -352,9 +364,9 @@ response:
             "content":        "string", 
             "status":         0,
             "to_top":         true,
-            "*author_name":  "string", 
-            "*author_id":    0, 
-            "*tag":          [], 
+            "*author_name":   "string", 
+            "*author_id":     0, 
+            "*tag":           [], 
         },
     ],
 
@@ -435,9 +447,9 @@ request:
     "page":   0,
     "limit":  0,
     "*filter": {
-        "status": 0,
-        "begin_date" : "string",
-        "end_date" : "string"
+        "status":     0,
+        "begin_date": "string",
+        "end_date":   "string"
     }
 }
 ```
@@ -534,10 +546,10 @@ request:
     "page":   0,
     "limit":  0,
     "*filter": {
-        "type":   0,
-        "status": 0,
-        "begin_date" : "string",
-        "end_date" : "string"
+        "type":       0,
+        "status":     0,
+        "begin_date": "string",
+        "end_date":   "string"
     }
 }
 ```
@@ -558,9 +570,9 @@ response:
             "content":        "string", 
             "status":         0,
             "to_top":         true,
-            "*author_name":  "string", 
-            "*author_id":    0, 
-            "*tag":          [], 
+            "*author_name":   "string", 
+            "*author_id":     0, 
+            "*tag":           [], 
         },
     ],
 
@@ -580,7 +592,7 @@ request:
 ```json
 {
     "*token":        "string",
-    "*type":           0,
+    "*type":         0,
     "*productionInformation_subtype":        0,
     "*title":        "string",
     "*publish_date": "string", 
@@ -644,10 +656,10 @@ request:
     "page":   0,
     "limit":  0,
     "*filter": {
-        "type":   0,
-        "status": 0,
-        "begin_date" : "string",
-        "end_date" : "string"
+        "type":       0,
+        "status":     0,
+        "begin_date": "string",
+        "end_date":   "string"
     },
 
     "_comment_type": "0=禁限卡表, 1=判例說明"
@@ -669,9 +681,9 @@ response:
             "content":        "string", 
             "status":         0,
             "to_top":         true,
-            "*author_name":  "string", 
-            "*author_id":    0, 
-            "*tag":          [], 
+            "*author_name":   "string", 
+            "*author_id":     0, 
+            "*tag":           [], 
         },
     ],
 
@@ -752,9 +764,9 @@ request:
     "page":   0,
     "limit":  0,
     "*filter": {
-        "status": 0,
-        "begin_date" : "string",
-        "end_date" : "string"
+        "status":     0,
+        "begin_date": "string",
+        "end_date":   "string"
     }
 }
 ```
@@ -773,9 +785,9 @@ response:
             "content":        "string", 
             "status":         0,
             "to_top":         true,
-            "*author_name":  "string",  
-            "*author_id":    0, 
-            "*tag":          [], 
+            "*author_name":   "string",  
+            "*author_id":     0, 
+            "*tag":           [], 
         },
     ],
 
@@ -854,8 +866,8 @@ request:
     "title":  "string",
     "url":    "string",
     "*filter": {
-            "date": "string",
-            "type": 0,
+        "date":  "string",
+         "type": 0,
     }
 }
 ```
@@ -937,7 +949,7 @@ request:
     "page":   0,
     "limit":  0,
     "*filter": {
-            "maintype": 0,
+        "maintype": 0,
     }
 }
 ```
@@ -963,8 +975,8 @@ request:
 ```json
 {
     "*token":   "string",
-    "*productionInformation_subtype":   "string",
-    "maintype":   0,
+    "*productionInformation_subtype": "string",
+    "maintype": 0,
 
 }
 ```
@@ -981,8 +993,8 @@ request:
 {
     "*token":   "string",
     "id":       0,
-    "*productionInformation_subtype":   "string",
-    "maintype":   0,
+    "*productionInformation_subtype": "string",
+    "maintype": 0,
 }
 ```
 
@@ -1001,7 +1013,7 @@ request:
     "page":   0,
     "limit":  0,
     "*filter": {
-            "tag":  "string",
+        "tag": "string",
     }
 }
 ```
@@ -1029,8 +1041,8 @@ response:
 request:
 ```json
 {
-    "*token":   "string",
-    "id":       0,
+    "*token": "string",
+    "id":     0,
     "*tag":   "string",
 }
 ```
