@@ -11,17 +11,10 @@
 | /rules/                          | 新增規則相關api                         | 2021/07/15 |
 | /seriesStory/                    | 新增卡片故事相關api                      | 2021/07/15 |
 | /calander/                       | 新增日曆表相關api                        | 2021/07/15 |
-<<<<<<< HEAD
-| /productionInformation_subtype/                       | 新增productionInformation_subtype api                        | 2021/08/04 |
-| /tag/                       | 新增tag api                        | 2021/08/04 |
-| /admin/                       | 新增admin list/add/edit api                        | 2021/08/04 |
-| /banner/                       | 新增banner api                        | 2021/08/14 |
-=======
 | /productionInformation_subtype/  | 新增productionInformation_subtype api  | 2021/08/04 |
 | /tag/                            | 新增tag api                            | 2021/08/04 |
 | /admin/                          | 新增admin list/add/edit api            | 2021/08/04 |
-
->>>>>>> master
+| /banner/                         | 新增banner api                         | 2021/08/14 |
 ***
 
 # admin-server
@@ -57,19 +50,14 @@
 | [/calander/articleList](#calanderarticleList)                              | 取得日曆表                 |
 | [/calander/addArticle](#calanderaddArticle)                                | 新增日曆表                 |
 | [/calander/editArticle](#calandereditArticle)                              | 編輯日曆表                 |
-| [/productionInformation_subtype/articleList](#productionInformation_subtypearticleList)                              | 取得sunbtype                 |
-| [/productionInformation_subtype/addArticle](#productionInformation_subtypeaddArticle)                                | 新增sunbtype                 |
-| [/productionInformation_subtype/editArticle](#productionInformation_subtypeeditArticle)                              | 編輯sunbtype                 |
-<<<<<<< HEAD
-| [/tag/articleList](#tagarticleList)                              | tag                 |
-| [/tag/editArticle](#tageditArticle)                              | tag                 |
-| [/banner/articleList](#bannerarticleList)                              | 取得sunbtype                 |
-| [/banner/addArticle](#banneraddArticle)                                | 新增sunbtype                 |
-| [/banner/editArticle](#bannereditArticle)                              | 編輯sunbtype                 |
-=======
-| [/tag/articleList](#tagarticleList)                                        | tag                       |
-| [/tag/editArticle](#tageditArticle)                                        | tag                       |
->>>>>>> master
+| [/productionInformation_subtype/articleList](#productionInformation_subtypearticleList) | 取得sunbtype |
+| [/productionInformation_subtype/addArticle](#productionInformation_subtypeaddArticle)   | 新增sunbtype |
+| [/productionInformation_subtype/editArticle](#productionInformation_subtypeeditArticle) | 編輯sunbtype |
+| [/tag/articleList](#tagarticleList)                                        | tag                      |
+| [/tag/editArticle](#tageditArticle)                                        | tag                      |
+| [/banner/articleList](#bannerarticleList)                                  | 取得sunbtype              |
+| [/banner/addArticle](#banneraddArticle)                                    | 新增sunbtype              |
+| [/banner/editArticle](#bannereditArticle)                                  | 編輯sunbtype              |
 
 
 ***
@@ -1062,8 +1050,8 @@ request:
     "page":   0,
     "limit":  0,
     "*filter": {
-            "begin_date": 0,
-            "end_date": 0
+        "begin_date": 0,
+        "end_date":   0
     }
 }
 ```
@@ -1074,13 +1062,13 @@ response:
     "*list":
     [
         {
-            "id":    0,
-            "title": "string",
-            "subtitle": "string",
-            "date": "string",
-            "photo_pc": "string",
+            "id":           0,
+            "title":        "string",
+            "subtitle":     "string",
+            "date":         "string",
+            "photo_pc":     "string",
             "photo_mobile": "string",
-            "url": "string"
+            "url":          "string"
         },
     ],
 }
@@ -1092,13 +1080,13 @@ response:
 request:
 ```json
 {
-    "*token":   "string",
-    "*title": "string",
-    "*subtitle": "string",
-    "*date": "string",
-    "*photo_pc": "string",
+    "*token":        "string",
+    "*title":        "string",
+    "*subtitle":     "string",
+    "*date":         "string",
+    "*photo_pc":     "string",
     "*photo_mobile": "string",
-    "*url": "string"
+    "*url":          "string"
 
 }
 ```
@@ -1113,13 +1101,13 @@ response:
 request:
 ```json
 {
-    "*token":   "string",
-    "*title": "string",
-    "*subtitle": "string",
-    "*date": "string",
-    "*photo_pc": "string",
+    "*token":        "string",
+    "*title":        "string",
+    "*subtitle":     "string",
+    "*date":         "string",
+    "*photo_pc":     "string",
     "*photo_mobile": "string",
-    "*url": "string"
+    "*url":          "string"
 }
 ```
 
