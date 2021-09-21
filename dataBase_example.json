@@ -1,0 +1,120 @@
+{
+	"admin": {
+		"id": 0,
+		"type": 0,
+		"name": "string",
+		"create_date": "string",
+		"photo": "string",
+		"status": 0,
+		"acount": "string",
+		"password": "sting"
+	},
+	"seriesIntroduction": {
+		"id": 0,
+		"type": 0,
+		"title": "string",
+		"publish_date": "string",
+		"last_edit_date": "string",
+		"photo": "string",
+		"content": "string",
+		"status": 0,
+		"to_top": true,
+		"author_name": "string",
+		"author_id": 0,
+		"tag": []
+	},
+	"usefulCardIntroduction": {
+		"id": 0,
+		"type": 0,
+		"title": "string",
+		"publish_date": "string",
+		"last_edit_date": "string",
+		"photo": "string",
+		"content": "string",
+		"status": 0,
+		"to_top": true,
+		"author_name": "string",
+		"author_id": 0,
+		"tag": []
+	},
+	"metaDeck": {
+		"id": 0,
+		"title": "string",
+		"publish_date": "string",
+		"last_edit_date": "string",
+		"photo": "string",
+		"content": "string",
+		"status": 0,
+		"to_top": true,
+		"author_name": "string",
+		"author_id": 0,
+		"tag": []
+	},
+	"productInformation": {
+		"id": 0,
+		"type": 0,
+		"*productionInformation_subtype": 0,
+		"title": "string",
+		"publish_date": "string",
+		"last_edit_date": "string",
+		"photo": "string",
+		"content": "string",
+		"status": 0,
+		"to_top": true,
+		"author_name": "string",
+		"author_id": 0,
+		"tag": []
+	},
+	"rules": {
+		"id": 0,
+		"type": 0,
+		"title": "string",
+		"publish_date": "string",
+		"last_edit_date": "string",
+		"photo": "string",
+		"content": "string",
+		"status": 0,
+		"to_top": true,
+		"author_name": "string",
+		"author_id": 0,
+		"tag": []
+	},
+	"seriesStory": {
+		"id": 0,
+		"title": "string",
+		"publish_date": "string",
+		"last_edit_date": "string",
+		"photo": "string",
+		"content": "string",
+		"status": 0,
+		"to_top": true,
+		"author_name": "string",
+		"author_id": 0,
+		"tag": []
+	},
+	"calander": {
+		"id": 0,
+		"title": "string",
+		"date": "string",
+		"url": "string",
+		"type": 0
+	},
+	"productionInformation_subtype": {
+		"id": 0,
+		"productionInformation_subtype": "string",
+		"maintype": 0
+	},
+	"tag": {
+		"id": 0,
+		"tag": "string"
+	},
+	"banner": {
+		"id": 0,
+		"title": "string",
+		"subtitle": "string",
+		"date": "string",
+		"photo_pc": "string",
+		"photo_mobile": "string",
+		"url": "string"
+	}
+}
