@@ -158,7 +158,6 @@ response:
 ```
 
 #### /admin/add
-
 request:
 ```json
 {
@@ -187,7 +186,6 @@ response:
 ```
 
 #### /admin/edit
-
 request:
 ```json
 {
@@ -209,8 +207,6 @@ response:
 ```json
 {}
 ```
-
-
 
 ### Series Introduction
 #### /seriesIntroduction/articleList
@@ -885,7 +881,6 @@ response:
 ```
 
 #### /calander/addArticle
-
 request:
 ```json
 {
@@ -908,7 +903,6 @@ response:
 ```
 
 #### /calander/editArticle
-
 request:
 ```json
 {
@@ -934,7 +928,6 @@ response:
 
 ### productionInformation_subtype
 #### /productionInformation_subtype/articleList
-
 request:
 ```json
 {
@@ -963,7 +956,6 @@ response:
 
 
 #### /productionInformation_subtype/addArticle
-
 request:
 ```json
 {
@@ -980,7 +972,6 @@ response:
 ```
 
 #### /productionInformation_subtype/editArticle
-
 request:
 ```json
 {
@@ -998,7 +989,6 @@ response:
 
 ### tag
 #### /tag/articleList
-
 request:
 ```json
 {
@@ -1030,7 +1020,6 @@ response:
 ```
 
 #### /tag/editArticle
-
 request:
 ```json
 {
@@ -1047,7 +1036,6 @@ response:
 
 ### banner
 #### /banner/articleList
-
 request:
 ```json
 {
@@ -1079,9 +1067,7 @@ response:
 }
 ```
 
-
 #### /banner/addArticle
-
 request:
 ```json
 {
@@ -1102,7 +1088,6 @@ response:
 ```
 
 #### /banner/editArticle
-
 request:
 ```json
 {
@@ -1121,11 +1106,8 @@ response:
 {}
 ```
 
-
-
 ### Cards
 #### /cards/cardsList
-
 request:
 ```json
 {
@@ -1184,7 +1166,6 @@ response:
 ```
 
 #### /cards/add
-
 request:
 ```json
 {
@@ -1209,7 +1190,6 @@ response:
 ```
 
 #### /cards/edit
-
 request:
 ```json
 {
@@ -1232,4 +1212,3 @@ response:
 ```json
 {}
 ```
-
