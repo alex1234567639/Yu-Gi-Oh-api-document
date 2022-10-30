@@ -1,17 +1,17 @@
 ### API Blog
 
-| API                                    | Action                                | Date       |
-| -------------------------------------- | ------------------------------------- | ---------- |
-| /metaDeck/articleList                  | 新增取得上位卡表文章api                   | 2021/07/11 |
-| /seriesIntroduction/articleList        | 新增取得系列介紹文章api                   | 2021/07/11 |
-| /usefulCardIntroduction/articleList    | 新增取得泛用卡介紹文章api                 | 2021/07/11 |
-| /productInformation/articleList        | 新增取得卡表資料文章api                   | 2021/07/14 |
-| /rules/articleList                     | 新增取得規則相關文章api                   | 2021/07/14 |
-| /seriesStory/articleList               | 新增取得卡片故事文章api                   | 2021/07/14 |
-| /calander/list                         | 新增日曆表api                           | 2021/07/14 |
-| /banner/list                           | 新增banner列表api                       | 2021/07/28 |
-| /banner/list                           | 修改banner列表api欄位                    | 2021/07/28 |
-| /search                                | 新增search api                         | 2021/08/08 |
+| API                                 | Action          | Date       |
+|-------------------------------------|-----------------|------------|
+| /metaDeck/articleList               | 新增取得上位卡表文章api   | 2021/07/11 |
+| /seriesIntroduction/articleList     | 新增取得系列介紹文章api   | 2021/07/11 |
+| /usefulCardIntroduction/articleList | 新增取得泛用卡介紹文章api  | 2021/07/11 |
+| /productInformation/articleList     | 新增取得卡表資料文章api   | 2021/07/14 |
+| /rules/articleList                  | 新增取得規則相關文章api   | 2021/07/14 |
+| /seriesStory/articleList            | 新增取得卡片故事文章api   | 2021/07/14 |
+| /calendar/list                      | 新增日曆表api        | 2021/07/14 |
+| /banner/list                        | 新增banner列表api   | 2021/07/28 |
+| /banner/list                        | 修改banner列表api欄位 | 2021/07/28 |
+| /search                             | 新增search api    | 2021/08/08 |
 
 ***
 
@@ -19,17 +19,17 @@
 * url: https://xxxxxxx.com.tw/api/[path]
 * method: POST
 
-| Path                                                                       | Description              |
-| -------------------------------------------------------------------------- | ------------------------ |
-| [/metaDeck/articleList](#metaDeckarticleList)                              | 取得上位卡表文章            |
-| [/seriesIntroduction/articleList](#seriesIntroductionarticleList)          | 取得系列介紹文章            |
-| [/usefulCardIntroduction/articleList](#usefulCardIntroductionarticleList)  | 取得泛用卡介紹文章          |
-| [/productInformation/articleList](#productInformationarticleList)          | 取得卡表資料文章            |
-| [/rules/articleList](#rulesarticleList)                                    | 取得規則相關文章            |
-| [/seriesStory/articleList](#seriesStoryarticleList)                        | 取得卡片故事文章            |
-| [/calander/list](#calanderlist)                                            | 取得日曆表                 |
-| [/banner/list](#bannerlist)                                                | 取得banner列表             |
-| [/search](#search)                                                         | Search文章                |
+| Path                                                                      | Description |
+|---------------------------------------------------------------------------|-------------|
+| [/metaDeck/articleList](#metadeckarticlelist)                             | 取得上位卡表文章    |
+| [/seriesIntroduction/articleList](#seriesintroductionarticlelist)         | 取得系列介紹文章    |
+| [/usefulCardIntroduction/articleList](#usefulcardintroductionarticlelist) | 取得泛用卡介紹文章   |
+| [/productInformation/articleList](#productinformationarticlelist)         | 取得卡表資料文章    |
+| [/rules/articleList](#rulesarticlelist)                                   | 取得規則相關文章    |
+| [/seriesStory/articleList](#seriesstoryarticlelist)                       | 取得卡片故事文章    |
+| [/calendar/list](#calendarlist)                                           | 取得日曆表       |
+| [/banner/list](#bannerlist)                                               | 取得banner列表  |
+| [/search](#search)                                                        | Search文章    |
  
 ***
 
@@ -60,7 +60,7 @@ response:
             "status":         0,
             "to_top":         true,
             "tag":            "array"
-        },
+        }
     ],
 
     "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
@@ -68,7 +68,7 @@ response:
     "_comment_photo": "btoa()編碼的Base64字串",
     "_comment_content": "副文本編輯產出的html字串",
     "_comment_status": "0=上架中, 1=下架中",
-    "_comment_to_top": "true=置頂, false=非置頂",
+    "_comment_to_top": "true=置頂, false=非置頂"
 }
 ```
 
@@ -102,8 +102,8 @@ response:
             "content":        "string", 
             "tag":            "array",
             "status":         0,
-            "to_top":         true,
-        },
+            "to_top":         true
+        }
     ],
 
     "_comment_type": "0=主題牌組, 1=外掛系列",
@@ -144,8 +144,8 @@ response:
             "content":        "string", 
             "tag":            "array",
             "status":         0,
-            "to_top":         true,
-        },
+            "to_top":         true
+        }
     ],
 
     "_comment_type": "0=單卡介紹, 1=戰術分析",
@@ -188,8 +188,8 @@ response:
             "content":        "string", 
             "tag":            "array",
             "status":         0,
-            "to_top":         true,
-        },
+            "to_top":         true
+        }
     ],
 
     "_comment_type": "0=RD, 1=補充包, 2=預組套牌, 3=禮盒, 4=活動贈品",
@@ -230,8 +230,8 @@ response:
             "content":        "string", 
             "tag":            "array",
             "status":         0,
-            "to_top":         true,
-        },
+            "to_top":         true
+        }
     ],
 
     "_comment_type": "0=判例, 1=禁卡表",
@@ -248,7 +248,7 @@ request:
 ```json
 {
     "page":  0,
-    "limit": 0,
+    "limit": 0
 }
 ```
 
@@ -268,8 +268,8 @@ response:
             "content":        "string", 
             "tag":            "array",
             "status":         0,
-            "to_top":         true,
-        },
+            "to_top":         true
+        }
     ],
 
     "_comment_photo": "btoa()編碼的Base64字串",
@@ -280,7 +280,7 @@ response:
 ```
 
 ### Calendar
-#### /calander/list
+#### /calendar/list
 request:
 ```json
 {}
@@ -296,8 +296,8 @@ response:
             "date":  "string",
             "photo": "string", 
             "url":   "string",
-            "type":  0,
-        },
+            "type":  0
+        }
     ],
 
     "_comment_date": "格式為YYYY-MM-DD HH:mm:ss",
@@ -325,8 +325,8 @@ response:
             "date":         "string",
             "photo_pc":     "string", 
             "photo_mobile": "string", 
-            "url":          "string",
-        },
+            "url":          "string"
+        }
     ],
 
     "_comment_date": "格式為YYYY-MM-DD HH:mm:ss",
