@@ -13,6 +13,7 @@
 | /banner/list                           | 修改banner列表api欄位                    | 2021/07/28 |
 | /search                                | 新增search api                         | 2021/08/08 |
 | /cards/                                | 新增cards相關api                        | 2022/10/30 |
+| /deck/                                 | 新增deck相關api                         | 2022/10/30 |
 
 ***
 
@@ -32,6 +33,10 @@
 | [/banner/list](#bannerlist)                                                | 取得banner列表             |
 | [/search](#search)                                                         | Search文章                |
 | [/cards/cardsList](#cardscardsList)                                        | 取得卡片資料               |
+| [/deck/deckList](#deckdeckList)                                            | 取得卡表列表               |
+| [/deck/add](#deckadd)                                                      | 新增卡表                  |
+| [/deck/edit](#deckedit)                                                    | 編輯卡表                  |
+| [/deck/delete](#deckdelete)                                                | 刪除卡表                  |
  
 ***
 
@@ -411,4 +416,85 @@ response:
     "_comment_effect": "卡片效果",
     "_comment_photo": "卡圖",
 }
+```
+
+### Deck
+#### /deck/deckList
+request:
+```json
+{
+    "page":  0,
+    "limit": 0
+}
+```
+
+response:
+```json
+{
+    "total": 0,
+    "*list":
+    [
+        {
+            "id":             0,
+            "title":          "string",  
+            "create_date":    "string", 
+            "last_edit_date": "string",
+            "main_deck":      [],
+            "extra_deck":     [],
+            "side_deck":      [],
+        },
+    ],
+
+    "_comment_create_date": "格式為YYYY-MM-DD HH:mm:ss",
+    "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss"
+}
+```
+
+#### /deck/add
+request:
+```json
+{
+    "title":          "string",  
+    "create_date":    "string", 
+    "last_edit_date": "string",
+    "main_deck":      [],
+    "extra_deck":     [],
+    "side_deck":      []
+}
+```
+
+response:
+```json
+{}
+```
+
+#### /deck/edit
+request:
+```json
+{
+    "id":             0,
+    "title":          "string",  
+    "last_edit_date": "string",
+    "main_deck":      [],
+    "extra_deck":     [],
+    "side_deck":      []
+}
+```
+
+response:
+```json
+{}
+```
+
+#### /deck/delete
+request:
+```json
+{
+    "id":             0
+}
+```
+
+response:
+```json
+{}
 ```
