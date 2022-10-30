@@ -12,6 +12,7 @@
 | /banner/list                           | 新增banner列表api                       | 2021/07/28 |
 | /banner/list                           | 修改banner列表api欄位                    | 2021/07/28 |
 | /search                                | 新增search api                         | 2021/08/08 |
+| /cards/                                | 新增cards相關api                        | 2022/10/30 |
 
 ***
 
@@ -30,6 +31,7 @@
 | [/calander/list](#calanderlist)                                            | 取得日曆表                 |
 | [/banner/list](#bannerlist)                                                | 取得banner列表             |
 | [/search](#search)                                                         | Search文章                |
+| [/cards/cardsList](#cardscardsList)                                        | 取得卡片資料               |
  
 ***
 
@@ -347,5 +349,66 @@ request:
     "_comment_content": "搜尋的文字",
     "_comment_article_type": "0=系列介紹, 1=泛用卡介紹, 2=卡表資料, 3=上位卡表, 4=卡片故事, 5=規則相關",
     "_comment_subtype": "article_type各自的子類型"
+}
+```
+
+
+### Cards
+#### /cards/cardsList
+
+request:
+```json
+{
+    "*token": "string",
+    "page":   0,
+    "limit":  0,
+    "*filter": {
+        "number":    0,
+        "name":      "string",
+        "type":      "string",
+        "star":      "string",
+        "attribute": "string",
+        "rarity":    "string",
+        "atk":       "string",
+        "def":       "string",
+        "packType":  "string",
+        "id":        0
+    },
+
+    "_comment_number": "卡號",
+    "_comment_name": "卡名",
+    "_comment_type": "種類",
+    "_comment_star": "星數",
+    "_comment_attribute": "屬性",
+    "_comment_rarity": "稀有度、版本",
+    "_comment_packType": "包裝分類",
+    "_comment_id": "卡片密碼"，
+}
+```
+
+response:
+```json
+{
+    "*total": 0,
+    "*list":
+    [
+        {
+            "number":    0,
+            "name":      "string",
+            "type":      "string",
+            "star":      "string",
+            "attribute": "string",
+            "rarity":    "string",
+            "atk":       "string",
+            "def":       "string",
+            "packType":  "string",
+            "id":        0,
+            "effect":    "string",
+            "photo":     "string",
+        },
+    ],
+
+    "_comment_effect": "卡片效果",
+    "_comment_photo": "卡圖",
 }
 ```

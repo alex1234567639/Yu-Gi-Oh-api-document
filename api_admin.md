@@ -14,7 +14,8 @@
 | /productionInformation_subtype/  | 新增productionInformation_subtype api  | 2021/08/04 |
 | /tag/                            | 新增tag api                            | 2021/08/04 |
 | /admin/                          | 新增admin list/add/edit api            | 2021/08/04 |
-| /banner/                         | 新增banner api                         | 2021/08/14 |
+| /banner/                         | 新增banner相關api                       | 2021/08/14 |
+| /cards/                          | 新增cards相關api                        | 2022/10/30 |
 ***
 
 # admin-server
@@ -58,6 +59,9 @@
 | [/banner/articleList](#bannerarticleList)                                  | 取得sunbtype              |
 | [/banner/addArticle](#banneraddArticle)                                    | 新增sunbtype              |
 | [/banner/editArticle](#bannereditArticle)                                  | 編輯sunbtype              |
+| [/cards/cardsList](#cardscardsList)                                        | 取得卡片資料               |
+| [/cards/add](#cardsadd)                                                    | 新增卡片                  |
+| [/cards/edit](#cardsedit)                                                  | 編輯卡片                  |
 
 
 ***
@@ -200,6 +204,7 @@ request:
     "_comment_content": "副文本編輯產出的html字串"
 }
 ```
+
 response:
 ```json
 {}
@@ -1115,3 +1120,116 @@ response:
 ```json
 {}
 ```
+
+
+
+### Cards
+#### /cards/cardsList
+
+request:
+```json
+{
+    "*token": "string",
+    "page":   0,
+    "limit":  0,
+    "*filter": {
+        "number":    0,
+        "name":      "string",
+        "type":      "string",
+        "star":      "string",
+        "attribute": "string",
+        "rarity":    "string",
+        "atk":       "string",
+        "def":       "string",
+        "packType":  "string",
+        "id":        0
+    },
+
+    "_comment_number": "卡號",
+    "_comment_name": "卡名",
+    "_comment_type": "種類",
+    "_comment_star": "星數",
+    "_comment_attribute": "屬性",
+    "_comment_rarity": "稀有度、版本",
+    "_comment_packType": "包裝分類",
+    "_comment_id": "卡片密碼"，
+}
+```
+
+response:
+```json
+{
+    "*total": 0,
+    "*list":
+    [
+        {
+            "number":    0,
+            "name":      "string",
+            "type":      "string",
+            "star":      "string",
+            "attribute": "string",
+            "rarity":    "string",
+            "atk":       "string",
+            "def":       "string",
+            "packType":  "string",
+            "id":        0,
+            "effect":    "string",
+            "photo":     "string",
+        },
+    ],
+
+    "_comment_effect": "卡片效果",
+    "_comment_photo": "卡圖",
+}
+```
+
+#### /cards/add
+
+request:
+```json
+{
+    "number":    0,
+    "name":      "string",
+    "type":      "string",
+    "star":      "string",
+    "attribute": "string",
+    "rarity":    "string",
+    "atk":       "string",
+    "def":       "string",
+    "packType":  "string",
+    "id":        0,
+    "effect":    "string",
+    "photo":     "string",
+}
+```
+
+response:
+```json
+{}
+```
+
+#### /cards/edit
+
+request:
+```json
+{
+    "number":    0,
+    "name":      "string",
+    "type":      "string",
+    "star":      "string",
+    "attribute": "string",
+    "rarity":    "string",
+    "atk":       "string",
+    "def":       "string",
+    "packType":  "string",
+    "id":        0,
+    "effect":    "string",
+    "photo":     "string",
+}
+```
+
+response:
+```json
+{}
+```
+
