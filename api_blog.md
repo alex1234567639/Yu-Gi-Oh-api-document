@@ -1,5 +1,6 @@
 ### API Blog
 
+
 | API                                 | Action          | Date       |
 |-------------------------------------|-----------------|------------|
 | /metaDeck/articleList               | 新增取得上位卡表文章api   | 2021/07/11 |
@@ -8,16 +9,19 @@
 | /productInformation/articleList     | 新增取得卡表資料文章api   | 2021/07/14 |
 | /rules/articleList                  | 新增取得規則相關文章api   | 2021/07/14 |
 | /seriesStory/articleList            | 新增取得卡片故事文章api   | 2021/07/14 |
-| /calendar/list                      | 新增日曆表api        | 2021/07/14 |
+| /calander/list                      | 新增日曆表api        | 2021/07/14 |
 | /banner/list                        | 新增banner列表api   | 2021/07/28 |
 | /banner/list                        | 修改banner列表api欄位 | 2021/07/28 |
 | /search                             | 新增search api    | 2021/08/08 |
+| /cards/                             | 新增cards相關api    | 2022/10/30 |
+| /deck/                              | 新增deck相關api     | 2022/10/30 |
 
 ***
 
 # blog-server
 * url: https://xxxxxxx.com.tw/api/[path]
 * method: POST
+
 
 | Path                                                                      | Description |
 |---------------------------------------------------------------------------|-------------|
@@ -30,6 +34,11 @@
 | [/calendar/list](#calendarlist)                                           | 取得日曆表       |
 | [/banner/list](#bannerlist)                                               | 取得banner列表  |
 | [/search](#search)                                                        | Search文章    |
+| [/cards/cardsList](#cardscardslist)                                       | 取得卡片資料      |
+| [/deck/deckList](#deckdecklist)                                           | 取得卡表列表      |
+| [/deck/add](#deckadd)                                                     | 新增卡表        |
+| [/deck/edit](#deckedit)                                                   | 編輯卡表        |
+| [/deck/delete](#deckdelete)                                               | 刪除卡表        |
  
 ***
 
@@ -348,4 +357,200 @@ request:
     "_comment_article_type": "0=系列介紹, 1=泛用卡介紹, 2=卡表資料, 3=上位卡表, 4=卡片故事, 5=規則相關",
     "_comment_subtype": "article_type各自的子類型"
 }
+```
+
+
+### Cards
+#### /cards/cardsList
+
+request:
+```json
+{
+    "*token": "string",
+    "page":   0,
+    "limit":  0,
+    "*filter": {
+        "number":    "string",
+        "name":      "string",
+        "type":      "string",
+        "star":      "string",
+        "attribute": "string",
+        "rarity":    "string",
+        "atk_t":       0,
+        "atk_l":       0,
+        "def_t":       0,
+        "def_l":       0,
+        "packType":  "string",
+        "id":        0
+    },
+
+    "_comment_number": "卡號",
+    "_comment_name": "卡名",
+    "_comment_type": "種類",
+    "_comment_star": "星數",
+    "_comment_attribute": "屬性",
+    "_comment_rarity": "稀有度、版本",
+    "_comment_packType": "包裝分類",
+    "_comment_id": "卡片密碼"
+}
+```
+
+response:
+```json
+{
+  "*total": 0,
+  "*list":
+  [
+    {
+      "number":    "string",
+      "name":      "string",
+      "type":      "string",
+      "star":      "string",
+      "attribute": "string",
+      "rarity":    "string",
+      "atk":       0,
+      "def":       0,
+      "packType":  "string",
+      "id":        0,
+      "effect":    "string",
+      "photo":     "string",
+      "price_info":     [
+        {
+          "time": "string",
+          "price": 0
+        }
+      ]
+    }
+  ],
+
+  "_comment_effect": "卡片效果",
+  "_comment_photo": "卡圖"
+}
+```
+
+### Deck
+#### /deck/deckList
+request:
+```json
+{
+    "page":  0,
+    "limit": 0,
+  "*filter": {
+    "number":    "string",
+    "title":          "string",
+    "last_edit_date": "string"
+  },
+
+  "_comment_number": "卡號",
+  "_comment_title": "牌組名稱",
+  "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss"
+}
+```
+
+response:
+```json
+{
+    "total": 0,
+    "*list":
+    [
+        {
+            "id":             0,
+            "*author_name":  "string",
+            "*author_id":    0,
+            "title":          "string",  
+            "create_date":    "string", 
+            "last_edit_date": "string",
+            "main_deck":      [
+              {
+                "number":    "string",
+                "name":      "string",
+                "type":      "string",
+                "star":      "string",
+                "attribute": "string",
+                "rarity":    "string",
+                "atk":       0,
+                "def":       0,
+                "packType":  "string",
+                "id":        0,
+                "effect":    "string",
+                "photo":     "string",
+                "price_info":     [
+                  {
+                    "time": "string",
+                    "price": 0
+                  }
+                ]
+              }
+            ],
+            "extra_deck":     [],
+            "side_deck":      []
+        }
+    ],
+
+    "_comment_create_date": "格式為YYYY-MM-DD HH:mm:ss",
+    "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss"
+}
+```
+
+#### /deck/add
+request:
+```json
+{
+    "title":          "string",  
+    "create_date":    "string", 
+    "last_edit_date": "string",
+    "*author_name":  "string",
+    "*author_id":    0,
+    "main_deck":      [
+      {
+        "number":    "string",
+        "rarity":    "string"
+      }
+    ],
+    "extra_deck":     [],
+    "side_deck":      []
+}
+```
+
+response:
+```json
+{}
+```
+
+#### /deck/edit
+request:
+```json
+{
+    "id":             0,
+    "title":          "string",  
+    "last_edit_date": "string",
+    "*author_name":  "string",
+    "*author_id":    0,
+    "main_deck":      [
+      {
+        "number":    "string",
+        "rarity":    "string"
+      }
+    ],
+    "extra_deck":     [],
+    "side_deck":      []
+}
+```
+
+response:
+```json
+{}
+```
+
+#### /deck/delete
+request:
+```json
+{
+    "id":             0
+}
+```
+
+response:
+```json
+{}
 ```

@@ -1,5 +1,6 @@
 ### API Admin
 
+
 | API                             | Action                              | Date       |
 |---------------------------------|-------------------------------------|------------|
 | /admin/login                    | 新增登入api                             | 2021/07/03 |
@@ -17,6 +18,7 @@
 | /banner/                        | 新增banner api                        | 2021/08/14 |
 | /battlePaper/                   | 新增戰報 api                            | 2022/10/30 |
 | /cardPrice/                     | 新增卡價 api                            | 2022/10/30 |
+| /cards/                         | 新增cards相關api                        | 2022/10/30 |
 ***
 
 # admin-server
@@ -63,6 +65,9 @@
 | [/battlePaper/articleList](#battlepaperarticlelist)                                     | 取得戰報相關文章    |
 | [/battlePaper/addArticle](#battlepaperaddarticle)                                       | 新增戰報相關文章    |
 | [/battlePaper/editArticle](#battlepapereditarticle)                                     | 編輯戰報相關文章    |
+| [/cards/cardsList](#cardscardslist)                                                     | 取得卡片資料      |
+| [/cards/add](#cardsadd)                                                                 | 新增卡片        |
+| [/cards/edit](#cardsedit)                                                               | 編輯卡片        |
 
 
 ***
@@ -127,7 +132,7 @@ request:
         "account" : "string"
     },
 
-    "_comment_type": "0=管理者, 1=一般用戶",
+    "_comment_type": "0=管理者, 1=前後台用戶, 2=前台用戶",
     "_comment_status": "0=正常, 1=停用中"
 }
 ```
@@ -150,7 +155,7 @@ response:
     ],
 
     "_comment_id": "自動生成的數字",
-    "_comment_type": "0=管理者, 1=一般用戶",
+    "_comment_type": "0=管理者, 1=前後台用戶, 2=前台用戶",
     "_comment_status": "0=正常, 1=停用中",
     "_comment_name": "length = 20",
     "_comment_account": "max length = 16, min length = 8",
@@ -159,7 +164,6 @@ response:
 ```
 
 #### /admin/add
-
 request:
 ```json
 {
@@ -188,7 +192,6 @@ response:
 ```
 
 #### /admin/edit
-
 request:
 ```json
 {
@@ -205,12 +208,11 @@ request:
     "_comment_content": "副文本編輯產出的html字串"
 }
 ```
+
 response:
 ```json
 {}
 ```
-
-
 
 ### Series Introduction
 #### /seriesIntroduction/articleList
@@ -884,8 +886,12 @@ response:
 }
 ```
 
+<<<<<<< HEAD
 #### /calendar/addArticle
 
+=======
+#### /calander/addArticle
+>>>>>>> de5c6425c673b074dcd6b1649862c1951cb5f043
 request:
 ```json
 {
@@ -907,8 +913,12 @@ response:
 {}
 ```
 
+<<<<<<< HEAD
 #### /calendar/editArticle
 
+=======
+#### /calander/editArticle
+>>>>>>> de5c6425c673b074dcd6b1649862c1951cb5f043
 request:
 ```json
 {
@@ -934,7 +944,6 @@ response:
 
 ### productionInformation_subtype
 #### /productionInformation_subtype/articleList
-
 request:
 ```json
 {
@@ -963,7 +972,6 @@ response:
 
 
 #### /productionInformation_subtype/addArticle
-
 request:
 ```json
 {
@@ -980,7 +988,6 @@ response:
 ```
 
 #### /productionInformation_subtype/editArticle
-
 request:
 ```json
 {
@@ -998,7 +1005,6 @@ response:
 
 ### tag
 #### /tag/articleList
-
 request:
 ```json
 {
@@ -1030,7 +1036,6 @@ response:
 ```
 
 #### /tag/editArticle
-
 request:
 ```json
 {
@@ -1047,7 +1052,6 @@ response:
 
 ### banner
 #### /banner/articleList
-
 request:
 ```json
 {
@@ -1079,9 +1083,7 @@ response:
 }
 ```
 
-
 #### /banner/addArticle
-
 request:
 ```json
 {
@@ -1102,7 +1104,6 @@ response:
 ```
 
 #### /banner/editArticle
-
 request:
 ```json
 {
@@ -1113,6 +1114,123 @@ request:
     "*photo_pc":     "string",
     "*photo_mobile": "string",
     "*url":          "string"
+}
+```
+
+response:
+```json
+{}
+```
+
+### Cards
+#### /cards/cardsList
+request:
+```json
+{
+    "*token": "string",
+    "page":   0,
+    "limit":  0,
+    "*filter": {
+        "number":    "string",
+        "name":      "string",
+        "type":      "string",
+        "star":      "string",
+        "attribute": "string",
+        "rarity":    "string",
+        "atk_t":       0,
+        "atk_l":       0,
+        "def_t":       0,
+        "def_l":       0,
+        "packType":  "string",
+        "id":        0
+    },
+
+    "_comment_number": "卡號",
+    "_comment_name": "卡名",
+    "_comment_type": "種類",
+    "_comment_star": "星數",
+    "_comment_attribute": "屬性",
+    "_comment_rarity": "稀有度、版本",
+    "_comment_packType": "包裝分類id",
+    "_comment_id": "卡片密碼"
+}
+```
+
+response:
+```json
+{
+    "*total": 0,
+    "*list":
+    [
+        {
+            "number":    "string",
+            "name":      "string",
+            "type":      "string",
+            "star":      "string",
+            "attribute": "string",
+            "rarity":    "string",
+            "atk":       0,
+            "def":       0,
+            "packType":  "string",
+            "id":        0,
+            "effect":    "string",
+            "photo":     "string",
+            "price_info":     [
+              {
+                "time": "string",
+                "price": 0
+              }
+            ]
+        }
+    ],
+
+    "_comment_effect": "卡片效果",
+    "_comment_photo": "卡圖"
+}
+```
+
+#### /cards/add
+request:
+```json
+{
+    "number":    "string",
+    "name":      "string",
+    "type":      "string",
+    "star":      "string",
+    "attribute": "string",
+    "rarity":    "string",
+    "atk":       0,
+    "def":       0,
+    "packType":  "string",
+    "id":        0,
+    "effect":    "string",
+    "photo":     "string"
+}
+```
+
+response:
+```json
+{}
+```
+
+#### /cards/edit
+request:
+```json
+{
+    "number":    "string",
+    "name":      "string",
+    "type":      "string",
+    "star":      "string",
+    "attribute": "string",
+    "rarity":    "string",
+    "atk":       0,
+    "def":       0,
+    "packType":  "string",
+    "id":        0,
+    "effect":    "string",
+    "photo":     "string",
+    "time":      "string",
+    "price":     0
 }
 ```
 
@@ -1136,7 +1254,7 @@ request:
         "end_date":   "string"
     },
 
-    "_comment_type": "0=當日報, 1=周報表"
+    "_comment_type": "0=週報"
 }
 ```
 
@@ -1162,7 +1280,7 @@ response:
     ],
 
     "_comment_id": "自動生成的數字",
-    "_comment_type": "0=禁限卡表, 1=判例說明",
+    "_comment_type": "0=週報",
     "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
     "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss",
     "_comment_photo": "btoa()編碼的Base64字串",
@@ -1186,7 +1304,7 @@ request:
     "*author_id":    0, 
     "*tag":          [], 
 
-    "_comment_type": "0=禁限卡表, 1=判例說明",
+    "_comment_type": "0=週報",
     "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
     "_comment_photo": "btoa()編碼的Base64字串",
     "_comment_content": "副文本編輯產出的html字串"
@@ -1198,7 +1316,7 @@ response:
 {}
 ```
 
-#### /battlePaper/editArticle
+#### /rules/editArticle
 request:
 ```json
 {
@@ -1215,7 +1333,7 @@ request:
     "*author_id":    0, 
     "*tag":          [], 
 
-    "_comment_type": "0=禁限卡表, 1=判例說明",
+    "_comment_type": "0=週報",
     "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
     "_comment_photo": "btoa()編碼的Base64字串",
     "_comment_content": "副文本編輯產出的html字串",
