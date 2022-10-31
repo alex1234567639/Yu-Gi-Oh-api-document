@@ -3,23 +3,23 @@
 
 | API                             | Action                              | Date       |
 |---------------------------------|-------------------------------------|------------|
-| /admin/login                    | 新增登入api                           | 2021/07/03 |
-| /admin/                         | 新增登出、重設密碼api                   | 2021/07/10 |
-| /seriesIntroduction/            | 新增系列介紹相關api                     | 2021/07/10 |
-| /usefulCardIntroduction/        | 新增泛用卡介紹相關api                   | 2021/07/15 |
-| /metaDeck/                      | 新增上位卡表相關api                     | 2021/07/15 |
-| /productInformation/            | 新增卡表資料相關api                     | 2021/07/15 |
-| /rules/                         | 新增規則相關api                        | 2021/07/15 |
-| /seriesStory/                   | 新增卡片故事相關api                     | 2021/07/15 |
-| /calendar/                      | 新增日曆表相關api                       | 2021/07/15 |
+| /admin/login                    | 新增登入api                             | 2021/07/03 |
+| /admin/                         | 新增登出、重設密碼api                        | 2021/07/10 |
+| /seriesIntroduction/            | 新增系列介紹相關api                         | 2021/07/10 |
+| /usefulCardIntroduction/        | 新增泛用卡介紹相關api                        | 2021/07/15 |
+| /metaDeck/                      | 新增上位卡表相關api                         | 2021/07/15 |
+| /productInformation/            | 新增卡表資料相關api                         | 2021/07/15 |
+| /rules/                         | 新增規則相關api                           | 2021/07/15 |
+| /seriesStory/                   | 新增卡片故事相關api                         | 2021/07/15 |
+| /calendar/                      | 新增日曆表相關api                          | 2021/07/15 |
 | /productionInformation_subtype/ | 新增productionInformation_subtype api | 2021/08/04 |
 | /tag/                           | 新增tag api                           | 2021/08/04 |
 | /admin/                         | 新增admin list/add/edit api           | 2021/08/04 |
 | /banner/                        | 新增banner api                        | 2021/08/14 |
-| /battlePaper/                   | 新增戰報 api                           | 2022/10/30 |
-| /cardPrice/                     | 新增卡價 api                           | 2022/10/30 |
-| /cards/                         | 新增cards相關api                       | 2022/10/30 |
-| /packType/                      | 新增卡包類別相關api                     | 2022/10/31 |
+| /battlePaper/                   | 新增戰報 api                            | 2022/10/30 |
+| /cardPrice/                     | 新增卡價 api                            | 2022/10/30 |
+| /cards/                         | 新增cards相關api                        | 2022/10/30 |
+| /packType/                      | 新增卡包類別相關api                         | 2022/10/31 |
 ***
 
 # admin-server
@@ -70,8 +70,8 @@
 | [/cards/add](#cardsadd)                                                                 | 新增卡片        |
 | [/cards/edit](#cardsedit)                                                               | 編輯卡片        |
 | [/packType/packTypeList](#packtypepacktypelist)                                         | 取得包裝分類      |
-| [/packType/add](#packtypeadd)                                                           | 新增包裝分類     |
-| [/packType/edit](#packtypeedit)                                                         | 編輯包裝分類     |
+| [/packType/add](#packtypeadd)                                                           | 新增包裝分類      |
+| [/packType/edit](#packtypeedit)                                                         | 編輯包裝分類      |
 
 
 ***
@@ -905,7 +905,7 @@ response:
 {}
 ```
 
-#### /calander/editArticle
+#### /calendar/editArticle
 request:
 ```json
 {
@@ -1305,7 +1305,7 @@ response:
 {}
 ```
 
-#### /rules/editArticle
+#### /battlePaper/editArticle
 request:
 ```json
 {
