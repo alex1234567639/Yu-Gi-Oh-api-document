@@ -26,11 +26,11 @@
 
 | Path                                                                      | Description       |
 |---------------------------------------------------------------------------|-------------------|
-| [/memebr/login](#memebrlogin)                                             | 登入               |
-| [/memebr/logout](#memebrlogout)                                           | 登出               |
-| [/memebr/resetPassword](#memebrresetpassword)                             | 重設密碼           |
-| [/memebr/add](#memebradd)                                                 | 會員註冊           |
-| [/memebr/edit](#memebredit)                                               | 編輯會員帳號        |
+| [/memebr/login](#memeberlogin)                                             | 登入               |
+| [/memebr/logout](#memeberlogout)                                           | 登出               |
+| [/memebr/resetPassword](#memeberresetpassword)                             | 重設密碼           |
+| [/memebr/add](#memeberadd)                                                 | 會員註冊           |
+| [/memebr/edit](#memeberedit)                                               | 編輯會員帳號        |
 | [/metaDeck/articleList](#metadeckarticlelist)                             | 取得上位卡表文章     |
 | [/seriesIntroduction/articleList](#seriesintroductionarticlelist)         | 取得系列介紹文章     |
 | [/usefulCardIntroduction/articleList](#usefulcardintroductionarticlelist) | 取得泛用卡介紹文章   |
