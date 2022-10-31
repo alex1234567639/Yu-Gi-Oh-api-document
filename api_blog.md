@@ -119,6 +119,7 @@ response:
 request:
 ```json
 {
+    "*token":  "string",
     "*id":     0,
     "*name":   "string",
     "*photo":  "string",
@@ -525,15 +526,15 @@ request:
 {
     "page":  0,
     "limit": 0,
-  "*filter": {
-    "number":    "string",
-    "title":          "string",
-    "last_edit_date": "string"
-  },
+    "*filter": {
+        "number":         "string",
+        "title":          "string",
+        "last_edit_date": "string"
+    },
 
-  "_comment_number": "卡號",
-  "_comment_title": "牌組名稱",
-  "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss"
+    "_comment_number": "卡號",
+    "_comment_title": "牌組名稱",
+    "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss"
 }
 ```
 
@@ -545,29 +546,29 @@ response:
     [
         {
             "id":             0,
-            "*author_name":  "string",
-            "*author_id":    0,
+            "*author_name":   "string",
+            "*author_id":     0,
             "title":          "string",  
             "create_date":    "string", 
             "last_edit_date": "string",
-            "main_deck":      [
+            "main_deck":[
               {
-                "number":    "string",
-                "name":      "string",
-                "type":      "string",
-                "star":      "string",
-                "attribute": "string",
-                "rarity":    "string",
-                "atk":       0,
-                "def":       0,
-                "packType":  "string",
-                "id":        0,
-                "effect":    "string",
-                "photo":     "string",
-                "price_info":     [
+                "number":     "string",
+                "name":       "string",
+                "type":       "string",
+                "star":       "string",
+                "attribute":  "string",
+                "rarity":     "string",
+                "atk":        0,
+                "def":        0,
+                "packType":   "string",
+                "id":         0,
+                "effect":     "string",
+                "photo":      "string",
+                "price_info":[
                   {
-                    "time": "string",
-                    "price": 0
+                    "time":   "string",
+                    "price":  0
                   }
                 ]
               }
@@ -586,15 +587,16 @@ response:
 request:
 ```json
 {
+    "*token":         "string",
     "title":          "string",  
     "create_date":    "string", 
     "last_edit_date": "string",
-    "*author_name":  "string",
-    "*author_id":    0,
-    "main_deck":      [
+    "*author_name":   "string",
+    "*author_id":     0,
+    "main_deck":[
       {
-        "number":    "string",
-        "rarity":    "string"
+        "number":     "string",
+        "rarity":     "string"
       }
     ],
     "extra_deck":     [],
@@ -611,15 +613,16 @@ response:
 request:
 ```json
 {
+    "*token":         "string",
     "id":             0,
     "title":          "string",  
     "last_edit_date": "string",
-    "*author_name":  "string",
-    "*author_id":    0,
-    "main_deck":      [
+    "*author_name":   "string",
+    "*author_id":     0,
+    "main_deck":[
       {
-        "number":    "string",
-        "rarity":    "string"
+        "number":     "string",
+        "rarity":     "string"
       }
     ],
     "extra_deck":     [],
@@ -636,6 +639,7 @@ response:
 request:
 ```json
 {
+    "*token":         "string",
     "id":             0
 }
 ```
