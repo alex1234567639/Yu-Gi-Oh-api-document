@@ -1,20 +1,21 @@
 ### API Blog
 
 
-| API                                 | Action          | Date       |
-|-------------------------------------|-----------------|------------|
-| /metaDeck/articleList               | 新增取得上位卡表文章api   | 2021/07/11 |
-| /seriesIntroduction/articleList     | 新增取得系列介紹文章api   | 2021/07/11 |
+| API                                 | Action                 | Date       |
+|-------------------------------------|------------------------|------------|
+| /metaDeck/articleList               | 新增取得上位卡表文章api    | 2021/07/11 |
+| /seriesIntroduction/articleList     | 新增取得系列介紹文章api    | 2021/07/11 |
 | /usefulCardIntroduction/articleList | 新增取得泛用卡介紹文章api  | 2021/07/11 |
-| /productInformation/articleList     | 新增取得卡表資料文章api   | 2021/07/14 |
-| /rules/articleList                  | 新增取得規則相關文章api   | 2021/07/14 |
-| /seriesStory/articleList            | 新增取得卡片故事文章api   | 2021/07/14 |
-| /calander/list                      | 新增日曆表api        | 2021/07/14 |
-| /banner/list                        | 新增banner列表api   | 2021/07/28 |
-| /banner/list                        | 修改banner列表api欄位 | 2021/07/28 |
-| /search                             | 新增search api    | 2021/08/08 |
-| /cards/                             | 新增cards相關api    | 2022/10/30 |
-| /deck/                              | 新增deck相關api     | 2022/10/30 |
+| /productInformation/articleList     | 新增取得卡表資料文章api    | 2021/07/14 |
+| /rules/articleList                  | 新增取得規則相關文章api    | 2021/07/14 |
+| /seriesStory/articleList            | 新增取得卡片故事文章api    | 2021/07/14 |
+| /calander/list                      | 新增日曆表api            | 2021/07/14 |
+| /banner/list                        | 新增banner列表api        | 2021/07/28 |
+| /banner/list                        | 修改banner列表api欄位     | 2021/07/28 |
+| /search                             | 新增search api           | 2021/08/08 |
+| /cards/                             | 新增cards相關api         | 2022/10/30 |
+| /deck/                              | 新增deck相關api          | 2022/10/30 |
+| /memebr/                            | 新增會員相關api           | 2022/10/31 |
 
 ***
 
@@ -23,24 +24,114 @@
 * method: POST
 
 
-| Path                                                                      | Description |
-|---------------------------------------------------------------------------|-------------|
-| [/metaDeck/articleList](#metadeckarticlelist)                             | 取得上位卡表文章    |
-| [/seriesIntroduction/articleList](#seriesintroductionarticlelist)         | 取得系列介紹文章    |
+| Path                                                                      | Description       |
+|---------------------------------------------------------------------------|-------------------|
+| [/member/login](#memberlogin)                                             | 登入               |
+| [/member/logout](#memberlogout)                                           | 登出               |
+| [/member/resetPassword](#memberresetpassword)                             | 重設密碼           |
+| [/member/add](#memberadd)                                                 | 會員註冊           |
+| [/member/edit](#memberedit)                                               | 編輯會員帳號        |
+| [/metaDeck/articleList](#metadeckarticlelist)                             | 取得上位卡表文章     |
+| [/seriesIntroduction/articleList](#seriesintroductionarticlelist)         | 取得系列介紹文章     |
 | [/usefulCardIntroduction/articleList](#usefulcardintroductionarticlelist) | 取得泛用卡介紹文章   |
-| [/productInformation/articleList](#productinformationarticlelist)         | 取得卡表資料文章    |
-| [/rules/articleList](#rulesarticlelist)                                   | 取得規則相關文章    |
-| [/seriesStory/articleList](#seriesstoryarticlelist)                       | 取得卡片故事文章    |
-| [/calendar/list](#calendarlist)                                           | 取得日曆表       |
-| [/banner/list](#bannerlist)                                               | 取得banner列表  |
-| [/search](#search)                                                        | Search文章    |
-| [/cards/cardsList](#cardscardslist)                                       | 取得卡片資料      |
-| [/deck/deckList](#deckdecklist)                                           | 取得卡表列表      |
-| [/deck/add](#deckadd)                                                     | 新增卡表        |
-| [/deck/edit](#deckedit)                                                   | 編輯卡表        |
-| [/deck/delete](#deckdelete)                                               | 刪除卡表        |
+| [/productInformation/articleList](#productinformationarticlelist)         | 取得卡表資料文章     |
+| [/rules/articleList](#rulesarticlelist)                                   | 取得規則相關文章     |
+| [/seriesStory/articleList](#seriesstoryarticlelist)                       | 取得卡片故事文章     |
+| [/calendar/list](#calendarlist)                                           | 取得日曆表          |
+| [/banner/list](#bannerlist)                                               | 取得banner列表      |
+| [/search](#search)                                                        | Search文章         |
+| [/cards/cardsList](#cardscardslist)                                       | 取得卡片資料        |
+| [/deck/deckList](#deckdecklist)                                           | 取得卡表列表        |
+| [/deck/add](#deckadd)                                                     | 新增卡表            |
+| [/deck/edit](#deckedit)                                                   | 編輯卡表            |
+| [/deck/delete](#deckdelete)                                               | 刪除卡表            |
  
 ***
+
+### Member
+#### /member/login
+request:
+```json
+{
+    "*account":  "string",
+    "*password": "string"
+}
+```
+
+response:
+```json
+{
+    "token": "string"
+}
+```
+
+#### /member/logout
+request:
+```json
+{
+    "*token": "string",
+    "*ip":    "string"
+}
+```
+
+response:
+```json
+{}
+```
+
+#### /member/resetPassword
+request:
+```json
+{
+    "*token":        "string",
+    "*old_password": "string",
+    "*new_password": "string"
+}
+```
+
+response:
+```json
+{}
+```
+
+#### /member/add
+request:
+```json
+{
+    "*name":        "string",
+    "*create_date": "string", 
+    "*account":     "string",
+    "*password":    "sting",
+
+    "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
+    "_comment_name": "length = 20",
+    "_comment_account": "length = 16",
+    "_comment_password": "max length = 16, min length = 8"
+}
+```
+
+response:
+```json
+{}
+```
+
+#### /member/edit
+request:
+```json
+{
+    "*token":  "string",
+    "*id":     0,
+    "*name":   "string",
+    "*photo":  "string",
+
+    "_comment_photo": "btoa()編碼的Base64字串"
+}
+```
+
+response:
+```json
+{}
+```
 
 ### Meta Deck
 #### /metaDeck/articleList
@@ -435,15 +526,15 @@ request:
 {
     "page":  0,
     "limit": 0,
-  "*filter": {
-    "number":    "string",
-    "title":          "string",
-    "last_edit_date": "string"
-  },
+    "*filter": {
+        "number":         "string",
+        "title":          "string",
+        "last_edit_date": "string"
+    },
 
-  "_comment_number": "卡號",
-  "_comment_title": "牌組名稱",
-  "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss"
+    "_comment_number": "卡號",
+    "_comment_title": "牌組名稱",
+    "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss"
 }
 ```
 
@@ -455,29 +546,29 @@ response:
     [
         {
             "id":             0,
-            "*author_name":  "string",
-            "*author_id":    0,
+            "*author_name":   "string",
+            "*author_id":     0,
             "title":          "string",  
             "create_date":    "string", 
             "last_edit_date": "string",
-            "main_deck":      [
+            "main_deck":[
               {
-                "number":    "string",
-                "name":      "string",
-                "type":      "string",
-                "star":      "string",
-                "attribute": "string",
-                "rarity":    "string",
-                "atk":       0,
-                "def":       0,
-                "packType":  "string",
-                "id":        0,
-                "effect":    "string",
-                "photo":     "string",
-                "price_info":     [
+                "number":     "string",
+                "name":       "string",
+                "type":       "string",
+                "star":       "string",
+                "attribute":  "string",
+                "rarity":     "string",
+                "atk":        0,
+                "def":        0,
+                "packType":   "string",
+                "id":         0,
+                "effect":     "string",
+                "photo":      "string",
+                "price_info":[
                   {
-                    "time": "string",
-                    "price": 0
+                    "time":   "string",
+                    "price":  0
                   }
                 ]
               }
@@ -496,15 +587,16 @@ response:
 request:
 ```json
 {
+    "*token":         "string",
     "title":          "string",  
     "create_date":    "string", 
     "last_edit_date": "string",
-    "*author_name":  "string",
-    "*author_id":    0,
-    "main_deck":      [
+    "*author_name":   "string",
+    "*author_id":     0,
+    "main_deck":[
       {
-        "number":    "string",
-        "rarity":    "string"
+        "number":     "string",
+        "rarity":     "string"
       }
     ],
     "extra_deck":     [],
@@ -521,15 +613,16 @@ response:
 request:
 ```json
 {
+    "*token":         "string",
     "id":             0,
     "title":          "string",  
     "last_edit_date": "string",
-    "*author_name":  "string",
-    "*author_id":    0,
-    "main_deck":      [
+    "*author_name":   "string",
+    "*author_id":     0,
+    "main_deck":[
       {
-        "number":    "string",
-        "rarity":    "string"
+        "number":     "string",
+        "rarity":     "string"
       }
     ],
     "extra_deck":     [],
@@ -546,6 +639,7 @@ response:
 request:
 ```json
 {
+    "*token":         "string",
     "id":             0
 }
 ```

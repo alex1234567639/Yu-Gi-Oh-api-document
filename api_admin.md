@@ -3,22 +3,23 @@
 
 | API                             | Action                              | Date       |
 |---------------------------------|-------------------------------------|------------|
-| /admin/login                    | 新增登入api                             | 2021/07/03 |
-| /admin/                         | 新增登出、重設密碼api                        | 2021/07/10 |
-| /seriesIntroduction/            | 新增系列介紹相關api                         | 2021/07/10 |
-| /usefulCardIntroduction/        | 新增泛用卡介紹相關api                        | 2021/07/15 |
-| /metaDeck/                      | 新增上位卡表相關api                         | 2021/07/15 |
-| /productInformation/            | 新增卡表資料相關api                         | 2021/07/15 |
-| /rules/                         | 新增規則相關api                           | 2021/07/15 |
-| /seriesStory/                   | 新增卡片故事相關api                         | 2021/07/15 |
-| /calendar/                      | 新增日曆表相關api                          | 2021/07/15 |
+| /admin/login                    | 新增登入api                           | 2021/07/03 |
+| /admin/                         | 新增登出、重設密碼api                   | 2021/07/10 |
+| /seriesIntroduction/            | 新增系列介紹相關api                     | 2021/07/10 |
+| /usefulCardIntroduction/        | 新增泛用卡介紹相關api                   | 2021/07/15 |
+| /metaDeck/                      | 新增上位卡表相關api                     | 2021/07/15 |
+| /productInformation/            | 新增卡表資料相關api                     | 2021/07/15 |
+| /rules/                         | 新增規則相關api                        | 2021/07/15 |
+| /seriesStory/                   | 新增卡片故事相關api                     | 2021/07/15 |
+| /calendar/                      | 新增日曆表相關api                       | 2021/07/15 |
 | /productionInformation_subtype/ | 新增productionInformation_subtype api | 2021/08/04 |
 | /tag/                           | 新增tag api                           | 2021/08/04 |
 | /admin/                         | 新增admin list/add/edit api           | 2021/08/04 |
 | /banner/                        | 新增banner api                        | 2021/08/14 |
-| /battlePaper/                   | 新增戰報 api                            | 2022/10/30 |
-| /cardPrice/                     | 新增卡價 api                            | 2022/10/30 |
-| /cards/                         | 新增cards相關api                        | 2022/10/30 |
+| /battlePaper/                   | 新增戰報 api                           | 2022/10/30 |
+| /cardPrice/                     | 新增卡價 api                           | 2022/10/30 |
+| /cards/                         | 新增cards相關api                       | 2022/10/30 |
+| /packType/                      | 新增卡包類別相關api                     | 2022/10/31 |
 ***
 
 # admin-server
@@ -68,6 +69,9 @@
 | [/cards/cardsList](#cardscardslist)                                                     | 取得卡片資料      |
 | [/cards/add](#cardsadd)                                                                 | 新增卡片        |
 | [/cards/edit](#cardsedit)                                                               | 編輯卡片        |
+| [/packType/packTypeList](#packtypepacktypelist)                                         | 取得包裝分類      |
+| [/packType/add](#packtypeadd)                                                           | 新增包裝分類     |
+| [/packType/edit](#packtypeedit)                                                         | 編輯包裝分類     |
 
 
 ***
@@ -126,9 +130,9 @@ request:
     "page":   0,
     "limit":  0,
     "*filter": {
-        "type":    0,
-        "status":  0,
-        "name" :   "string",
+        "type":     0,
+        "status":   0,
+        "name" :    "string",
         "account" : "string"
     },
 
@@ -167,19 +171,14 @@ response:
 request:
 ```json
 {
-    "*id":          0,
     "*type":        0,
     "*name":        "string",
     "*create_date": "string", 
-    "*photo":       "string",
-    "*status":      0,
-    "account":       "string",
-    "password":     "sting",
+    "*account":     "string",
+    "*password":    "sting",
 
-    "_comment_type": "0=主題牌組, 1=外掛系列",
+    "_comment_type": "0=管理者, 1=前後台用戶, 2=前台用戶",
     "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
-    "_comment_photo": "btoa()編碼的Base64字串",
-    "_comment_content": "副文本編輯產出的html字串",
     "_comment_name": "length = 20",
     "_comment_account": "length = 16",
     "_comment_password": "max length = 16, min length = 8"
@@ -195,17 +194,16 @@ response:
 request:
 ```json
 {
-    "*id":          0,
-    "*type":        0,
-    "*name":        "string",
-    "*create_date": "string", 
-    "*photo":       "string",
-    "*status":      0,
+    "*token":  "string",
+    "*id":     0,
+    "*type":   0,
+    "*name":   "string",
+    "*photo":  "string",
+    "*status": 0,
 
-    "_comment_type": "0=主題牌組, 1=外掛系列",
-    "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
+    "_comment_type": "0=管理者, 1=前後台用戶, 2=前台用戶",
     "_comment_photo": "btoa()編碼的Base64字串",
-    "_comment_content": "副文本編輯產出的html字串"
+    "_comment_status": "0=正常, 1=停用中"
 }
 ```
 
@@ -849,7 +847,6 @@ response:
 {}
 ```
 
-
 ### Calendar
 #### /calendar/articleList
 request:
@@ -886,12 +883,7 @@ response:
 }
 ```
 
-<<<<<<< HEAD
 #### /calendar/addArticle
-
-=======
-#### /calander/addArticle
->>>>>>> de5c6425c673b074dcd6b1649862c1951cb5f043
 request:
 ```json
 {
@@ -913,12 +905,7 @@ response:
 {}
 ```
 
-<<<<<<< HEAD
-#### /calendar/editArticle
-
-=======
 #### /calander/editArticle
->>>>>>> de5c6425c673b074dcd6b1649862c1951cb5f043
 request:
 ```json
 {
@@ -1193,6 +1180,7 @@ response:
 request:
 ```json
 {
+    "*token":    "string",
     "number":    "string",
     "name":      "string",
     "type":      "string",
@@ -1217,6 +1205,7 @@ response:
 request:
 ```json
 {
+    "*token":    "string",
     "number":    "string",
     "name":      "string",
     "type":      "string",
@@ -1244,9 +1233,9 @@ response:
 request:
 ```json
 {
-    "*token": "string",
-    "page":   0,
-    "limit":  0,
+    "*token":        "string",
+    "page":           0,
+    "limit":          0,
     "*filter": {
         "type":       0,
         "status":     0,
@@ -1339,6 +1328,70 @@ request:
     "_comment_content": "副文本編輯產出的html字串",
     "_comment_status": "0=上架中, 1=下架中",
     "_comment_to_top": "true=置頂, false=非置頂"
+}
+```
+
+response:
+```json
+{}
+```
+
+### Pack Type
+#### /packType/packTypeList
+request:
+```json
+{
+    "*token": "string",
+    "page":   0,
+    "limit":  0,
+    "*filter": {
+        "status":  0
+    },
+
+    "_comment_status": "0=上架中, 1=下架中"
+}
+```
+
+response:
+```json
+{
+  "*total": 0,
+  "*list":
+  [
+    {
+        "packType":  "string",
+        "name":      "string",
+        "status":    0
+    }
+  ],
+
+  "_comment_packType": "包裝分類id",
+  "_comment_status": "0=上架中, 1=下架中"
+}
+```
+
+#### /packType/add
+request:
+```json
+{
+    "*token":    "string",
+    "*packType":  "string",
+    "*name":      "string"
+}
+```
+
+response:
+```json
+{}
+```
+
+#### /packType/edit
+request:
+```json
+{
+    "*token":    "string",
+    "*packType":  "string",
+    "*name":      "string"
 }
 ```
 
