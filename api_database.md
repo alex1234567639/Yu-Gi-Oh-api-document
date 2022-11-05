@@ -15,9 +15,137 @@
 }
 ```
 
-### 文章 - 戰報(battle_paper)
+### 文章 - 系列介紹(series_introduction)
+
+```json
+{
+  "id": 0,
+  "type": 0,
+  "title": "string",
+  "publish_date": "string", 
+  "last_edit_date": "string",
+  "photo": "string",
+  "content": "string", 
+  "status": 0,
+  "to_top": true,
+  "author_name": "string", 
+  "author_id": 0, 
+  "tag": []
+}
+```
 
 ### 文章 - 泛用卡介紹(useful_card_introduction)
+
+```json
+{
+  "id": 0,
+  "type": 0,
+  "title": "string",
+  "publish_date": "string", 
+  "last_edit_date": "string",
+  "photo": "string",
+  "content": "string", 
+  "status": 0,
+  "to_top": true,
+  "author_name": "string", 
+  "author_id": 0, 
+  "tag": []
+}
+```
+
+### 文章 - 上位卡表(meta_deck)
+
+```json
+{
+  "id": 0,
+  "title": "string",
+  "publish_date": "string", 
+  "last_edit_date": "string",
+  "photo": "string",
+  "content": "string", 
+  "status": 0,
+  "to_top": true,
+  "author_name": "string", 
+  "author_id": 0, 
+  "tag": []
+}
+```
+
+### 文章 - 卡表資料(product_information))
+
+```json
+{
+  "id": 0,
+  "type": 0,
+  "productionInformation_subtype": 0,
+  "title": "string",
+  "publish_date": "string", 
+  "last_edit_date": "string",
+  "photo": "string",
+  "content": "string", 
+  "status": 0,
+  "to_top": true,
+  "author_name": "string", 
+  "author_id": 0, 
+  "tag": []
+}
+```
+
+### 文章 - 規則相關(rules)
+
+```json
+{
+  "id": 0,
+  "type": 0,
+  "title": "string",
+  "publish_date": "string", 
+  "last_edit_date": "string",
+  "photo": "string",
+  "content": "string", 
+  "status": 0,
+  "to_top": true,
+  "author_name": "string", 
+  "author_id": 0, 
+  "tag": []
+}
+```
+
+### 文章 - 卡片故事(series_story)
+
+```json
+{
+  "id": 0,
+  "title": "string",
+  "publish_date": "string", 
+  "last_edit_date": "string",
+  "photo": "string",
+  "content": "string", 
+  "status": 0,
+  "to_top": true,
+  "author_name": "string", 
+  "author_id": 0, 
+  "tag": []
+}
+```
+
+### 文章 - 戰報(battle_paper)
+
+```json
+{
+  "id": 0,
+  "type": 0,
+  "title": "string",
+  "publish_date": "string", 
+  "last_edit_date": "string",
+  "photo": "string",
+  "content": "string", 
+  "status": 0,
+  "to_top": true,
+  "author_name": "string", 
+  "author_id": 0, 
+  "tag": []
+}
+```
 
 ### 卡片(cards)
 
