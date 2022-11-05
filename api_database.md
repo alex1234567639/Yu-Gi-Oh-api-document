@@ -11,7 +11,26 @@
   "photo": "string",
   "status": 0,
   "account": "string",
-  "password": "sting"
+  "password": "sting",
+  "frontend_token": "string",
+  "backend_token": "string",
+  "deck_id": [],
+  "series_introduction_id": [],
+  "useful_card_introduction_id": [],
+  "meta_deck_id": [],
+  "product_information_id": [],
+  "rules_id": [],
+  "series_story_id": [],
+  "battle_paper_id": [],
+
+  "_comment_id": "自動生成的數字",
+  "_comment_type": "0=管理者, 1=前後台用戶, 2=前台用戶",
+  "_comment_status": "0=正常, 1=停用中",
+  "_comment_name": "length = 20",
+  "_comment_account": "max length = 16, min length = 8",
+  "_comment_password": "max length = 16, min length = 8",
+  "_comment_frontend_token": "前台token",
+  "_comment_backend_token": "後台token"
 }
 ```
 
@@ -22,15 +41,23 @@
   "id": 0,
   "type": 0,
   "title": "string",
-  "publish_date": "string", 
+  "publish_date": "string",
   "last_edit_date": "string",
   "photo": "string",
-  "content": "string", 
+  "content": "string",
   "status": 0,
   "to_top": true,
-  "author_name": "string", 
-  "author_id": 0, 
-  "tag": []
+  "admin_id": 0,
+  "tag": [],
+
+  "_comment_id": "自動生成的數字",
+  "_comment_type": "0=主題牌組, 1=外掛系列",
+  "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
+  "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss",
+  "_comment_photo": "btoa()編碼的Base64字串",
+  "_comment_content": "副文本編輯產出的html字串",
+  "_comment_status": "0=上架中, 1=下架中",
+  "_comment_to_top": "true=置頂, false=非置頂"
 }
 ```
 
@@ -41,15 +68,23 @@
   "id": 0,
   "type": 0,
   "title": "string",
-  "publish_date": "string", 
+  "publish_date": "string",
   "last_edit_date": "string",
   "photo": "string",
-  "content": "string", 
+  "content": "string",
   "status": 0,
   "to_top": true,
-  "author_name": "string", 
-  "author_id": 0, 
-  "tag": []
+  "admin_id": 0,
+  "tag": [],
+
+  "_comment_id": "自動生成的數字",
+  "_comment_type": "0=單卡介紹, 1=戰術分析",
+  "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
+  "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss",
+  "_comment_photo": "btoa()編碼的Base64字串",
+  "_comment_content": "副文本編輯產出的html字串",
+  "_comment_status": "0=上架中, 1=下架中",
+  "_comment_to_top": "true=置頂, false=非置頂"
 }
 ```
 
@@ -59,35 +94,51 @@
 {
   "id": 0,
   "title": "string",
-  "publish_date": "string", 
+  "publish_date": "string",
   "last_edit_date": "string",
   "photo": "string",
-  "content": "string", 
+  "content": "string",
   "status": 0,
   "to_top": true,
-  "author_name": "string", 
-  "author_id": 0, 
-  "tag": []
+  "admin_id": 0,
+  "tag": [],
+
+  "_comment_id": "自動生成的數字",
+  "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
+  "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss",
+  "_comment_photo": "btoa()編碼的Base64字串",
+  "_comment_content": "副文本編輯產出的html字串",
+  "_comment_status": "0=上架中, 1=下架中",
+  "_comment_to_top": "true=置頂, false=非置頂"
 }
 ```
 
-### 文章 - 卡表資料(product_information))
+### 文章 - 卡表資料(product_information)
 
 ```json
 {
   "id": 0,
   "type": 0,
-  "productionInformation_subtype": 0,
+  "product_information_type_id": 0,
   "title": "string",
-  "publish_date": "string", 
+  "publish_date": "string",
   "last_edit_date": "string",
   "photo": "string",
-  "content": "string", 
+  "content": "string",
   "status": 0,
   "to_top": true,
-  "author_name": "string", 
-  "author_id": 0, 
-  "tag": []
+  "admin_id": 0,
+  "tag": [],
+
+  "_comment_id": "自動生成的數字",
+  "_comment_type": "0=RD, 1=補充包, 2=預組套牌, 3=禮盒, 4=活動商品",
+  "_comment_product_information_type_id": "product_information_type id",
+  "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
+  "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss",
+  "_comment_photo": "btoa()編碼的Base64字串",
+  "_comment_content": "副文本編輯產出的html字串",
+  "_comment_status": "0=上架中, 1=下架中",
+  "_comment_to_top": "true=置頂, false=非置頂"
 }
 ```
 
@@ -98,15 +149,23 @@
   "id": 0,
   "type": 0,
   "title": "string",
-  "publish_date": "string", 
+  "publish_date": "string",
   "last_edit_date": "string",
   "photo": "string",
-  "content": "string", 
+  "content": "string",
   "status": 0,
   "to_top": true,
-  "author_name": "string", 
-  "author_id": 0, 
-  "tag": []
+  "admin_id": 0,
+  "tag": [],
+
+  "_comment_id": "自動生成的數字",
+  "_comment_type": "0=禁限卡表, 1=判例說明",
+  "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
+  "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss",
+  "_comment_photo": "btoa()編碼的Base64字串",
+  "_comment_content": "副文本編輯產出的html字串",
+  "_comment_status": "0=上架中, 1=下架中",
+  "_comment_to_top": "true=置頂, false=非置頂"
 }
 ```
 
@@ -116,15 +175,22 @@
 {
   "id": 0,
   "title": "string",
-  "publish_date": "string", 
+  "publish_date": "string",
   "last_edit_date": "string",
   "photo": "string",
-  "content": "string", 
+  "content": "string",
   "status": 0,
   "to_top": true,
-  "author_name": "string", 
-  "author_id": 0, 
-  "tag": []
+  "admin_id": 0,
+  "tag": [],
+
+  "_comment_id": "自動生成的數字",
+  "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
+  "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss",
+  "_comment_photo": "btoa()編碼的Base64字串",
+  "_comment_content": "副文本編輯產出的html字串",
+  "_comment_status": "0=上架中, 1=下架中",
+  "_comment_to_top": "true=置頂, false=非置頂"
 }
 ```
 
@@ -135,15 +201,23 @@
   "id": 0,
   "type": 0,
   "title": "string",
-  "publish_date": "string", 
+  "publish_date": "string",
   "last_edit_date": "string",
   "photo": "string",
-  "content": "string", 
+  "content": "string",
   "status": 0,
   "to_top": true,
-  "author_name": "string", 
-  "author_id": 0, 
-  "tag": []
+  "admin_id": 0,
+  "tag": [],
+
+  "_comment_id": "自動生成的數字",
+  "_comment_type": "0=週報",
+  "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
+  "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss",
+  "_comment_photo": "btoa()編碼的Base64字串",
+  "_comment_content": "副文本編輯產出的html字串",
+  "_comment_status": "0=上架中, 1=下架中",
+  "_comment_to_top": "true=置頂, false=非置頂"
 }
 ```
 
@@ -159,7 +233,7 @@
   "rarity": "string",
   "atk": 0,
   "def": 0,
-  "packType": "string",
+  "product_information_type_id": 0,
   "id": 0,
   "effect": "string",
   "photo": "string",
@@ -168,7 +242,17 @@
       "time": "string",
       "price": 0
     }
-  ]
+  ],
+
+  "_comment_number": "卡號",
+  "_comment_name": "卡名",
+  "_comment_type": "種類",
+  "_comment_star": "星數",
+  "_comment_attribute": "屬性",
+  "_comment_rarity": "稀有度、版本",
+  "_comment_product_information_type_id": "包裝分類id",
+  "_comment_id": "卡片密碼",
+  "_comment_price_info": "卡價"
 }
 ```
 
@@ -177,35 +261,21 @@
 ```json
 {
   "id": 0,
-  "*author_name": "string",
-  "*author_id": 0,
+  "admin_id": 0,
   "title": "string",
   "create_date": "string",
   "last_edit_date": "string",
   "main_deck": [
     {
-      "number": "string",
-      "name": "string",
-      "type": "string",
-      "star": "string",
-      "attribute": "string",
-      "rarity": "string",
-      "atk": 0,
-      "def": 0,
-      "packType": "string",
-      "id": 0,
-      "effect": "string",
-      "photo": "string",
-      "price_info": [
-        {
-          "time": "string",
-          "price": 0
-        }
-      ]
+      "card_id": 0
     }
   ],
   "extra_deck": [],
-  "side_deck": []
+  "side_deck": [],
+
+  "_comment_card_id": "card database id",
+  "_comment_create_date": "格式為YYYY-MM-DD HH:mm:ss",
+  "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss"
 }
 ```
 
@@ -217,17 +287,10 @@
   "title": "string",
   "date": "string",
   "url": "string",
-  "type": 0
-}
-```
+  "type": 0,
 
-### 卡包(packtype)
-
-```json
-{
-  "packType": "string",
-  "name": "string",
-  "status": 0
+  "_comment_date": "格式為YYYY-MM-DD HH:mm:ss",
+  "_comment_type": "0=賽事, 1=發售日期, 2=其他相關活動"
 }
 ```
 
@@ -245,13 +308,22 @@
 }
 ```
 
-### 產品類別表(product_information_subtype)
+### 產品類別表(product_information_type)
 
 ```json
 {
   "id": 0,
-  "productionInformation_subtype": "string",
-  "maintype": 0
+  "packType": "string",
+  "subtype": "string",
+  "maintype": 0,
+  "status": 0,
+  "name": "string",
+
+  "_comment_packType": "產品代號",
+  "_comment_maintype": "產品分類 0=補充包 1=Rush Duel 2=活動贈品 3=預組套牌",
+  "_comment_subtype": "產品系列名稱(PP大會包...)",
+  "_comment_status": "0=上架中, 1=下架中",
+  "_comment_name": "產品名稱"
 }
 ```
 
