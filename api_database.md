@@ -11,7 +11,7 @@
   "photo": "string",
   "status": 0,
   "account": "string",
-  "password": "sting",
+  "password": "string",
   "frontend_token": "string",
   "backend_token": "string",
   "deck_id": [],
@@ -119,7 +119,7 @@
 {
   "id": 0,
   "type": 0,
-  "product_information_type_id": 0,
+  "product_information_type_id": "string",
   "title": "string",
   "publish_date": "string",
   "last_edit_date": "string",
@@ -225,16 +225,16 @@
 
 ```json
 {
-  "number": "string",
+  "id": "string",
   "name": "string",
   "type": "string",
   "star": "string",
   "attribute": "string",
-  "rarity": "string",
-  "atk": 0,
-  "def": 0,
-  "product_information_type_id": 0,
-  "id": 0,
+  "rarity": "array",
+  "atk": "string",
+  "def": "string",
+  "product_information_type_id": "string",
+  "number": 0,
   "effect": "string",
   "photo": "string",
   "price_info": [
@@ -244,14 +244,14 @@
     }
   ],
 
-  "_comment_number": "卡號",
+  "_comment_id": "卡號",
   "_comment_name": "卡名",
   "_comment_type": "種類",
   "_comment_star": "星數",
   "_comment_attribute": "屬性",
   "_comment_rarity": "稀有度、版本",
   "_comment_product_information_type_id": "包裝分類id",
-  "_comment_id": "卡片密碼",
+  "_comment_number": "卡片密碼",
   "_comment_price_info": "卡價"
 }
 ```
@@ -267,13 +267,13 @@
   "last_edit_date": "string",
   "main_deck": [
     {
-      "card_id": 0
+      "card_number": 0
     }
   ],
   "extra_deck": [],
   "side_deck": [],
 
-  "_comment_card_id": "card database id",
+  "_comment_card_number": "卡片密碼",
   "_comment_create_date": "格式為YYYY-MM-DD HH:mm:ss",
   "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss"
 }
