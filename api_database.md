@@ -335,3 +335,21 @@
   "tag": "string"
 }
 ```
+
+### 權限(permit)
+
+```json
+{
+  "id": 0,
+  "name": "string",
+  "permission": [
+    "string"
+  ],
+  "type": 0,
+
+  "_comment_name": "權限名稱 (管理者, 前後台用戶, 前台用戶)",
+  "_comment_permission": "包含的後台路徑",
+  "_comment_type": "admin type 0=管理者, 1=前後台用戶, 2=前台用戶"
+}
+
+```
