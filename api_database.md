@@ -230,7 +230,7 @@
   "type": "string",
   "star": "string",
   "attribute": "string",
-  "rarity": "array",
+  "rarity": [],
   "atk": "string",
   "def": "string",
   "product_information_type_id": "string",
@@ -240,7 +240,10 @@
   "price_info": [
     {
       "time": "string",
-      "price": 0
+      "price_lowest": 0,
+      "price_avg": 0,
+      "price_yuyu": 0,
+      "rarity": "string"
     }
   ],
 

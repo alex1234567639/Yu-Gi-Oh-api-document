@@ -551,7 +551,7 @@ response:
       "type": "string",
       "star": "string",
       "attribute": "string",
-      "rarity": "string",
+      "rarity": [],
       "atk": 0,
       "def": 0,
       "packType": "string",
@@ -561,7 +561,10 @@ response:
       "price_info": [
         {
           "time": "string",
-          "price": 0
+          "price_lowest": 0,
+          "price_avg": 0,
+          "price_yuyu": 0,
+          "rarity": "string"
         }
       ]
     }
@@ -624,7 +627,10 @@ response:
           "price_info": [
             {
               "time": "string",
-              "price": 0
+              "price_lowest": 0,
+              "price_avg": 0,
+              "price_yuyu": 0,
+              "rarity": "string"
             }
           ]
         }

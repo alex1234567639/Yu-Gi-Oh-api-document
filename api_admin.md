@@ -1223,7 +1223,7 @@ response:
       "type": "string",
       "star": "string",
       "attribute": "string",
-      "rarity": "string",
+      "rarity": [],
       "atk": 0,
       "def": 0,
       "packType": "string",
@@ -1233,7 +1233,10 @@ response:
       "price_info": [
         {
           "time": "string",
-          "price": 0
+          "price_lowest": 0,
+          "price_avg": 0,
+          "price_yuyu": 0,
+          "rarity": "string"
         }
       ]
     }
@@ -1256,13 +1259,14 @@ request:
   "type": "string",
   "star": "string",
   "attribute": "string",
-  "rarity": "string",
+  "rarity": [],
   "atk": 0,
   "def": 0,
   "packType": "string",
   "id": 0,
   "effect": "string",
-  "photo": "string"
+  "photo": "string",
+  "price_info":[]
 }
 ```
 
@@ -1284,7 +1288,7 @@ request:
   "type": "string",
   "star": "string",
   "attribute": "string",
-  "rarity": "string",
+  "rarity": [],
   "atk": 0,
   "def": 0,
   "packType": "string",
@@ -1292,7 +1296,7 @@ request:
   "effect": "string",
   "photo": "string",
   "time": "string",
-  "price": 0
+  "price_info":[]
 }
 ```
 
