@@ -12,8 +12,6 @@
   "status": 0,
   "account": "string",
   "password": "string",
-  "frontend_token": "string",
-  "backend_token": "string",
   "deck_id": [],
   "series_introduction_id": [],
   "useful_card_introduction_id": [],
@@ -29,8 +27,6 @@
   "_comment_name": "length = 20",
   "_comment_account": "max length = 16, min length = 8",
   "_comment_password": "max length = 16, min length = 8",
-  "_comment_frontend_token": "前台token",
-  "_comment_backend_token": "後台token"
 }
 ```
 
@@ -290,6 +286,7 @@
   "title": "string",
   "date": "string",
   "url": "string",
+  "*content": "string",
   "type": 0,
 
   "_comment_date": "格式為YYYY-MM-DD HH:mm:ss",
@@ -297,7 +294,7 @@
 }
 ```
 
-### 橫幅(banner)
+### 首頁輪播(banner)
 
 ```json
 {
@@ -343,7 +340,6 @@
 
 ```json
 {
-  "id": 0,
   "name": "string",
   "permission": [
     "string"
@@ -353,6 +349,30 @@
   "_comment_name": "權限名稱 (管理者, 前後台用戶, 前台用戶)",
   "_comment_permission": "包含的後台路徑",
   "_comment_type": "admin type 0=管理者, 1=前後台用戶, 2=前台用戶"
+}
+
+```
+
+### 前台Token(frontend_token)
+
+```json
+{
+  "token": 0,
+  "date": "string",
+
+  "_comment_date": "格式為YYYY-MM-DD HH:mm:ss",
+}
+
+```
+
+### 後台Token(backend_token)
+
+```json
+{
+  "token": 0,
+  "date": "string",
+
+  "_comment_date": "格式為YYYY-MM-DD HH:mm:ss",
 }
 
 ```

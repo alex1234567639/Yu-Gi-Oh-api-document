@@ -19,6 +19,7 @@
 | /cardPrice/                 | 新增卡價 api                       | 2022/10/30 |
 | /cards/                     | 新增 cards 相關 api                | 2022/10/30 |
 | /packType/                  | 新增卡包類別相關 api               | 2022/10/31 |
+| /permission/                | 新增權限相關 api                   | 2023/03/17 |
 
 ---
 
@@ -47,30 +48,34 @@
 | [/productInformation/articleList](#productinformationarticlelist)         | 取得卡表資料文章   |
 | [/productInformation/addArticle](#productinformationaddarticle)           | 新增卡表資料文章   |
 | [/productInformation/editArticle](#productinformationeditarticle)         | 編輯卡表資料文章   |
+| [/productionInformationType/list](#productioninformationtypelist)         | 取得卡表資料subType|
 | [/rules/articleList](#rulesarticlelist)                                   | 取得規則相關文章   |
 | [/rules/addArticle](#rulesaddarticle)                                     | 新增規則相關文章   |
 | [/rules/editArticle](#ruleseditarticle)                                   | 編輯規則相關文章   |
 | [/seriesStory/articleList](#seriesstoryarticlelist)                       | 取得卡片故事文章   |
 | [/seriesStory/addArticle](#seriesstoryaddarticle)                         | 新增卡片故事文章   |
 | [/seriesStory/editArticle](#seriesstoryeditarticle)                       | 編輯卡片故事文章   |
-| [/calendar/articleList](#calendararticlelist)                             | 取得日曆表         |
-| [/calendar/addArticle](#calendaraddarticle)                               | 新增日曆表         |
-| [/calendar/editArticle](#calendareditarticle)                             | 編輯日曆表         |
-| [/productionInformationType/list](#productioninformationtypelist)         | 取得 subtype       |
-| [/tag/articleList](#tagarticlelist)                                       | tag                |
-| [/tag/editArticle](#tageditarticle)                                       | tag                |
-| [/banner/articleList](#bannerarticlelist)                                 | 取得 subtype       |
-| [/banner/addArticle](#banneraddarticle)                                   | 新增 subtype       |
-| [/banner/editArticle](#bannereditarticle)                                 | 編輯 subtype       |
+| [/calendar/list](#calendarlist)                                           | 取得日曆表         |
+| [/calendar/add](#calendaradd)                                             | 新增日曆          |
+| [/calendar/edit](#calendaredit)                                           | 編輯日曆表         |
+| [/tag/list](#taglist)                                                     | 取得 tag          |
+| [/tag/add](#tagadd)                                                       | 新增 tag         |
+| [/tag/edit](#tagedit)                                                     | 編輯 tag         |
+| [/banner/list](#bannerlist)                                               | 取得 banner       |
+| [/banner/add](#banneradd)                                                 | 新增 banner       |
+| [/banner/edit](#banneredit)                                               | 編輯 banner       |
 | [/battlePaper/articleList](#battlepaperarticlelist)                       | 取得戰報相關文章   |
 | [/battlePaper/addArticle](#battlepaperaddarticle)                         | 新增戰報相關文章   |
 | [/battlePaper/editArticle](#battlepapereditarticle)                       | 編輯戰報相關文章   |
-| [/cards/cardsList](#cardscardslist)                                       | 取得卡片資料       |
+| [/cards/list](#cardslist)                                                 | 取得卡片資料       |
 | [/cards/add](#cardsadd)                                                   | 新增卡片           |
 | [/cards/edit](#cardsedit)                                                 | 編輯卡片           |
-| [/packType/packTypeList](#packtypepacktypelist)                           | 取得包裝分類       |
+| [/packType/list](#packtypelist)                                           | 取得包裝分類       |
 | [/packType/add](#packtypeadd)                                             | 新增包裝分類       |
 | [/packType/edit](#packtypeedit)                                           | 編輯包裝分類       |
+| [/permission/list](#permissionlist)                                         | 取得權限分類       |
+| [/permission/add](#permissionadd)                                           | 新增權限分類       |
+| [/permission/edit](#permissionedit)                                         | 編輯權限分類       |
 
 ---
 
@@ -101,8 +106,7 @@ request:
 
 ```json
 {
-  "*token": "string",
-  "*ip": "string"
+  "*token": "string"
 }
 ```
 
@@ -155,6 +159,7 @@ response:
 
 ```json
 {
+  "total": 0,
   "*list": [
     {
       "id": 0,
@@ -255,6 +260,7 @@ response:
 
 ```json
 {
+  "total": 0,
   "*list": [
     {
       "id": 0,
@@ -373,6 +379,7 @@ response:
 
 ```json
 {
+  "total": 0,
   "*list": [
     {
       "id": 0,
@@ -487,6 +494,7 @@ response:
 
 ```json
 {
+  "total": 0,
   "*list": [
     {
       "id": 0,
@@ -588,8 +596,8 @@ request:
     "begin_date": "string",
     "end_date": "string",
     "packType": "string",
-    "subtype": "string",
-    "maintype": 0
+    "subType": "string",
+    "mainType": 0
   }
 }
 ```
@@ -598,12 +606,13 @@ response:
 
 ```json
 {
+  "total": 0,
   "*list": [
     {
       "id": 0,
       "packType": "string",
-      "subtype": "string",
-      "maintype": 0,
+      "subType": "string",
+      "mainType": 0,
       "name": "string",
       "title": "string",
       "publish_date": "string",
@@ -618,7 +627,6 @@ response:
     }
   ],
   "_comment_id": "自動生成的數字",
-  "_comment_type": "0=RD, 1=補充包, 2=預組套牌, 3=禮盒, 4=活動商品",
   "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
   "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss",
   "_comment_photo": "btoa()編碼的Base64字串",
@@ -626,8 +634,8 @@ response:
   "_comment_status": "0=上架中, 1=下架中",
   "_comment_to_top": "true=置頂, false=非置頂",
   "_comment_packType": "產品代號",
-  "_comment_maintype": "產品分類 0=補充包 1=Rush Duel 2=活動贈品 3=預組套牌",
-  "_comment_subtype": "產品系列名稱(PP大會包...)",
+  "_comment_mainType": "產品分類 0=補充包 1=Rush Duel 2=活動贈品 3=預組套牌",
+  "_comment_subType": "產品系列名稱(PP大會包...)",
   "_comment_name": "產品名稱"
 }
 ```
@@ -695,6 +703,35 @@ response:
 {}
 ```
 
+### productionInformationType
+
+#### /productionInformationType/list
+
+request:
+
+```json
+{
+  "*token": "string"
+}
+```
+
+response:
+
+```json
+{
+  "*list": [
+    {
+      "mainType": 0,
+      "subtypeList": [
+        {
+          "productionInformation_subType": "string"
+        }
+      ]
+    }
+  ]
+}
+```
+
 ### Rules
 
 #### /rules/articleList
@@ -721,6 +758,7 @@ response:
 
 ```json
 {
+  "total": 0,
   "*list": [
     {
       "id": 0,
@@ -835,6 +873,7 @@ response:
 
 ```json
 {
+  "total": 0,
   "*list": [
     {
       "id": 0,
@@ -922,17 +961,13 @@ response:
 
 ### Calendar
 
-#### /calendar/articleList
+#### /calendar/list
 
 request:
 
 ```json
 {
   "*token": "string",
-  "page": 0,
-  "limit": 0,
-  "title": "string",
-  "url": "string",
   "*filter": {
     "date": "string",
     "type": 0
@@ -943,6 +978,8 @@ request:
 response:
 
 ```json
+*回傳當月列表*
+
 {
   "*list": [
     {
@@ -950,6 +987,7 @@ response:
       "title": "string",
       "date": "string",
       "url": "string",
+      "content": "string",
       "type": 0
     }
   ],
@@ -959,7 +997,7 @@ response:
 }
 ```
 
-#### /calendar/addArticle
+#### /calendar/add
 
 request:
 
@@ -984,7 +1022,7 @@ response:
 {}
 ```
 
-#### /calendar/editArticle
+#### /calendar/edit
 
 request:
 
@@ -997,7 +1035,6 @@ request:
   "*url": "string",
   "*content": "string",
   "＊type": 0,
-  "*photo": "string",
 
   "_comment_type": "0=賽事, 1=發售日期, 2=其他相關活動",
   "_comment_date": "格式為YYYY-MM-DD HH:mm:ss",
@@ -1011,38 +1048,9 @@ response:
 {}
 ```
 
-### productionInformationType
-
-#### /productionInformationType/list
-
-request:
-
-```json
-{
-  "*token": "string"
-}
-```
-
-response:
-
-```json
-{
-  "*list": [
-    {
-      "maintype": 0,
-      "subtypeList": [
-        {
-          "productionInformation_subtype": "string"
-        }
-      ]
-    }
-  ]
-}
-```
-
 ### tag
 
-#### /tag/articleList
+#### /tag/list
 
 request:
 
@@ -1076,7 +1084,24 @@ response:
 {}
 ```
 
-#### /tag/editArticle
+#### /tag/add
+
+request:
+
+```json
+{
+  "*token": "string",
+  "*tag": "string"
+}
+```
+
+response:
+
+```json
+{}
+```
+
+#### /tag/edit
 
 request:
 
@@ -1096,7 +1121,7 @@ response:
 
 ### banner
 
-#### /banner/articleList
+#### /banner/list
 
 request:
 
@@ -1127,10 +1152,12 @@ response:
       "url": "string"
     }
   ]
+
+  "_comment_date": "最後更新日期"
 }
 ```
 
-#### /banner/addArticle
+#### /banner/add
 
 request:
 
@@ -1152,7 +1179,7 @@ response:
 {}
 ```
 
-#### /banner/editArticle
+#### /banner/edit
 
 request:
 
@@ -1176,7 +1203,7 @@ response:
 
 ### Cards
 
-#### /cards/cardsList
+#### /cards/list
 
 request:
 
@@ -1332,6 +1359,7 @@ response:
 
 ```json
 {
+  "total": 0,
   "*list": [
     {
       "id": 0,
@@ -1425,7 +1453,7 @@ response:
 
 ### Pack Type
 
-#### /packType/packTypeList
+#### /packType/list
 
 request:
 
@@ -1497,6 +1525,84 @@ request:
   "*subtype": "string",
   "*maintype": 0,
   "*name": "string"
+}
+```
+
+response:
+
+```json
+{}
+```
+
+### Permission
+
+#### /permission/list
+
+request:
+
+```json
+{
+  "*token": "string",
+}
+```
+
+response:
+
+```json
+{
+  "list": 
+    [
+      {
+        "id": 0,
+        "name":        "string",
+        "description": "string",
+        "permission1": true,
+        "permission2": false,
+
+        "_comment_permission": "將能夠調整的權限逐一列出, permission1 permission2..."
+      }
+    ]
+}
+```
+
+#### /permission/add
+
+request:
+
+```json
+{
+  "*token":       "string",
+  "*name":        "string",
+  "*permission": {
+      "permission1": true,
+      "permission2": false
+  },
+
+  "_comment_permission": "將能夠調整的權限逐一列出, permission1 permission2..."
+}
+```
+
+response:
+
+```json
+{}
+```
+
+#### /permission/edit
+
+request:
+
+```json
+{
+  "*token":       "string",
+  "*name":        "string",
+  "*id": 0,
+  "*permission": {
+      "permission1": true,
+      "permission2": false
+  },
+
+  "_comment_permission": "將能夠調整的權限逐一列出, permission1 permission2..."
 }
 ```
 
