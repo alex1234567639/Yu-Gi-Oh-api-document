@@ -19,6 +19,7 @@
 | /cardPrice/                 | 新增卡價 api                       | 2022/10/30 |
 | /cards/                     | 新增 cards 相關 api                | 2022/10/30 |
 | /packType/                  | 新增卡包類別相關 api               | 2022/10/31 |
+| /permission/                | 新增權限相關 api                   | 2023/03/17 |
 
 ---
 
@@ -72,6 +73,9 @@
 | [/packType/list](#packtypelist)                                           | 取得包裝分類       |
 | [/packType/add](#packtypeadd)                                             | 新增包裝分類       |
 | [/packType/edit](#packtypeedit)                                           | 編輯包裝分類       |
+| [/permission/list](#permissionlist)                                         | 取得權限分類       |
+| [/permission/add](#permissionadd)                                           | 新增權限分類       |
+| [/permission/edit](#permissionedit)                                         | 編輯權限分類       |
 
 ---
 
@@ -988,7 +992,7 @@ response:
     }
   ],
 
-  "_comment_date": "格式為YYYY-MM-DD",
+  "_comment_date": "格式為YYYY-MM-DD HH:mm:ss",
   "_comment_type": "0=賽事, 1=發售日期, 2=其他相關活動"
 }
 ```
@@ -1521,6 +1525,84 @@ request:
   "*subtype": "string",
   "*maintype": 0,
   "*name": "string"
+}
+```
+
+response:
+
+```json
+{}
+```
+
+### Permission
+
+#### /permission/list
+
+request:
+
+```json
+{
+  "*token": "string",
+}
+```
+
+response:
+
+```json
+{
+  "list": 
+    [
+      {
+        "id": 0,
+        "name":        "string",
+        "description": "string",
+        "permission1": true,
+        "permission2": false,
+
+        "_comment_permission": "將能夠調整的權限逐一列出, permission1 permission2..."
+      }
+    ]
+}
+```
+
+#### /permission/add
+
+request:
+
+```json
+{
+  "*token":       "string",
+  "*name":        "string",
+  "*permission": {
+      "permission1": true,
+      "permission2": false
+  },
+
+  "_comment_permission": "將能夠調整的權限逐一列出, permission1 permission2..."
+}
+```
+
+response:
+
+```json
+{}
+```
+
+#### /permission/edit
+
+request:
+
+```json
+{
+  "*token":       "string",
+  "*name":        "string",
+  "*id": 0,
+  "*permission": {
+      "permission1": true,
+      "permission2": false
+  },
+
+  "_comment_permission": "將能夠調整的權限逐一列出, permission1 permission2..."
 }
 ```
 
