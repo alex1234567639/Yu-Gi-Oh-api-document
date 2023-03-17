@@ -357,10 +357,10 @@
 
 ```json
 {
-  "token": 0,
+  "token": "string",
   "date": "string",
 
-  "_comment_date": "格式為YYYY-MM-DD HH:mm:ss",
+  "_comment_date": "格式為new Date()格式"
 }
 
 ```
@@ -369,10 +369,10 @@
 
 ```json
 {
-  "token": 0,
+  "token": "string",
   "date": "string",
 
-  "_comment_date": "格式為YYYY-MM-DD HH:mm:ss",
+  "_comment_date": "格式為new Date()格式"
 }
 
 ```
