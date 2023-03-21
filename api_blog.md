@@ -16,6 +16,7 @@
 | /deck/                              | 新增 deck 相關 api                 | 2022/10/30 |
 | /member/                            | 新增會員相關 api                   | 2022/10/31 |
 | /productionInformationType/         | 新增 productionInformationType api | 2022/11/05 |
+| /member/verify                      | 新增 驗證會員 api                   | 2023/03/21 |
 
 ---
 
@@ -31,6 +32,7 @@
 | [/member/resetPassword](#memberresetpassword)                             | 重設密碼           |
 | [/member/add](#memberadd)                                                 | 會員註冊           |
 | [/member/edit](#memberedit)                                               | 編輯會員帳號       |
+| [/member/verify](#memberverify)                                           | 驗證會員帳號       |
 | [/metaDeck/articleList](#metadeckarticlelist)                             | 取得上位卡表文章   |
 | [/seriesIntroduction/articleList](#seriesintroductionarticlelist)         | 取得系列介紹文章   |
 | [/usefulCardIntroduction/articleList](#usefulcardintroductionarticlelist) | 取得泛用卡介紹文章 |
@@ -112,6 +114,7 @@ request:
 ```json
 {
   "*name": "string",
+  "*email": "string",
   "*create_date": "string",
   "*account": "string",
   "*password": "sting",
@@ -126,7 +129,9 @@ request:
 response:
 
 ```json
-{}
+{
+  "verify_code": "string",
+}
 ```
 
 #### /member/edit
@@ -141,6 +146,24 @@ request:
   "*photo": "string",
 
   "_comment_photo": "btoa()編碼的Base64字串"
+}
+```
+
+response:
+
+```json
+{}
+```
+
+#### /member/verify
+
+request:
+
+```json
+{
+  "verify_code": "string",
+
+   "_comment_verify_code": "驗證碼"
 }
 ```
 
