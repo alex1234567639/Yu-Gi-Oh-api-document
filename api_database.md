@@ -4,7 +4,7 @@
 
 ```json
 {
-  "id": 0,
+  "_id": "string",
   "type": 0,
   "name": "string",
   "create_date": "string",
@@ -12,16 +12,8 @@
   "status": 0,
   "account": "string",
   "password": "string",
-  "deck_id": [],
-  "series_introduction_id": [],
-  "useful_card_introduction_id": [],
-  "meta_deck_id": [],
-  "product_information_id": [],
-  "rules_id": [],
-  "series_story_id": [],
-  "battle_paper_id": [],
+  "email": "string",
 
-  "_comment_id": "自動生成的數字",
   "_comment_type": "0=管理者, 1=前後台用戶, 2=前台用戶",
   "_comment_status": "0=正常, 1=停用中",
   "_comment_name": "length = 20",
@@ -30,11 +22,24 @@
 }
 ```
 
+### 驗證碼 (verify_code)
+
+```json
+{
+  "_id": "string",
+  "verify_code": "string",
+  "verify_account": "string",
+  "date": "string",
+
+  "_comment_verify_code": "驗證碼"
+}
+```
+
 ### 文章 - 系列介紹(series_introduction)
 
 ```json
 {
-  "id": 0,
+  "_id": "string",
   "type": 0,
   "title": "string",
   "publish_date": "string",
@@ -46,7 +51,6 @@
   "admin_id": 0,
   "tag": [],
 
-  "_comment_id": "自動生成的數字",
   "_comment_type": "0=主題牌組, 1=外掛系列",
   "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
   "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss",
@@ -61,7 +65,7 @@
 
 ```json
 {
-  "id": 0,
+  "_id": "string",
   "type": 0,
   "title": "string",
   "publish_date": "string",
@@ -73,7 +77,6 @@
   "admin_id": 0,
   "tag": [],
 
-  "_comment_id": "自動生成的數字",
   "_comment_type": "0=單卡介紹, 1=戰術分析",
   "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
   "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss",
@@ -88,7 +91,7 @@
 
 ```json
 {
-  "id": 0,
+  "_id": "string",
   "title": "string",
   "publish_date": "string",
   "last_edit_date": "string",
@@ -99,7 +102,6 @@
   "admin_id": 0,
   "tag": [],
 
-  "_comment_id": "自動生成的數字",
   "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
   "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss",
   "_comment_photo": "btoa()編碼的Base64字串",
@@ -113,7 +115,7 @@
 
 ```json
 {
-  "id": 0,
+  "_id": "string",
   "type": 0,
   "product_information_type_id": "string",
   "title": "string",
@@ -126,7 +128,6 @@
   "admin_id": 0,
   "tag": [],
 
-  "_comment_id": "自動生成的數字",
   "_comment_type": "0=RD, 1=補充包, 2=預組套牌, 3=禮盒, 4=活動商品",
   "_comment_product_information_type_id": "product_information_type id",
   "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
@@ -142,7 +143,7 @@
 
 ```json
 {
-  "id": 0,
+  "_id": "string",
   "type": 0,
   "title": "string",
   "publish_date": "string",
@@ -154,7 +155,6 @@
   "admin_id": 0,
   "tag": [],
 
-  "_comment_id": "自動生成的數字",
   "_comment_type": "0=禁限卡表, 1=判例說明",
   "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
   "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss",
@@ -169,7 +169,7 @@
 
 ```json
 {
-  "id": 0,
+  "_id": "string",
   "title": "string",
   "publish_date": "string",
   "last_edit_date": "string",
@@ -180,7 +180,6 @@
   "admin_id": 0,
   "tag": [],
 
-  "_comment_id": "自動生成的數字",
   "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
   "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss",
   "_comment_photo": "btoa()編碼的Base64字串",
@@ -194,7 +193,7 @@
 
 ```json
 {
-  "id": 0,
+  "_id": "string",
   "type": 0,
   "title": "string",
   "publish_date": "string",
@@ -205,8 +204,7 @@
   "to_top": true,
   "admin_id": 0,
   "tag": [],
-
-  "_comment_id": "自動生成的數字",
+  
   "_comment_type": "0=週報",
   "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
   "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss",
@@ -259,7 +257,7 @@
 
 ```json
 {
-  "id": 0,
+  "_id": "string",
   "admin_id": 0,
   "title": "string",
   "create_date": "string",
@@ -282,7 +280,7 @@
 
 ```json
 {
-  "id": 0,
+  "_id": "string",
   "title": "string",
   "date": "string",
   "url": "string",
@@ -298,7 +296,7 @@
 
 ```json
 {
-  "id": 0,
+  "_id": "string",
   "title": "string",
   "subtitle": "string",
   "date": "string",
@@ -312,7 +310,7 @@
 
 ```json
 {
-  "id": 0,
+  "_id": "string",
   "packType": "string",
   "subtype": "string",
   "maintype": 0,
@@ -331,7 +329,7 @@
 
 ```json
 {
-  "id": 0,
+  "_id": "string",
   "tag": "string"
 }
 ```
@@ -340,6 +338,7 @@
 
 ```json
 {
+  "_id": "string",
   "name": "string",
   "permission": [
     "string"
@@ -358,8 +357,10 @@
 ```json
 {
   "token": "string",
+  "tokenReq": "string",
   "date": "string",
 
+  "_comment_tokenReq": "使用者帳號",
   "_comment_date": "格式為new Date()格式"
 }
 
@@ -370,8 +371,10 @@
 ```json
 {
   "token": "string",
+  "tokenReq": "string",
   "date": "string",
 
+  "_comment_tokenReq": "使用者帳號",
   "_comment_date": "格式為new Date()格式"
 }
 
