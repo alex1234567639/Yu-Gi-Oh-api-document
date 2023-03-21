@@ -96,7 +96,10 @@ response:
 
 ```json
 {
-  "token": "string"
+  "token": "string",
+  "date": "string",
+
+  "_comment_date": "ex: Tue Mar 21 2023 21:30:08 GMT+0800 (台北標準時間)",
 }
 ```
 
@@ -106,7 +109,10 @@ request:
 
 ```json
 {
-  "*token": "string"
+  "*token": "string",
+  "*tokenReq": "string",
+
+  "_comment_tokenReq": "使用者帳號",
 }
 ```
 
@@ -123,6 +129,7 @@ request:
 ```json
 {
   "*token": "string",
+  "*tokenReq": "string",
   "*old_password": "string",
   "*new_password": "string"
 }
@@ -141,6 +148,7 @@ request:
 ```json
 {
   "*token": "string",
+  "*tokenReq": "string",
   "page": 0,
   "limit": 0,
   "*filter": {
@@ -162,7 +170,7 @@ response:
   "total": 0,
   "*list": [
     {
-      "id": 0,
+      "_id": "string",
       "type": 0,
       "name": "string",
       "create_date": "string",
@@ -173,7 +181,6 @@ response:
     }
   ],
 
-  "_comment_id": "自動生成的數字",
   "_comment_type": "0=管理者, 1=前後台用戶, 2=前台用戶",
   "_comment_status": "0=正常, 1=停用中",
   "_comment_name": "length = 20",
@@ -188,8 +195,11 @@ request:
 
 ```json
 {
+  "*token": "string",
+  "*tokenReq": "string",
   "*type": 0,
   "*name": "string",
+  "*email": "string",
   "*create_date": "string",
   "*account": "string",
   "*password": "sting",
@@ -215,7 +225,8 @@ request:
 ```json
 {
   "*token": "string",
-  "*id": 0,
+  "*tokenReq": "string",
+  "*_id": "string",
   "*type": 0,
   "*name": "string",
   "*photo": "string",
@@ -242,6 +253,7 @@ request:
 ```json
 {
   "*token": "string",
+  "*tokenReq": "string",
   "page": 0,
   "limit": 0,
   "*filter": {
@@ -263,7 +275,7 @@ response:
   "total": 0,
   "*list": [
     {
-      "id": 0,
+      "_id": "string",
       "type": 0,
       "title": "string",
       "publish_date": "string",
@@ -278,7 +290,6 @@ response:
     }
   ],
 
-  "_comment_id": "自動生成的數字",
   "_comment_type": "0=主題牌組, 1=外掛系列",
   "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
   "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss",
@@ -296,6 +307,7 @@ request:
 ```json
 {
   "*token": "string",
+  "*tokenReq": "string",
   "*type": 0,
   "*title": "string",
   "*publish_date": "string",
@@ -325,7 +337,8 @@ request:
 ```json
 {
   "*token": "string",
-  "*id": 0,
+  "*tokenReq": "string",
+  "*_id": "string",
   "*type": 0,
   "*title": "string",
   "*publish_date": "string",
@@ -361,6 +374,7 @@ request:
 ```json
 {
   "*token": "string",
+  "*tokenReq": "string",
   "page": 0,
   "limit": 0,
   "*filter": {
@@ -382,7 +396,7 @@ response:
   "total": 0,
   "*list": [
     {
-      "id": 0,
+      "_id": "string",
       "type": 0,
       "title": "string",
       "publish_date": "string",
@@ -397,7 +411,6 @@ response:
     }
   ],
 
-  "_comment_id": "自動生成的數字",
   "_comment_type": "0=單卡介紹, 1=戰術分析",
   "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
   "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss",
@@ -415,6 +428,7 @@ request:
 ```json
 {
   "*token": "string",
+  "*tokenReq": "string",
   "*type": 0,
   "*title": "string",
   "*publish_date": "string",
@@ -444,7 +458,8 @@ request:
 ```json
 {
   "*token": "string",
-  "id": 0,
+  "*tokenReq": "string",
+  "_id": "string",
   "*type": 0,
   "*title": "string",
   "*publish_date": "string",
@@ -480,6 +495,7 @@ request:
 ```json
 {
   "*token": "string",
+  "*tokenReq": "string",
   "page": 0,
   "limit": 0,
   "*filter": {
@@ -497,7 +513,7 @@ response:
   "total": 0,
   "*list": [
     {
-      "id": 0,
+      "_id": "string",
       "title": "string",
       "publish_date": "string",
       "last_edit_date": "string",
@@ -511,7 +527,6 @@ response:
     }
   ],
 
-  "_comment_id": "自動生成的數字",
   "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
   "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss",
   "_comment_photo": "btoa()編碼的Base64字串",
@@ -528,6 +543,7 @@ request:
 ```json
 {
   "*token": "string",
+  "*tokenReq": "string",
   "*title": "string",
   "*publish_date": "string",
   "*photo": "string",
@@ -555,7 +571,8 @@ request:
 ```json
 {
   "*token": "string",
-  "*id": 0,
+  "*tokenReq": "string",
+  "*_id": "string",
   "*title": "string",
   "*publish_date": "string",
   "*photo": "string",
@@ -589,6 +606,7 @@ request:
 ```json
 {
   "*token": "string",
+  "*tokenReq": "string",
   "page": 0,
   "limit": 0,
   "*filter": {
@@ -609,7 +627,7 @@ response:
   "total": 0,
   "*list": [
     {
-      "id": 0,
+      "*_id": "string",
       "packType": "string",
       "subType": "string",
       "mainType": 0,
@@ -626,7 +644,7 @@ response:
       "*tag": []
     }
   ],
-  "_comment_id": "自動生成的數字",
+  
   "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
   "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss",
   "_comment_photo": "btoa()編碼的Base64字串",
@@ -647,6 +665,7 @@ request:
 ```json
 {
   "*token": "string",
+  "*tokenReq": "string",
   "*productInformationTypeId": 0,
   "*title": "string",
   "*publish_date": "string",
@@ -676,7 +695,8 @@ request:
 ```json
 {
   "*token": "string",
-  "*id": 0,
+  "*tokenReq": "string",
+  "*_id": "string",
   "*productInformationTypeId": 0,
   "*title": "string",
   "*publish_date": "string",
@@ -711,7 +731,8 @@ request:
 
 ```json
 {
-  "*token": "string"
+  "*token": "string",
+  "*tokenReq": "string",
 }
 ```
 
@@ -741,6 +762,7 @@ request:
 ```json
 {
   "*token": "string",
+  "*tokenReq": "string",
   "page": 0,
   "limit": 0,
   "*filter": {
@@ -761,7 +783,7 @@ response:
   "total": 0,
   "*list": [
     {
-      "id": 0,
+      "_id": "string",
       "type": 0,
       "title": "string",
       "publish_date": "string",
@@ -776,7 +798,6 @@ response:
     }
   ],
 
-  "_comment_id": "自動生成的數字",
   "_comment_type": "0=禁限卡表, 1=判例說明",
   "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
   "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss",
@@ -794,6 +815,7 @@ request:
 ```json
 {
   "*token": "string",
+  "*tokenReq": "string",
   "*type": 0,
   "*title": "string",
   "*publish_date": "string",
@@ -823,7 +845,8 @@ request:
 ```json
 {
   "*token": "string",
-  "*id": 0,
+  "*tokenReq": "string",
+  "*_id": "string",
   "*type": 0,
   "*title": "string",
   "*publish_date": "string",
@@ -859,6 +882,7 @@ request:
 ```json
 {
   "*token": "string",
+  "*tokenReq": "string",
   "page": 0,
   "limit": 0,
   "*filter": {
@@ -876,7 +900,7 @@ response:
   "total": 0,
   "*list": [
     {
-      "id": 0,
+      "*_id": "string",
       "title": "string",
       "publish_date": "string",
       "last_edit_date": "string",
@@ -890,7 +914,6 @@ response:
     }
   ],
 
-  "_comment_id": "自動生成的數字",
   "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
   "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss",
   "_comment_photo": "btoa()編碼的Base64字串",
@@ -907,6 +930,7 @@ request:
 ```json
 {
   "*token": "string",
+  "*tokenReq": "string",
   "*title": "string",
   "*publish_date": "string",
   "*photo": "string",
@@ -934,7 +958,8 @@ request:
 ```json
 {
   "*token": "string",
-  "*id": 0,
+  "*tokenReq": "string",
+  "*_id": "string",
   "*title": "string",
   "*publish_date": "string",
   "*photo": "string",
@@ -968,6 +993,7 @@ request:
 ```json
 {
   "*token": "string",
+  "*tokenReq": "string",
   "*filter": {
     "date": "string",
     "type": 0
@@ -983,7 +1009,7 @@ response:
 {
   "*list": [
     {
-      "id": 0,
+      "_id": "string",
       "title": "string",
       "date": "string",
       "url": "string",
@@ -1004,6 +1030,7 @@ request:
 ```json
 {
   "*token": "string",
+  "*tokenReq": "string",
   "*title": "string",
   "*date": "string",
   "*url": "string",
@@ -1029,7 +1056,8 @@ request:
 ```json
 {
   "*token": "string",
-  "id": 0,
+  "*tokenReq": "string",
+  "*_id": "string",
   "*title": "string",
   "*date": "string",
   "*url": "string",
@@ -1057,6 +1085,7 @@ request:
 ```json
 {
   "*token": "string",
+  "*tokenReq": "string",
   "page": 0,
   "limit": 0,
   "*filter": {
@@ -1071,7 +1100,7 @@ response:
 {
   "*list": [
     {
-      "id": 0,
+      "_id": "string",
       "tag": "string"
     }
   ]
@@ -1091,6 +1120,7 @@ request:
 ```json
 {
   "*token": "string",
+  "*tokenReq": "string",
   "*tag": "string"
 }
 ```
@@ -1108,7 +1138,8 @@ request:
 ```json
 {
   "*token": "string",
-  "id": 0,
+  "*tokenReq": "string",
+  "*_id": "string",
   "*tag": "string"
 }
 ```
@@ -1128,6 +1159,7 @@ request:
 ```json
 {
   "*token": "string",
+  "*tokenReq": "string",
   "page": 0,
   "limit": 0,
   "*filter": {
@@ -1143,7 +1175,7 @@ response:
 {
   "*list": [
     {
-      "id": 0,
+      "_id": "string",
       "title": "string",
       "subtitle": "string",
       "date": "string",
@@ -1151,7 +1183,7 @@ response:
       "photo_mobile": "string",
       "url": "string"
     }
-  ]
+  ],
 
   "_comment_date": "最後更新日期"
 }
@@ -1164,6 +1196,7 @@ request:
 ```json
 {
   "*token": "string",
+  "*tokenReq": "string",
   "*title": "string",
   "*subtitle": "string",
   "*date": "string",
@@ -1186,6 +1219,7 @@ request:
 ```json
 {
   "*token": "string",
+  "*tokenReq": "string",
   "*title": "string",
   "*subtitle": "string",
   "*date": "string",
@@ -1210,6 +1244,7 @@ request:
 ```json
 {
   "*token": "string",
+  "*tokenReq": "string",
   "page": 0,
   "limit": 0,
   "*filter": {
@@ -1281,6 +1316,7 @@ request:
 ```json
 {
   "*token": "string",
+  "*tokenReq": "string",
   "number": "string",
   "name": "string",
   "type": "string",
@@ -1310,6 +1346,7 @@ request:
 ```json
 {
   "*token": "string",
+  "*tokenReq": "string",
   "number": "string",
   "name": "string",
   "type": "string",
@@ -1342,6 +1379,7 @@ request:
 ```json
 {
   "*token": "string",
+  "*tokenReq": "string",
   "page": 0,
   "limit": 0,
   "*filter": {
@@ -1362,7 +1400,7 @@ response:
   "total": 0,
   "*list": [
     {
-      "id": 0,
+      "_id": "string",
       "type": 0,
       "title": "string",
       "publish_date": "string",
@@ -1377,7 +1415,6 @@ response:
     }
   ],
 
-  "_comment_id": "自動生成的數字",
   "_comment_type": "0=週報",
   "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
   "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss",
@@ -1395,6 +1432,7 @@ request:
 ```json
 {
   "*token": "string",
+  "*tokenReq": "string",
   "*type": 0,
   "*title": "string",
   "*publish_date": "string",
@@ -1424,7 +1462,8 @@ request:
 ```json
 {
   "*token": "string",
-  "*id": 0,
+  "*tokenReq": "string",
+  "*_id": "string",
   "*type": 0,
   "*title": "string",
   "*publish_date": "string",
@@ -1460,6 +1499,7 @@ request:
 ```json
 {
   "*token": "string",
+  "*tokenReq": "string",
   "page": 0,
   "limit": 0,
   "*filter": {
@@ -1477,7 +1517,7 @@ response:
   "*total": 0,
   "*list": [
     {
-      "id": 0,
+      "*_id": "string",
       "packType": "string",
       "subtype": "string",
       "maintype": 0,
@@ -1501,6 +1541,7 @@ request:
 ```json
 {
   "*token": "string",
+  "*tokenReq": "string",
   "*packType": "string",
   "*subtype": "string",
   "*maintype": 0,
@@ -1521,6 +1562,7 @@ request:
 ```json
 {
   "*token": "string",
+  "*tokenReq": "string",
   "*packType": "string",
   "*subtype": "string",
   "*maintype": 0,
@@ -1543,6 +1585,7 @@ request:
 ```json
 {
   "*token": "string",
+  "*tokenReq": "string",
 }
 ```
 
@@ -1553,8 +1596,8 @@ response:
   "list": 
     [
       {
-        "id": 0,
-        "name":        "string",
+        "*_id": "string",
+        "name": "string",
         "description": "string",
         "permission1": true,
         "permission2": false,
@@ -1571,8 +1614,9 @@ request:
 
 ```json
 {
-  "*token":       "string",
-  "*name":        "string",
+  "*token": "string",
+  "*tokenReq": "string",
+  "*name": "string",
   "*permission": {
       "permission1": true,
       "permission2": false
@@ -1594,9 +1638,10 @@ request:
 
 ```json
 {
-  "*token":       "string",
-  "*name":        "string",
-  "*id": 0,
+  "*token": "string",
+  "*tokenReq": "string",
+  "*name": "string",
+  "*_id": "string",
   "*permission": {
       "permission1": true,
       "permission2": false
