@@ -1248,6 +1248,7 @@ request:
   "page": 0,
   "limit": 0,
   "*filter": {
+    "id": "string",
     "number": "string",
     "name": "string",
     "type": "string",
@@ -1259,10 +1260,10 @@ request:
     "def_t": 0,
     "def_l": 0,
     "packType": "string",
-    "id": 0
   },
 
-  "_comment_number": "卡號",
+  "_comment_id": "卡號",
+  "_comment_number": "卡片密碼",
   "_comment_name": "卡名",
   "_comment_type": "種類",
   "_comment_star": "星數",
@@ -1280,6 +1281,7 @@ response:
   "*total": 0,
   "*list": [
     {
+      "id": "string",
       "number": "string",
       "name": "string",
       "type": "string",
@@ -1289,7 +1291,6 @@ response:
       "atk": 0,
       "def": 0,
       "packType": "string",
-      "id": 0,
       "effect": "string",
       "photo": "string",
       "price_info": [
