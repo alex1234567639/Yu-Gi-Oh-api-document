@@ -99,7 +99,7 @@ response:
   "token": "string",
   "date": "string",
 
-  "_comment_date": "ex: Tue Mar 21 2023 21:30:08 GMT+0800 (台北標準時間)",
+  "_comment_date": "ex: Tue Mar 21 2023 21:30:08 GMT+0800 (台北標準時間)"
 }
 ```
 
@@ -112,7 +112,7 @@ request:
   "*token": "string",
   "*tokenReq": "string",
 
-  "_comment_tokenReq": "使用者帳號",
+  "_comment_tokenReq": "使用者帳號"
 }
 ```
 
@@ -732,7 +732,7 @@ request:
 ```json
 {
   "*token": "string",
-  "*tokenReq": "string",
+  "*tokenReq": "string"
 }
 ```
 
@@ -1002,9 +1002,9 @@ request:
 ```
 
 response:
-
-```json
 *回傳當月列表*
+```json
+
 
 {
   "*list": [
@@ -1259,7 +1259,7 @@ request:
     "atk_l": 0,
     "def_t": 0,
     "def_l": 0,
-    "packType": "string",
+    "packType": "string"
   },
 
   "_comment_id": "卡號",
@@ -1586,7 +1586,7 @@ request:
 ```json
 {
   "*token": "string",
-  "*tokenReq": "string",
+  "*tokenReq": "string"
 }
 ```
 
