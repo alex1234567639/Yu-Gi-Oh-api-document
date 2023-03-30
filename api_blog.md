@@ -16,7 +16,7 @@
 | /deck/                              | 新增 deck 相關 api                 | 2022/10/30 |
 | /member/                            | 新增會員相關 api                   | 2022/10/31 |
 | /productionInformationType/         | 新增 productionInformationType api | 2022/11/05 |
-| /member/verify                      | 新增 驗證會員 api                   | 2023/03/21 |
+| /member/verify                      | 新增 驗證會員 api                  | 2023/03/21 |
 
 ---
 
@@ -48,6 +48,7 @@
 | [/deck/edit](#deckedit)                                                   | 編輯卡表           |
 | [/deck/delete](#deckdelete)                                               | 刪除卡表           |
 | [/productionInformationType/list](#productioninformationtypelist)         | 取得 subtype       |
+| [/reptile/yuyuPrice](#reptileyuyuPrice)                                   | 爬蟲悠悠亭價格     |
 
 ---
 
@@ -85,7 +86,7 @@ request:
   "*token": "string",
   "*tokenReq": "string",
 
-  "_comment_tokenReq": "使用者帳號",
+  "_comment_tokenReq": "使用者帳號"
 }
 ```
 
@@ -137,7 +138,7 @@ response:
 
 ```json
 {
-  "verify_code": "string",
+  "verify_code": "string"
 }
 ```
 
@@ -192,7 +193,7 @@ request:
 {
   "page": 0,
   "limit": 0,
-  "_id": "string",
+  "_id": "string"
 }
 ```
 
@@ -429,7 +430,7 @@ request:
 {
   "page": 0,
   "limit": 0,
-  "_id": "string",
+  "_id": "string"
 }
 ```
 
@@ -567,7 +568,7 @@ request:
     "atk_l": 0,
     "def_t": 0,
     "def_l": 0,
-    "packType": "string",
+    "packType": "string"
   },
 
   "_comment_id": "卡號",
@@ -758,7 +759,7 @@ request:
 {
   "*token": "string",
   "*tokenReq": "string",
-  "_id": "string",
+  "_id": "string"
 }
 ```
 
@@ -793,5 +794,29 @@ response:
       ]
     }
   ]
+}
+```
+
+### reptile
+
+#### /reptile/yuyuPrice
+
+request:
+
+```json
+{
+  "name": "string",
+  "rarity": "string",
+
+  "_comment_name": "卡號",
+  "_comment_rarity": "卡片罕貴度"
+}
+```
+
+response:
+
+```json
+{
+  "*price": 0
 }
 ```

@@ -47,7 +47,7 @@ encrypt string 為 AES(JSON string).toString()
 | 請求參數不合法              | 10004       |
 | token 過期             | 10005       |
 | Base64 decode failed | 10006       |
-| AES decrypt failed   | 10007       |
+| 找不到對應資料              | 10007       |
 | 沒有權限的操作              | 10008       |
 | 已從其他地方登入             | 10009       |
 | 上傳圖片失敗               | 10010       |

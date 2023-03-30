@@ -28,54 +28,54 @@
 - url: https://xxxxxxx.com.tw/api/[path]
 - method: POST
 
-| Path                                                                      | Description        |
-| ------------------------------------------------------------------------- | ------------------ |
-| [/admin/login](#adminlogin)                                               | 登入               |
-| [/admin/logout](#adminlogout)                                             | 登出               |
-| [/admin/resetPassword](#adminresetpassword)                               | 重設密碼           |
-| [/admin/list](#adminlist)                                                 | 取得帳號           |
-| [/admin/add](#adminadd)                                                   | 新增帳號           |
-| [/admin/edit](#adminedit)                                                 | 編輯帳號           |
-| [/seriesIntroduction/articleList](#seriesintroductionarticlelist)         | 取得系列介紹文章   |
-| [/seriesIntroduction/addArticle](#seriesintroductionaddarticle)           | 新增系列介紹文章   |
-| [/seriesIntroduction/editArticle](#seriesintroductioneditarticle)         | 編輯系列介紹文章   |
-| [/usefulCardIntroduction/articleList](#usefulcardintroductionarticlelist) | 取得泛用卡介紹文章 |
-| [/usefulCardIntroduction/addArticle](#usefulcardintroductionaddarticle)   | 新增泛用卡介紹文章 |
-| [/usefulCardIntroduction/editArticle](#usefulcardintroductioneditarticle) | 編輯泛用卡介紹文章 |
-| [/metaDeck/articleList](#metadeckarticlelist)                             | 取得上位卡表文章   |
-| [/metaDeck/addArticle](#metadeckaddarticle)                               | 新增上位卡表文章   |
-| [/metaDeck/editArticle](#metadeckeditarticle)                             | 編輯上位卡表文章   |
-| [/productInformation/articleList](#productinformationarticlelist)         | 取得卡表資料文章   |
-| [/productInformation/addArticle](#productinformationaddarticle)           | 新增卡表資料文章   |
-| [/productInformation/editArticle](#productinformationeditarticle)         | 編輯卡表資料文章   |
-| [/productionInformationType/list](#productioninformationtypelist)         | 取得卡表資料subType|
-| [/rules/articleList](#rulesarticlelist)                                   | 取得規則相關文章   |
-| [/rules/addArticle](#rulesaddarticle)                                     | 新增規則相關文章   |
-| [/rules/editArticle](#ruleseditarticle)                                   | 編輯規則相關文章   |
-| [/seriesStory/articleList](#seriesstoryarticlelist)                       | 取得卡片故事文章   |
-| [/seriesStory/addArticle](#seriesstoryaddarticle)                         | 新增卡片故事文章   |
-| [/seriesStory/editArticle](#seriesstoryeditarticle)                       | 編輯卡片故事文章   |
-| [/calendar/list](#calendarlist)                                           | 取得日曆表         |
-| [/calendar/add](#calendaradd)                                             | 新增日曆          |
-| [/calendar/edit](#calendaredit)                                           | 編輯日曆表         |
-| [/tag/list](#taglist)                                                     | 取得 tag          |
-| [/tag/add](#tagadd)                                                       | 新增 tag         |
-| [/tag/edit](#tagedit)                                                     | 編輯 tag         |
-| [/banner/list](#bannerlist)                                               | 取得 banner       |
-| [/banner/add](#banneradd)                                                 | 新增 banner       |
-| [/banner/edit](#banneredit)                                               | 編輯 banner       |
-| [/battlePaper/articleList](#battlepaperarticlelist)                       | 取得戰報相關文章   |
-| [/battlePaper/addArticle](#battlepaperaddarticle)                         | 新增戰報相關文章   |
-| [/battlePaper/editArticle](#battlepapereditarticle)                       | 編輯戰報相關文章   |
-| [/cards/list](#cardslist)                                                 | 取得卡片資料       |
-| [/cards/add](#cardsadd)                                                   | 新增卡片           |
-| [/cards/edit](#cardsedit)                                                 | 編輯卡片           |
-| [/packType/list](#packtypelist)                                           | 取得包裝分類       |
-| [/packType/add](#packtypeadd)                                             | 新增包裝分類       |
-| [/packType/edit](#packtypeedit)                                           | 編輯包裝分類       |
-| [/permission/list](#permissionlist)                                         | 取得權限分類       |
-| [/permission/add](#permissionadd)                                           | 新增權限分類       |
-| [/permission/edit](#permissionedit)                                         | 編輯權限分類       |
+| Path                                                                      | Description          |
+| ------------------------------------------------------------------------- | -------------------- |
+| [/admin/login](#adminlogin)                                               | 登入                 |
+| [/admin/logout](#adminlogout)                                             | 登出                 |
+| [/admin/resetPassword](#adminresetpassword)                               | 重設密碼             |
+| [/admin/list](#adminlist)                                                 | 取得帳號             |
+| [/admin/add](#adminadd)                                                   | 新增帳號             |
+| [/admin/edit](#adminedit)                                                 | 編輯帳號             |
+| [/seriesIntroduction/articleList](#seriesintroductionarticlelist)         | 取得系列介紹文章     |
+| [/seriesIntroduction/addArticle](#seriesintroductionaddarticle)           | 新增系列介紹文章     |
+| [/seriesIntroduction/editArticle](#seriesintroductioneditarticle)         | 編輯系列介紹文章     |
+| [/usefulCardIntroduction/articleList](#usefulcardintroductionarticlelist) | 取得泛用卡介紹文章   |
+| [/usefulCardIntroduction/addArticle](#usefulcardintroductionaddarticle)   | 新增泛用卡介紹文章   |
+| [/usefulCardIntroduction/editArticle](#usefulcardintroductioneditarticle) | 編輯泛用卡介紹文章   |
+| [/metaDeck/articleList](#metadeckarticlelist)                             | 取得上位卡表文章     |
+| [/metaDeck/addArticle](#metadeckaddarticle)                               | 新增上位卡表文章     |
+| [/metaDeck/editArticle](#metadeckeditarticle)                             | 編輯上位卡表文章     |
+| [/productInformation/articleList](#productinformationarticlelist)         | 取得卡表資料文章     |
+| [/productInformation/addArticle](#productinformationaddarticle)           | 新增卡表資料文章     |
+| [/productInformation/editArticle](#productinformationeditarticle)         | 編輯卡表資料文章     |
+| [/productionInformationType/list](#productioninformationtypelist)         | 取得卡表資料 subType |
+| [/rules/articleList](#rulesarticlelist)                                   | 取得規則相關文章     |
+| [/rules/addArticle](#rulesaddarticle)                                     | 新增規則相關文章     |
+| [/rules/editArticle](#ruleseditarticle)                                   | 編輯規則相關文章     |
+| [/seriesStory/articleList](#seriesstoryarticlelist)                       | 取得卡片故事文章     |
+| [/seriesStory/addArticle](#seriesstoryaddarticle)                         | 新增卡片故事文章     |
+| [/seriesStory/editArticle](#seriesstoryeditarticle)                       | 編輯卡片故事文章     |
+| [/calendar/list](#calendarlist)                                           | 取得日曆表           |
+| [/calendar/add](#calendaradd)                                             | 新增日曆             |
+| [/calendar/edit](#calendaredit)                                           | 編輯日曆表           |
+| [/tag/list](#taglist)                                                     | 取得 tag             |
+| [/tag/add](#tagadd)                                                       | 新增 tag             |
+| [/tag/edit](#tagedit)                                                     | 編輯 tag             |
+| [/banner/list](#bannerlist)                                               | 取得 banner          |
+| [/banner/add](#banneradd)                                                 | 新增 banner          |
+| [/banner/edit](#banneredit)                                               | 編輯 banner          |
+| [/battlePaper/articleList](#battlepaperarticlelist)                       | 取得戰報相關文章     |
+| [/battlePaper/addArticle](#battlepaperaddarticle)                         | 新增戰報相關文章     |
+| [/battlePaper/editArticle](#battlepapereditarticle)                       | 編輯戰報相關文章     |
+| [/cards/list](#cardslist)                                                 | 取得卡片資料         |
+| [/cards/add](#cardsadd)                                                   | 新增卡片             |
+| [/cards/edit](#cardsedit)                                                 | 編輯卡片             |
+| [/packType/list](#packtypelist)                                           | 取得包裝分類         |
+| [/packType/add](#packtypeadd)                                             | 新增包裝分類         |
+| [/packType/edit](#packtypeedit)                                           | 編輯包裝分類         |
+| [/permission/list](#permissionlist)                                       | 取得權限分類         |
+| [/permission/add](#permissionadd)                                         | 新增權限分類         |
+| [/permission/edit](#permissionedit)                                       | 編輯權限分類         |
 
 ---
 
@@ -279,7 +279,6 @@ response:
       "type": 0,
       "title": "string",
       "publish_date": "string",
-      "last_edit_date": "string",
       "photo": "string",
       "content": "string",
       "status": 0,
@@ -292,7 +291,6 @@ response:
 
   "_comment_type": "0=主題牌組, 1=外掛系列",
   "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
-  "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss",
   "_comment_photo": "btoa()編碼的Base64字串",
   "_comment_content": "副文本編輯產出的html字串",
   "_comment_status": "0=上架中, 1=下架中",
@@ -400,7 +398,6 @@ response:
       "type": 0,
       "title": "string",
       "publish_date": "string",
-      "last_edit_date": "string",
       "photo": "string",
       "content": "string",
       "status": 0,
@@ -413,7 +410,6 @@ response:
 
   "_comment_type": "0=單卡介紹, 1=戰術分析",
   "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
-  "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss",
   "_comment_photo": "btoa()編碼的Base64字串",
   "_comment_content": "副文本編輯產出的html字串",
   "_comment_status": "0=上架中, 1=下架中",
@@ -516,7 +512,6 @@ response:
       "_id": "string",
       "title": "string",
       "publish_date": "string",
-      "last_edit_date": "string",
       "photo": "string",
       "content": "string",
       "status": 0,
@@ -528,7 +523,6 @@ response:
   ],
 
   "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
-  "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss",
   "_comment_photo": "btoa()編碼的Base64字串",
   "_comment_content": "副文本編輯產出的html字串",
   "_comment_status": "0=上架中, 1=下架中",
@@ -634,7 +628,6 @@ response:
       "name": "string",
       "title": "string",
       "publish_date": "string",
-      "last_edit_date": "string",
       "photo": "string",
       "content": "string",
       "status": 0,
@@ -644,9 +637,8 @@ response:
       "*tag": []
     }
   ],
-  
+
   "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
-  "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss",
   "_comment_photo": "btoa()編碼的Base64字串",
   "_comment_content": "副文本編輯產出的html字串",
   "_comment_status": "0=上架中, 1=下架中",
@@ -787,7 +779,6 @@ response:
       "type": 0,
       "title": "string",
       "publish_date": "string",
-      "last_edit_date": "string",
       "photo": "string",
       "content": "string",
       "status": 0,
@@ -800,7 +791,6 @@ response:
 
   "_comment_type": "0=禁限卡表, 1=判例說明",
   "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
-  "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss",
   "_comment_photo": "btoa()編碼的Base64字串",
   "_comment_content": "副文本編輯產出的html字串",
   "_comment_status": "0=上架中, 1=下架中",
@@ -903,7 +893,6 @@ response:
       "*_id": "string",
       "title": "string",
       "publish_date": "string",
-      "last_edit_date": "string",
       "photo": "string",
       "content": "string",
       "status": 0,
@@ -915,7 +904,6 @@ response:
   ],
 
   "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
-  "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss",
   "_comment_photo": "btoa()編碼的Base64字串",
   "_comment_content": "副文本編輯產出的html字串",
   "_comment_status": "0=上架中, 1=下架中",
@@ -1002,10 +990,9 @@ request:
 ```
 
 response:
-*回傳當月列表*
+_回傳當月列表_
+
 ```json
-
-
 {
   "*list": [
     {
@@ -1298,8 +1285,14 @@ response:
           "time": "string",
           "price_lowest": 0,
           "price_avg": 0,
-          "price_yuyu": 0,
           "rarity": "string"
+        }
+      ],
+      "price_yuyu": [
+        {
+          "time": "string",
+          "rarity": "string",
+          "price": 0
         }
       ]
     }
@@ -1330,7 +1323,8 @@ request:
   "id": 0,
   "effect": "string",
   "photo": "string",
-  "price_info":[]
+  "price_info": [],
+  "price_yuyu": []
 }
 ```
 
@@ -1361,7 +1355,8 @@ request:
   "effect": "string",
   "photo": "string",
   "time": "string",
-  "price_info":[]
+  "price_info": [],
+  "price_yuyu": []
 }
 ```
 
@@ -1405,7 +1400,6 @@ response:
       "type": 0,
       "title": "string",
       "publish_date": "string",
-      "last_edit_date": "string",
       "photo": "string",
       "content": "string",
       "status": 0,
@@ -1418,7 +1412,6 @@ response:
 
   "_comment_type": "0=週報",
   "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
-  "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss",
   "_comment_photo": "btoa()編碼的Base64字串",
   "_comment_content": "副文本編輯產出的html字串",
   "_comment_status": "0=上架中, 1=下架中",
@@ -1594,18 +1587,17 @@ response:
 
 ```json
 {
-  "list": 
-    [
-      {
-        "*_id": "string",
-        "name": "string",
-        "description": "string",
-        "permission1": true,
-        "permission2": false,
+  "list": [
+    {
+      "*_id": "string",
+      "name": "string",
+      "description": "string",
+      "permission1": true,
+      "permission2": false,
 
-        "_comment_permission": "將能夠調整的權限逐一列出, permission1 permission2..."
-      }
-    ]
+      "_comment_permission": "將能夠調整的權限逐一列出, permission1 permission2..."
+    }
+  ]
 }
 ```
 
@@ -1619,8 +1611,8 @@ request:
   "*tokenReq": "string",
   "*name": "string",
   "*permission": {
-      "permission1": true,
-      "permission2": false
+    "permission1": true,
+    "permission2": false
   },
 
   "_comment_permission": "將能夠調整的權限逐一列出, permission1 permission2..."
@@ -1644,8 +1636,8 @@ request:
   "*name": "string",
   "*_id": "string",
   "*permission": {
-      "permission1": true,
-      "permission2": false
+    "permission1": true,
+    "permission2": false
   },
 
   "_comment_permission": "將能夠調整的權限逐一列出, permission1 permission2..."
