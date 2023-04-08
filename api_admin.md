@@ -1246,7 +1246,7 @@ request:
     "atk_l": 0,
     "def_t": 0,
     "def_l": 0,
-    "packType": "string"
+    "product_information_type": "string"
   },
 
   "_comment_id": "卡號",
@@ -1256,7 +1256,7 @@ request:
   "_comment_star": "星數",
   "_comment_attribute": "屬性",
   "_comment_rarity": "稀有度、版本",
-  "_comment_packType": "包裝分類id",
+  "_comment_product_information_type": "包裝分類name",
   "_comment_id": "卡片密碼"
 }
 ```
@@ -1277,7 +1277,7 @@ response:
       "rarity": [],
       "atk": 0,
       "def": 0,
-      "packType": "string",
+      "product_information_type": "string",
       "effect": "string",
       "photo": "string",
       "price_info": [
@@ -1319,7 +1319,7 @@ request:
   "rarity": [],
   "atk": 0,
   "def": 0,
-  "packType": "string",
+  "product_information_type": "string",
   "id": 0,
   "effect": "string",
   "photo": "string",
@@ -1350,7 +1350,7 @@ request:
   "rarity": [],
   "atk": 0,
   "def": 0,
-  "packType": "string",
+  "product_information_type": "string",
   "id": 0,
   "effect": "string",
   "photo": "string",

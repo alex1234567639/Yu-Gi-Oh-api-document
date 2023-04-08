@@ -200,7 +200,7 @@
   "rarity": [],
   "atk": "string",
   "def": "string",
-  "product_information_type_id": "string",
+  "product_information_type": "string",
   "number": "string",
   "effect": "string",
   "photo": "string",
@@ -227,7 +227,7 @@
   "_comment_star": "星數",
   "_comment_attribute": "屬性",
   "_comment_rarity": "稀有度、版本",
-  "_comment_product_information_type_id": "包裝分類id",
+  "_comment_product_information_type_id": "包裝分類name",
   "_comment_price_info": "卡價"
 }
 ```

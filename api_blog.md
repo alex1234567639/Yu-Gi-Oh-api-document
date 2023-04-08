@@ -568,7 +568,7 @@ request:
     "atk_l": 0,
     "def_t": 0,
     "def_l": 0,
-    "packType": "string"
+    "product_information_type": "string"
   },
 
   "_comment_id": "卡號",
@@ -578,7 +578,7 @@ request:
   "_comment_star": "星數",
   "_comment_attribute": "屬性",
   "_comment_rarity": "稀有度、版本",
-  "_comment_packType": "包裝分類"
+  "_comment_product_information_type": "包裝分類name"
 }
 ```
 
