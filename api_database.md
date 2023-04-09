@@ -203,7 +203,6 @@
   "product_information_type": "string",
   "number": "string",
   "effect": "string",
-  "photo": "string",
   "price_info": [
     {
       "time": "string",
@@ -229,6 +228,18 @@
   "_comment_rarity": "稀有度、版本",
   "_comment_product_information_type_id": "包裝分類name",
   "_comment_price_info": "卡價"
+}
+```
+
+### Cards Image(cards_image)
+
+```json
+{
+  "number": "string",
+  "photo": "string"
+
+  "_comment_number": "卡片密碼",
+  "_comment_photo": "base64格式圖檔"
 }
 ```
 

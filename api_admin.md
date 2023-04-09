@@ -20,6 +20,7 @@
 | /cards/                     | 新增 cards 相關 api                | 2022/10/30 |
 | /packType/                  | 新增卡包類別相關 api               | 2022/10/31 |
 | /permission/                | 新增權限相關 api                   | 2023/03/17 |
+| /cards_image/               | 新增卡片圖片相關 api               | 2023/04/09 |
 
 ---
 
@@ -76,6 +77,9 @@
 | [/permission/list](#permissionlist)                                       | 取得權限分類         |
 | [/permission/add](#permissionadd)                                         | 新增權限分類         |
 | [/permission/edit](#permissionedit)                                       | 編輯權限分類         |
+| [/cardsImage/list](#cardsimagelist)                                       | 取得卡片圖片         |
+| [/cardsImage/add](#cardsimageadd)                                         | 新增卡片圖片         |
+| [/cardsImage/edit](#cardsimageedit)                                       | 編輯卡片圖片         |
 
 ---
 
@@ -1279,7 +1283,6 @@ response:
       "def": 0,
       "product_information_type": "string",
       "effect": "string",
-      "photo": "string",
       "price_info": [
         {
           "time": "string",
@@ -1298,8 +1301,7 @@ response:
     }
   ],
 
-  "_comment_effect": "卡片效果",
-  "_comment_photo": "卡圖"
+  "_comment_effect": "卡片效果"
 }
 ```
 
@@ -1322,7 +1324,6 @@ request:
   "product_information_type": "string",
   "id": 0,
   "effect": "string",
-  "photo": "string",
   "price_info": [],
   "price_yuyu": []
 }
@@ -1353,10 +1354,79 @@ request:
   "product_information_type": "string",
   "id": 0,
   "effect": "string",
-  "photo": "string",
   "time": "string",
   "price_info": [],
   "price_yuyu": []
+}
+```
+
+response:
+
+```json
+{}
+```
+
+### Cards Image
+
+#### /cardsImage/list
+
+request:
+
+```json
+{
+  "*token": "string",
+  "*tokenReq": "string"
+}
+```
+
+response:
+
+```json
+{
+  "list": [
+    {
+      "number": "string",
+      "photo": "string",
+
+      "_comment_number": "卡片密碼"
+    }
+  ]
+}
+```
+
+#### /cardsImage/add
+
+request:
+
+```json
+{
+  "*token": "string",
+  "*tokenReq": "string",
+  "*filter": {
+    "number": "string",
+    "photo": "string"
+  }
+}
+```
+
+response:
+
+```json
+{}
+```
+
+#### /cardsImage/edit
+
+request:
+
+```json
+{
+  "*token": "string",
+  "*tokenReq": "string",
+  "*filter": {
+    "number": "string",
+    "photo": "string"
+  }
 }
 ```
 

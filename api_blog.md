@@ -17,6 +17,7 @@
 | /member/                            | 新增會員相關 api                   | 2022/10/31 |
 | /productionInformationType/         | 新增 productionInformationType api | 2022/11/05 |
 | /member/verify                      | 新增 驗證會員 api                  | 2023/03/21 |
+| /cards_image/                       | 新增卡片圖片相關 api               | 2023/04/09 |
 
 ---
 
@@ -43,12 +44,14 @@
 | [/banner/list](#bannerlist)                                               | 取得 banner 列表   |
 | [/search](#search)                                                        | Search 文章        |
 | [/cards/cardsList](#cardscardslist)                                       | 取得卡片資料       |
+| [/cards/cardsEdit](#cardscardsedit)                                       | 修改卡片資料       |
 | [/deck/deckList](#deckdecklist)                                           | 取得卡表列表       |
 | [/deck/add](#deckadd)                                                     | 新增卡表           |
 | [/deck/edit](#deckedit)                                                   | 編輯卡表           |
 | [/deck/delete](#deckdelete)                                               | 刪除卡表           |
 | [/productionInformationType/list](#productioninformationtypelist)         | 取得 subtype       |
 | [/reptile/yuyuPrice](#reptileyuyuPrice)                                   | 爬蟲悠悠亭價格     |
+| [/cardsImage/cardsList](#cardsimagelist)                                  | 取得卡片圖片       |
 
 ---
 
@@ -600,23 +603,86 @@ response:
       "def": 0,
       "packType": "string",
       "effect": "string",
-      "photo": "string",
       "price_info": [
         {
           "time": "string",
           "price_lowest": 0,
           "price_avg": 0,
-          "price_yuyu": 0,
           "rarity": "string"
+        }
+      ],
+      "price_yuyu": [
+        {
+          "time": "string",
+          "rarity": "string",
+          "price": 0
         }
       ]
     }
   ],
 
-  "_comment_effect": "卡片效果",
-  "_comment_photo": "卡圖"
+  "_comment_effect": "卡片效果"
 }
 ```
+
+#### /cards/cardsEdit
+
+request:
+
+```json
+{
+  "*token": "string",
+  "*tokenReq": "string",
+  "number": "string",
+  "name": "string",
+  "type": "string",
+  "star": "string",
+  "attribute": "string",
+  "rarity": [],
+  "atk": 0,
+  "def": 0,
+  "product_information_type": "string",
+  "id": 0,
+  "effect": "string",
+  "time": "string",
+  "price_info": [],
+  "price_yuyu": []
+}
+```
+
+response:
+
+```json
+{}
+```
+
+### Cards Image
+
+#### /cardsImage/cardsList
+
+request:
+
+```json
+{
+  "*token": "string",
+  "*tokenReq": "string"
+}
+```
+
+response:
+
+````json
+{
+  "list": [
+    {
+      "number": "string",
+      "photo": "string",
+
+      "_comment_number": "卡片密碼"
+    }
+  ]
+}
+
 
 ### Deck
 
@@ -639,7 +705,7 @@ request:
   "_comment_title": "牌組名稱",
   "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss"
 }
-```
+````
 
 response:
 
@@ -785,8 +851,7 @@ response:
 {
   "*list": [
     {
-      "_id": "string",
-      "maintype": 0,
+      "mainType": 0,
       "subtypeList": [
         {
           "productionInformation_subtype": "string"
@@ -817,6 +882,8 @@ response:
 
 ```json
 {
-  "*price": 0
+  "price": 0,
+  "time": "string",
+  "rarity": "string"
 }
 ```
