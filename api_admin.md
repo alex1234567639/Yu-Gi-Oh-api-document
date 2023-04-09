@@ -16,7 +16,6 @@
 | /admin/                     | 新增 admin list/add/edit api       | 2021/08/04 |
 | /banner/                    | 新增 banner api                    | 2021/08/14 |
 | /battlePaper/               | 新增戰報 api                       | 2022/10/30 |
-| /cardPrice/                 | 新增卡價 api                       | 2022/10/30 |
 | /cards/                     | 新增 cards 相關 api                | 2022/10/30 |
 | /packType/                  | 新增卡包類別相關 api               | 2022/10/31 |
 | /permission/                | 新增權限相關 api                   | 2023/03/17 |
