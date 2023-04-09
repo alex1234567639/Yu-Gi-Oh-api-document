@@ -287,7 +287,7 @@ response:
       "status": 0,
       "to_top": true,
       "author_name": "string",
-      "author_id": 0,
+      "author_id": "string",
       "tag": []
     }
   ],
@@ -406,7 +406,7 @@ response:
       "status": 0,
       "to_top": true,
       "*author_name": "string",
-      "*author_id": 0,
+      "*author_id": "string",
       "*tag": []
     }
   ],
@@ -520,7 +520,7 @@ response:
       "status": 0,
       "to_top": true,
       "*author_name": "string",
-      "*author_id": 0,
+      "*author_id": "string",
       "*tag": []
     }
   ],
@@ -613,7 +613,11 @@ request:
     "packType": "string",
     "subType": "string",
     "mainType": 0
-  }
+  },
+
+   "_comment_packType": "產品代號",
+  "_comment_maintype": "產品分類 0=補充包 1=Rush Duel 2=活動贈品 3=預組套牌",
+  "_comment_subtype": "產品系列名稱(PP大會包...)"
 }
 ```
 
@@ -636,7 +640,7 @@ response:
       "status": 0,
       "to_top": true,
       "*author_name": "string",
-      "*author_id": 0,
+      "*author_id": "string",
       "*tag": []
     }
   ],
@@ -787,7 +791,7 @@ response:
       "status": 0,
       "to_top": true,
       "*author_name": "string",
-      "*author_id": 0,
+      "*author_id": "string",
       "*tag": []
     }
   ],
@@ -901,7 +905,7 @@ response:
       "status": 0,
       "to_top": true,
       "*author_name": "string",
-      "*author_id": 0,
+      "*author_id": "string",
       "*tag": []
     }
   ],
@@ -1025,7 +1029,7 @@ request:
   "*date": "string",
   "*url": "string",
   "*content": "string",
-  "＊type": 0,
+  "*type": 0,
 
   "_comment_type": "0=賽事, 1=發售日期, 2=其他相關活動",
   "_comment_date": "格式為YYYY-MM-DD HH:mm:ss",
@@ -1175,7 +1179,9 @@ response:
     }
   ],
 
-  "_comment_date": "最後更新日期"
+  "_comment_date": "最後更新日期、格式為YYYY-MM-DD HH:mm:ss",
+  "_comment_photo": "btoa()編碼的Base64字串",
+  "_comment_url": "連結"
 }
 ```
 
