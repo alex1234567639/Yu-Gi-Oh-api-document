@@ -1,0 +1,62 @@
+[
+    {
+        "type": 0,
+        "name": "王子恒",
+        "create_date": "2023-04-08",
+        "photo": "",
+        "status": 0,
+        "account": "alex123456",
+        "password": "alex123456",
+        "email": "alex123456@gmail.com"
+    },
+    {
+        "type": 0,
+        "name": "Chung Lung",
+        "create_date": "2023-04-08",
+        "photo": "",
+        "status": 0,
+        "account": "eric123456",
+        "password": "eric123456",
+        "email": "eric123456@gmail.com"
+    },
+    {
+        "type": 1,
+        "name": "陳大天",
+        "create_date": "2023-04-01",
+        "photo": "",
+        "status": 0,
+        "account": "front02",
+        "password": "front02",
+        "email": "front02@gmail.com"
+    },
+    {
+        "type": 1,
+        "name": "王小明",
+        "create_date": "2023-04-01",
+        "photo": "",
+        "status": 1,
+        "account": "front01",
+        "password": "front01",
+        "email": "front01@gmail.com"
+    },
+    {
+        "type": 2,
+        "name": "康哥",
+        "create_date": "2023-03-28",
+        "photo": "",
+        "status": 0,
+        "account": "back01",
+        "password": "back01",
+        "email": "back01@gmail.com"
+    },
+    {
+        "type": 2,
+        "name": "榮哥",
+        "create_date": "2023-03-28",
+        "photo": "",
+        "status": 1,
+        "account": "back02",
+        "password": "back02",
+        "email": "back026@gmail.com"
+    }
+]
