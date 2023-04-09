@@ -34,7 +34,7 @@
   "content": "string",
   "status": 0,
   "to_top": true,
-  "admin_id": 0,
+  "admin_id": "string",
   "tag": [],
 
   "_comment_type": "0=主題牌組, 1=外掛系列",
@@ -58,7 +58,7 @@
   "content": "string",
   "status": 0,
   "to_top": true,
-  "admin_id": 0,
+  "admin_id": "string",
   "tag": [],
 
   "_comment_type": "0=單卡介紹, 1=戰術分析",
@@ -81,7 +81,7 @@
   "content": "string",
   "status": 0,
   "to_top": true,
-  "admin_id": 0,
+  "admin_id": "string",
   "tag": [],
 
   "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
@@ -105,7 +105,7 @@
   "content": "string",
   "status": 0,
   "to_top": true,
-  "admin_id": 0,
+  "admin_id": "string",
   "tag": [],
 
   "_comment_type": "0=RD, 1=補充包, 2=預組套牌, 3=禮盒, 4=活動商品",
@@ -130,7 +130,7 @@
   "content": "string",
   "status": 0,
   "to_top": true,
-  "admin_id": 0,
+  "admin_id": "string",
   "tag": [],
 
   "_comment_type": "0=禁限卡表, 1=判例說明",
@@ -153,7 +153,7 @@
   "content": "string",
   "status": 0,
   "to_top": true,
-  "admin_id": 0,
+  "admin_id": "string",
   "tag": [],
 
   "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
@@ -176,7 +176,7 @@
   "content": "string",
   "status": 0,
   "to_top": true,
-  "admin_id": 0,
+  "admin_id": "string",
   "tag": [],
 
   "_comment_type": "0=週報",
