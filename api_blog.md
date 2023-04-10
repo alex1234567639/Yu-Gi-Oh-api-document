@@ -198,8 +198,7 @@ request:
   "page": 0,
   "limit": 0,
   "*filter": {
-    "_id": "string",
-    "status": 0
+    "_id": "string"
   }
 }
 ```
@@ -243,11 +242,8 @@ request:
   "*token": "frontend",
   "page": 0,
   "limit": 0,
-  "type": 0,
   "*filter": {
-    "_id": "string",
-    "type": 0,
-    "status": 0,
+    "_id": "string"
   },
 
   "_comment_type": "0=主題牌組, 1=外掛系列"
@@ -295,11 +291,8 @@ request:
   "*token": "frontend",
   "page": 0,
   "limit": 0,
-  "type": 0,
   "*filter": {
-    "_id": "string",
-    "type": 0,
-    "status": 0
+    "_id": "string"
   },
   
   "_comment_type": "0=單卡介紹, 1=戰術分析"
@@ -350,9 +343,6 @@ request:
   "*filter": {
     "_id": "string",
     "status": 0,
-    "begin_date": "string",
-    "end_date": "string",
-    "packType": "string",
     "subType": "string",
     "mainType": 0
   },
@@ -411,9 +401,7 @@ request:
   "page": 0,
   "limit": 0,
   "*filter": {
-    "_id": "string",
-    "type": 0,
-    "status": 0
+    "_id": "string"
   },  
 
   "_comment_type": "0=判例, 1=禁卡表"
@@ -462,8 +450,7 @@ request:
   "page": 0,
   "limit": 0,
   "*filter": {
-    "_id": "string",
-    "status": 0,
+    "_id": "string"
   }
 }
 ```
@@ -580,7 +567,7 @@ request:
   "article_subtype": 0,
 
   "_comment_content": "搜尋的文字",
-  "_comment_article_type": "0=系列介紹, 1=泛用卡介紹, 2=卡表資料, 3=上位卡表, 4=卡片故事, 5=規則相關",
+  "_comment_article_type": "0=上位卡表(metaDeck), 1=系列介紹(seriesIntroduction), 2=泛用卡介紹(usefulCardIntroduction), 3=規則相關(rules), 4=卡片故事(seriesStory)",
   "_comment_subtype": "article_type各自的子類型"
 }
 ```
@@ -709,7 +696,7 @@ request:
 
 response:
 
-````json
+```json
 {
   "list": [
     {
@@ -720,6 +707,7 @@ response:
     }
   ]
 }
+```
 
 
 ### Deck
@@ -744,7 +732,7 @@ request:
   "_comment_title": "牌組名稱",
   "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss"
 }
-````
+```
 
 response:
 
