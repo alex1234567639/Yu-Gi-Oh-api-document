@@ -615,7 +615,7 @@ request:
     "mainType": 0
   },
 
-   "_comment_packType": "產品代號",
+  "_comment_packType": "產品代號",
   "_comment_maintype": "產品分類 0=補充包 1=Rush Duel 2=活動贈品 3=預組套牌",
   "_comment_subtype": "產品系列名稱(PP大會包...)"
 }
@@ -1380,7 +1380,10 @@ request:
 ```json
 {
   "*token": "string",
-  "*tokenReq": "string"
+  "*tokenReq": "string",
+  "*filter": {
+    "number": "string"
+  }
 }
 ```
 
