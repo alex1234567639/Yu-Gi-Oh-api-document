@@ -1,50 +1,32 @@
 [
-    {
-        "title": "[卡圖故事] 戰場的悲傷邂逅-閃刀姬卡圖故事",
-        "publish_date": "2023-04-08 12:00:00",
-        "photo": "",
-        "content": "<div class="p">
-        <p style="font-weight: 400;"><span style="font-size: 1.3rem; color: #ff0000;"><strong>卡圖故事</strong></span></p>
-        <p>&nbsp;</p>
-        <p>「閃刀姬」是已經推出三年的遊戲王人氣牌組</p>
-        <p>&nbsp;</p>
-        <p>以其可愛的外表</p>
-        <p>還有強大的賽場實力，一直深受玩家喜愛</p>
-        <p><strong>其實，官方不只是相當用心做這個系列</strong></p>
-        <p><strong>卡圖故事上也是有不少的巧思</strong></p>
-        </div>",
-        "status": 0,
-        "to_top": true,
-        "admin_id": "6419c838d4b5d905bb2c9aaf",
-        "tag": []
-    },
-    {
-        "title": "[卡圖故事] 可愛女孩的香甜陷阱誘惑--蟲惑魔與落穴的故事",
-        "publish_date": "2023-04-08 12:00:00",
-        "photo": "",
-        "content": "<div class="p">
-        <p>官方漫畫OCG構築者中</p>
-        <p>&nbsp;</p>
-        <p><strong>蟲惑魔是主角的姊姊：揚羽使用的牌組</strong></p>
-        <p><strong>在故事中的設定是史上唯一一位女性世界冠軍賽選手</strong></p>
-        </div>",
-        "status": 0,
-        "to_top": true,
-        "admin_id": "6419c838d4b5d905bb2c9aaf",
-        "tag": []
-    },
-    {
-        "title": "[卡圖故事] 蟑螂大戰---G家族與人類的對決",
-        "publish_date": "2023-04-08 12:00:00",
-        "photo": "",
-        "content": "<div class="p">
-        <p><strong>增值的G是大家所熟知的手坑</strong></p>
-        <p><strong>但是你或許不知道的是</strong></p>
-        <p><strong>這張手坑也有屬於自己的家族--G系列</strong></p>
-        </div>",
-        "status": 1,
-        "to_top": false,
-        "admin_id": "6419c8e870182ff75b33e13c",
-        "tag": []
-    }
+  {
+    "title": "[卡圖故事] 戰場的悲傷邂逅-閃刀姬卡圖故事",
+    "publish_date": "2023-04-08 12:00:00",
+    "photo": "",
+    "content": "<div class='p'><p style='font-weight: 400;'><span style='font-size: 1.3rem; color: #ff0000;'><strong>卡圖故事</strong></span></p><p>&nbsp;</p><p>「閃刀姬」是已經推出三年的遊戲王人氣牌組</p><p>&nbsp;</p><p>以其可愛的外表</p><p>還有強大的賽場實力，一直深受玩家喜愛</p><p><strong>其實，官方不只是相當用心做這個系列</strong></p><p><strong>卡圖故事上也是有不少的巧思</strong></p></div>",
+    "status": 0,
+    "to_top": true,
+    "admin_id": "6419c838d4b5d905bb2c9aaf",
+    "tag": []
+  },
+  {
+    "title": "[卡圖故事] 可愛女孩的香甜陷阱誘惑--蟲惑魔與落穴的故事",
+    "publish_date": "2023-04-08 12:00:00",
+    "photo": "",
+    "content": "<div class='p'><p>官方漫畫OCG構築者中</p><p>&nbsp;</p><p><strong>蟲惑魔是主角的姊姊：揚羽使用的牌組</strong></p><p><strong>在故事中的設定是史上唯一一位女性世界冠軍賽選手</strong></p></div>",
+    "status": 0,
+    "to_top": true,
+    "admin_id": "6419c838d4b5d905bb2c9aaf",
+    "tag": []
+  },
+  {
+    "title": "[卡圖故事] 蟑螂大戰---G家族與人類的對決",
+    "publish_date": "2023-04-08 12:00:00",
+    "photo": "",
+    "content": "<div class='p'><p><strong>增值的G是大家所熟知的手坑</strong></p><p><strong>但是你或許不知道的是</strong></p><p><strong>這張手坑也有屬於自己的家族--G系列</strong></p></div>",
+    "status": 1,
+    "to_top": false,
+    "admin_id": "6419c8e870182ff75b33e13c",
+    "tag": []
+  }
 ]

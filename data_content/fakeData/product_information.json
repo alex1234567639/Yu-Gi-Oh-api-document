@@ -1,102 +1,61 @@
 [
-    {
-        "type": 0,
-        "title": "Rush Duel 傳說覺醒包 卡表 3/4發售",
-        "publish_date": "2023-04-08 12:00:00",
-        "photo": "",
-        "content": "<div>遊戲王 超速決鬥</div>
-        <div>2023/3/4 レジェンド覚醒パック</div>
-        <div>傳說覺醒包</div>
-        <div>&nbsp;</div>
-        <div>1包5張，1盒15包</div>
-        <div>種類：</div>
-        <div>全51種</div>
-        <div>ORR 1種</div>
-        <div>SER 2種</div>
-        <div>UR 6種</div>
-        <div>SR 8種</div>
-        <div>R 14種</div>
-        <div>N 20種</div>
-        <div>UR卡和SR卡有SER版本</div>
-        <div>價格：165日元（含稅）</div>",
-        "status": 0,
-        "to_top": true,
-        "admin_id": "6419c838d4b5d905bb2c9aaf",
-        "tag": []
-    },
-    {
-        "type": 1,
-        "title": "[卡表資料] LVP3 全卡表",
-        "publish_date": "2023-04-08 12:00:00",
-        "photo": "",
-        "content": "<div class="p">連結包3</div>
-        <div class="p">收錄20個系列的新連結怪以及菁英復刻卡片</div>
-        <div class="p">所有新卡都有半鑽版本</div>
-        <div class="p"><br /><strong><u>罕貴度一覽</u></strong><u></u></div>
-        <div class="p"><strong><u>&nbsp;</u></strong></div>
-        <div class="p">(UR/SER)&nbsp; 金閃/半鑽</div>
-        <div class="p">LVP3-JP001&nbsp;L・G・D</div>
-        <div class="p">LVP3-JP011&nbsp;聯合搬運者</div>
-        <div class="p">LVP3-JP036&nbsp;神聖魔皇后 塞勒涅</div>
-        <div class="p">LVP3-JP056&nbsp;武神姫 淡島</div>
-        <div class="p">LVP3-JP071&nbsp;捕食植物 佛得角蟒蛇</div>",
-        "status": 0,
-        "to_top": true,
-        "admin_id": "6419c838d4b5d905bb2c9aaf",
-        "tag": []
-    },
-    {
-        "type": 2,
-        "title": "[卡表資料] SD45 蟲惑魔之森 卡表 12/3 正式發售",
-        "publish_date": "2023-04-08 12:00:00",
-        "photo": "",
-        "content": "<div class="p">
-        <p><span style="color: #ff0000;"><strong>2022/12/3 ストラクチャーデッキ 蟲惑魔の森</strong></span></p>
-        <p>價格：1320日元（含稅）</p>
-        <p>內容：</p>
-        <p>SD卡組 &times;1</p>
-        <p>卡組強化包 &times;1</p>
-        <p>決斗場地+遊戲說明 &times;1</p>
-        </div>",
-        "status": 0,
-        "to_top": false,
-        "admin_id": "6419c8e870182ff75b33e13c",
-        "tag": []
-    },
-    {
-        "type": 3,
-        "title": "[卡表資料] Secret Utility Box 收錄卡表 12/24發售",
-        "publish_date": "2023-04-08 12:00:00",
-        "photo": "",
-        "content": "<div class="p">
-        <p><span style="font-size: 1.7rem;"><strong>2022/12/24 SECRET UTILITY BOX</strong></span></p>
-        <p>&nbsp;</p>
-        <p>價格：3850日元(含稅)</p>
-        <p>內容：</p>
-        <p>特別卡包 &times;4</p>
-        <p>特製決鬥者卡套 &times;100(全6種隨機1種)</p>
-        <p>特製場地中心卡/分隔片 &times;1(全6種隨機1種)</p>
-        <p>特製卡盒 &times;1(全6種隨機1種)</p>
-        <p>特製骰子 &times;1(全6種隨機1種)</p>
-        <p>特製收納盒 &times;1(全6種隨機1種)</p>
-        <p>特別藍字版SER &times;2(全12種隨機2種)</p>
-        </div>",
-        "status": 0,
-        "to_top": false,
-        "admin_id": "6419c8e870182ff75b33e13c",
-        "tag": []
-    },
-    {
-        "type": 4,
-        "title": "[卡表資料] 20CP Final Challenge Pack：1012促銷卡包 最後的紅鑽",
-        "publish_date": "2023-04-08 12:00:00",
-        "photo": "",
-        "content": "<div class="p">
-        <p><strong>2020年1月11日起發送</strong><br /><span style="color: #ff0000;"><strong>搭配1012補充包ETERNITY CODE贈送</strong></span><br /><strong>日本買一盒送一包，海外未定</strong><br /><br />每包一張，共十種高人氣卡片<br /><strong>全部都有半鑽或紅鑽(SER/20SE)兩種罕貴</strong><br /><br /><strong>第10期最後的紅鑽商品</strong></p>
-        </div>",
-        "status": 0,
-        "to_top": false,
-        "admin_id": "6419c8e870182ff75b33e13c",
-        "tag": []
-    }
+  {
+    "type": 0,
+    "title": "Rush Duel 傳說覺醒包 卡表 3/4發售",
+    "publish_date": "2023-04-08 12:00:00",
+    "photo": "",
+    "content": "<div>遊戲王 超速決鬥</div><div>2023/3/4 レジェンド覚醒パック</div><div>傳說覺醒包</div><div>&nbsp;</div><div>1包5張，1盒15包</div><div>種類：</div><div>全51種</div><div>ORR 1種</div><div>SER 2種</div><div>UR 6種</div><div>SR 8種</div><div>R 14種</div><div>N 20種</div><div>UR卡和SR卡有SER版本</div><div>價格：165日元（含稅）</div>",
+    "status": 0,
+    "to_top": true,
+    "admin_id": "6419c838d4b5d905bb2c9aaf",
+    "tag": []
+  },
+  {
+    "type": 1,
+    "title": "[卡表資料] LVP3 全卡表",
+    "publish_date": "2023-04-08 12:00:00",
+    "photo": "",
+    "content": "<div class='p'>連結包3</div><div class='p'>收錄20個系列的新連結怪以及菁英復刻卡片</div><div class='p'>所有新卡都有半鑽版本</div><div class='p'><br /><strong><u>罕貴度一覽</u></strong><u></u></div><div class='p'><strong><u>&nbsp;</u></strong></div><div class='p'>(UR/SER)&nbsp; 金閃/半鑽</div><div class='p'>LVP3-JP001&nbsp;L・G・D</div><div class='p'>LVP3-JP011&nbsp;聯合搬運者</div><div class='p'>LVP3-JP036&nbsp;神聖魔皇后 塞勒涅</div><div class='p'>LVP3-JP056&nbsp;武神姫 淡島</div><div class='p'>LVP3-JP071&nbsp;捕食植物 佛得角蟒蛇</div>",
+    "status": 0,
+    "to_top": true,
+    "admin_id": "6419c838d4b5d905bb2c9aaf",
+    "tag": [],
+    "product_information_type_id": "6436b4b8b50942dab148c506"
+  },
+  {
+    "type": 2,
+    "title": "[卡表資料] SD45 蟲惑魔之森 卡表 12/3 正式發售",
+    "publish_date": "2023-04-08 12:00:00",
+    "photo": "",
+    "content": "<div class='p'><p><span style='color: #ff0000;'><strong>2022/12/3 ストラクチャーデッキ 蟲惑魔の森</strong></span></p><p>價格：1320日元（含稅）</p><p>內容：</p><p>SD卡組 &times;1</p><p>卡組強化包 &times;1</p><p>決斗場地+遊戲說明 &times;1</p></div>",
+    "status": 0,
+    "to_top": false,
+    "admin_id": "6419c8e870182ff75b33e13c",
+    "tag": [],
+    "product_information_type_id": "6436b4b5b50942dab148c364"
+  },
+  {
+    "type": 3,
+    "title": "[卡表資料] Secret Utility Box 收錄卡表 12/24發售",
+    "publish_date": "2023-04-08 12:00:00",
+    "photo": "",
+    "content": "<div class='p'><p><span style='font-size: 1.7rem;'><strong>2022/12/24 SECRET UTILITY BOX</strong></span></p><p>&nbsp;</p><p>價格：3850日元(含稅)</p><p>內容：</p><p>特別卡包 &times;4</p><p>特製決鬥者卡套 &times;100(全6種隨機1種)</p><p>特製場地中心卡/分隔片 &times;1(全6種隨機1種)</p><p>特製卡盒 &times;1(全6種隨機1種)</p><p>特製骰子 &times;1(全6種隨機1種)</p><p>特製收納盒 &times;1(全6種隨機1種)</p><p>特別藍字版SER &times;2(全12種隨機2種)</p></div>",
+    "status": 0,
+    "to_top": false,
+    "admin_id": "6419c8e870182ff75b33e13c",
+    "tag": [],
+    "product_information_type_id": "6436b4b4b50942dab148c294"
+  },
+  {
+    "type": 4,
+    "title": "[卡表資料] 20CP Final Challenge Pack：1012促銷卡包 最後的紅鑽",
+    "publish_date": "2023-04-08 12:00:00",
+    "photo": "",
+    "content": "<div class='p'><p><strong>2020年1月11日起發送</strong><br /><span style='color: #ff0000;'><strong>搭配1012補充包ETERNITY CODE贈送</strong></span><br /><strong>日本買一盒送一包，海外未定</strong><br /><br />每包一張，共十種高人氣卡片<br /><strong>全部都有半鑽或紅鑽(SER/20SE)兩種罕貴</strong><br /><br /><strong>第10期最後的紅鑽商品</strong></p></div>",
+    "status": 0,
+    "to_top": false,
+    "admin_id": "6419c8e870182ff75b33e13c",
+    "tag": [],
+    "product_information_type_id": "643c15236d9a4b14a77dc02d"
+  }
 ]

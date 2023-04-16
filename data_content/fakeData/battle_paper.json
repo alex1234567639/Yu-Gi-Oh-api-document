@@ -1,43 +1,35 @@
 [
-    {
-        "type": 0,
-        "title": "[比賽報導] 2020/8/22 校際盃上位牌組蒐集區",
-        "publish_date": "2023-04-08 12:00:00",
-        "photo": "",
-        "content": "<div class="p">
-        <p><strong>2020/8/22</strong><br /><strong>校際盃上位牌組蒐集區，學生專屬賽事</strong><br /><strong>圖片皆由選手本人提供</strong><br /><strong>感謝所有熱心分享的同學們</strong><br /><strong>(持續收集中，請上位者私訊粉絲專頁NTUCGM)</strong></p>
-        </div>",
-        "status": 0,
-        "to_top": false,
-        "admin_id": "6419c838d4b5d905bb2c9aaf",
-        "tag": []
-    },
-    {
-        "type": 0,
-        "title": "[比賽報導] 2021/11/6 巔峰盃 3 on 3 比賽結果 (含賽事上位卡表)",
-        "publish_date": "2023-04-08 12:00:00",
-        "photo": "",
-        "content": "<div class="p">
-        <p><span style="color: #ff0000;"><strong>2021/11/6 巔峰盃 3 on 3 比賽結果</strong></span></p>
-        <p><strong>參賽人數：每隊3人共22隊</strong></p>
-        <p><strong>主辦單位：巔峰決鬥 Top Duel&nbsp; &nbsp; &nbsp;比賽地點：家家美樂地</strong></p>
-        </div>",
-        "status": 0,
-        "to_top": true,
-        "admin_id": "6419c838d4b5d905bb2c9aaf",
-        "tag": []
-    },
-    {
-        "type": 0,
-        "title": "[賽事報導]2017 ACS Winter Taiwan Qualifier 台灣日文版總決賽 (有賽事影片)",
-        "publish_date": "2023-04-08 12:00:00",
-        "photo": "",
-        "content": '<div class="p">
-        <p>2017/2/26 官方賽日文版圓滿落幕了<br /><br />從256位好手中選出今年度出戰亞洲賽的台灣代表<br /><br />本篇彙整上位對戰影片，讓大家能夠一次看完冠軍之路<br /><br />圖片來源：<a href="https://www.facebook.com/groups/yugiohtw/" target="_blank" rel="noopener">遊戲王官方社團</a><br />影片提供：<a href="https://www.youtube.com/user/kevin00148/videos" target="_blank" rel="noopener">大俠youtube頻道</a>&nbsp;(經本人同意授權使用)</p>
-        </div>',
-        "status": 1,
-        "to_top": false,
-        "admin_id": "6419c8e870182ff75b33e13c",
-        "tag": []
-    }
+  {
+    "type": 0,
+    "title": "[比賽報導] 2020/8/22 校際盃上位牌組蒐集區",
+    "publish_date": "2023-04-08 12:00:00",
+    "photo": "",
+    "content": "<div class='p'><p><strong>2020/8/22</strong><br /><strong>校際盃上位牌組蒐集區，學生專屬賽事</strong><br /><strong>圖片皆由選手本人提供</strong><br /><strong>感謝所有熱心分享的同學們</strong><br /><strong>(持續收集中，請上位者私訊粉絲專頁NTUCGM)</strong></p></div>",
+    "status": 0,
+    "to_top": false,
+    "admin_id": "6419c838d4b5d905bb2c9aaf",
+    "tag": []
+  },
+  {
+    "type": 0,
+    "title": "[比賽報導] 2021/11/6 巔峰盃 3 on 3 比賽結果 (含賽事上位卡表)",
+    "publish_date": "2023-04-08 12:00:00",
+    "photo": "",
+    "content": "<div class='p'><p><span style='color: #ff0000;'><strong>2021/11/6 巔峰盃 3 on 3 比賽結果</strong></span></p><p><strong>參賽人數：每隊3人共22隊</strong></p><p><strong>主辦單位：巔峰決鬥 Top Duel&nbsp; &nbsp; &nbsp;比賽地點：家家美樂地</strong></p></div>",
+    "status": 0,
+    "to_top": true,
+    "admin_id": "6419c838d4b5d905bb2c9aaf",
+    "tag": []
+  },
+  {
+    "type": 0,
+    "title": "[賽事報導]2017 ACS Winter Taiwan Qualifier 台灣日文版總決賽 (有賽事影片)",
+    "publish_date": "2023-04-08 12:00:00",
+    "photo": "",
+    "content": "<div class='p'><p>2017/2/26 官方賽日文版圓滿落幕了<br /><br />從256位好手中選出今年度出戰亞洲賽的台灣代表<br /><br />本篇彙整上位對戰影片，讓大家能夠一次看完冠軍之路<br /><br />圖片來源：<a href='https://www.facebook.com/groups/yugiohtw/' target='_blank' rel='noopener'>遊戲王官方社團</a><br />影片提供：<a href='https://www.youtube.com/user/kevin00148/videos' target='_blank' rel='noopener'>大俠youtube頻道</a>&nbsp;(經本人同意授權使用)</p></div>",
+    "status": 1,
+    "to_top": false,
+    "admin_id": "6419c8e870182ff75b33e13c",
+    "tag": []
+  }
 ]
