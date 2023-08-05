@@ -1250,6 +1250,7 @@ request:
     "type": "string",
     "star": "string",
     "attribute": "string",
+    "race": "string",
     "rarity": "string",
     "atk_t": 0,
     "atk_l": 0,
@@ -1264,6 +1265,7 @@ request:
   "_comment_type": "種類",
   "_comment_star": "星數",
   "_comment_attribute": "屬性",
+  "_comment_race": "種族",
   "_comment_rarity": "稀有度、版本",
   "_comment_product_information_type": "包裝分類name",
   "_comment_id": "卡片密碼"
@@ -1283,6 +1285,7 @@ response:
       "type": "string",
       "star": "string",
       "attribute": "string",
+      "race": "string",
       "rarity": [],
       "atk": 0,
       "def": 0,
@@ -1323,11 +1326,12 @@ request:
   "type": "string",
   "star": "string",
   "attribute": "string",
+  "race": "string",
   "rarity": [],
   "atk": 0,
   "def": 0,
   "product_information_type": "string",
-  "id": 0,
+  "id": "string",
   "effect": "string",
   "price_info": [],
   "price_yuyu": []
@@ -1353,11 +1357,12 @@ request:
   "type": "string",
   "star": "string",
   "attribute": "string",
+  "race": "string",
   "rarity": [],
   "atk": 0,
   "def": 0,
   "product_information_type": "string",
-  "id": 0,
+  "id": "string",
   "effect": "string",
   "time": "string",
   "price_info": [],
@@ -1670,8 +1675,10 @@ response:
       "*_id": "string",
       "name": "string",
       "description": "string",
-      "permission1": true,
-      "permission2": false,
+      "permission": {
+        "permission1": true,
+        "permission2": false
+      },
 
       "_comment_permission": "將能夠調整的權限逐一列出, permission1 permission2..."
     }
