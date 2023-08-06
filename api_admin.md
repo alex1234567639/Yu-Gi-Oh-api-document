@@ -1352,6 +1352,7 @@ request:
 {
   "*token": "string",
   "*tokenReq": "string",
+  "_id": "string",
   "number": "string",
   "name": "string",
   "type": "string",
@@ -1364,7 +1365,6 @@ request:
   "product_information_type": "string",
   "id": "string",
   "effect": "string",
-  "time": "string",
   "price_info": [],
   "price_yuyu": []
 }
