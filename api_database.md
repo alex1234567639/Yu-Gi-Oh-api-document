@@ -108,7 +108,7 @@
 	"admin_id": "string",
 	"tag": [],
 
-	"_comment_type": "0=RD, 1=補充包, 2=預組套牌, 3=禮盒, 4=活動商品",
+	"_comment_type": "產品分類 0=補充包 1=Rush Duel 2=其他 3=預組套牌 4=禮盒",
 	"_comment_product_information_type_id": "product_information_type id",
 	"_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
 	"_comment_photo": "btoa()編碼的Base64字串",
