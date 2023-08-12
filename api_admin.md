@@ -1411,10 +1411,8 @@ request:
 {
 	"*token": "string",
 	"*tokenReq": "string",
-	"*filter": {
-		"number": "string",
-		"photo": "string"
-	}
+	"number": "string",
+	"photo": "string"
 }
 ```
 
@@ -1432,10 +1430,9 @@ request:
 {
 	"*token": "string",
 	"*tokenReq": "string",
-	"*filter": {
-		"number": "string",
-		"photo": "string"
-	}
+	"_id": "string",
+	"number": "string",
+	"photo": "string"
 }
 ```
 
