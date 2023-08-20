@@ -1637,7 +1637,8 @@ request:
 	"*packType": "string",
 	"*subtype": "string",
 	"*maintype": 0,
-	"*name": "string"
+	"*name": "string",
+	"status": 0
 }
 ```
 
