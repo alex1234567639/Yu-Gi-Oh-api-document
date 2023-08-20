@@ -1597,7 +1597,7 @@ response:
 	],
 
 	"_comment_packType": "產品代號",
-	"_comment_maintype": "產品分類 0=補充包 1=Rush Duel 2=活動贈品 3=預組套牌",
+	"_comment_maintype": "產品分類 0=補充包 1=Rush Duel 2=其他 3=預組套牌 4=禮盒",
 	"_comment_subtype": "產品系列名稱(PP大會包...)",
 	"_comment_status": "0=上架中, 1=下架中",
 	"_comment_name": "產品名稱"
@@ -1633,6 +1633,7 @@ request:
 {
 	"*token": "string",
 	"*tokenReq": "string",
+	"*_id": "string",
 	"*packType": "string",
 	"*subtype": "string",
 	"*maintype": 0,
