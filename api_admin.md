@@ -1573,6 +1573,7 @@ request:
 	"page": 0,
 	"limit": 0,
 	"*filter": {
+		"name": "strnig",
 		"status": 0
 	},
 
