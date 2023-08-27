@@ -1153,8 +1153,8 @@ request:
 	"page": 0,
 	"limit": 0,
 	"*filter": {
-		"begin_date": 0,
-		"end_date": 0
+		"begin_date": "string",
+		"end_date": "string"
 	}
 }
 ```
@@ -1191,7 +1191,6 @@ request:
 	"*tokenReq": "string",
 	"*title": "string",
 	"*subtitle": "string",
-	"*date": "string",
 	"*photo_pc": "string",
 	"*photo_mobile": "string",
 	"*url": "string"
@@ -1212,9 +1211,9 @@ request:
 {
 	"*token": "string",
 	"*tokenReq": "string",
+	"*_id": "string",
 	"*title": "string",
 	"*subtitle": "string",
-	"*date": "string",
 	"*photo_pc": "string",
 	"*photo_mobile": "string",
 	"*url": "string"
