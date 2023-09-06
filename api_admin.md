@@ -1262,8 +1262,7 @@ request:
 	"_comment_attribute": "屬性",
 	"_comment_race": "種族",
 	"_comment_rarity": "稀有度、版本",
-	"_comment_product_information_type": "包裝分類name",
-	"_comment_id": "卡片密碼"
+	"_comment_product_information_type": "包裝分類name"
 }
 ```
 
@@ -1274,6 +1273,7 @@ response:
 	"*total": 0,
 	"*list": [
 		{
+			"_id": "string",
 			"id": "string",
 			"number": "string",
 			"name": "string",
@@ -1304,6 +1304,7 @@ response:
 		}
 	],
 
+    "_comment_ _id": "自動生成的id",
 	"_comment_effect": "卡片效果"
 }
 ```
