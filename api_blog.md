@@ -44,7 +44,7 @@
 | [/banner/list](#bannerlist)                                               | 取得 banner 列表   |
 | [/search](#search)                                                        | Search 文章        |
 | [/cards/list](#cardslist)                                                 | 取得卡片資料       |
-| [/cards/edit](#cardsedit)                                       | 修改卡片資料       |
+| [/cards/edit](#cardsedit)                                                 | 修改卡片資料       |
 | [/deck/deckList](#deckdecklist)                                           | 取得卡表列表       |
 | [/deck/add](#deckadd)                                                     | 新增卡表           |
 | [/deck/edit](#deckedit)                                                   | 編輯卡表           |
@@ -176,14 +176,18 @@ request:
 {
   "verify_code": "string",
 
-  "_comment_verify_code": "驗證碼"
+  "_comment_verify_code": "驗證碼 encode({tokenReq: string,email?:string,date: YYYY-MM-DD})"
 }
 ```
 
 response:
 
 ```json
-{}
+{
+  "password?": "string",
+
+  "_comment_password": "若為忘記密碼時使用"
+}
 ```
 
 ### Meta Deck
@@ -294,7 +298,7 @@ request:
   "*filter": {
     "_id": "string"
   },
-  
+
   "_comment_type": "0=單卡介紹, 1=戰術分析"
 }
 ```
@@ -402,7 +406,7 @@ request:
   "limit": 0,
   "*filter": {
     "_id": "string"
-  },  
+  },
 
   "_comment_type": "0=判例, 1=禁卡表"
 }
@@ -527,7 +531,7 @@ request:
 
 ```json
 {
-  "*token": "frontend",
+  "*token": "frontend"
 }
 ```
 
@@ -709,7 +713,6 @@ response:
 }
 ```
 
-
 ### Deck
 
 #### /deck/deckList
@@ -870,7 +873,7 @@ request:
 
 ```json
 {
-  "*token": "frontend",
+  "*token": "frontend"
 }
 ```
 
