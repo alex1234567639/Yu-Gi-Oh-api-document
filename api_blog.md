@@ -745,8 +745,12 @@ response:
 	"*list": [
 		{
 			"_id": "string",
+<<<<<<< HEAD
 			"*author_name": "string",
 			"*author_id": 0,
+=======
+			"*admin_id": 0,
+>>>>>>> eric
 			"title": "string",
 			"create_date": "string",
 			"last_edit_date": "string",
@@ -805,8 +809,7 @@ request:
 	"title": "string",
 	"create_date": "string",
 	"last_edit_date": "string",
-	"*author_name": "string",
-	"*author_id": 0,
+	"*admin_id": 0,
 	"main_deck": [
 		{
 			"card_id": "string",
@@ -844,9 +847,9 @@ request:
 	"*tokenReq": "string",
 	"_id": "string",
 	"title": "string",
+	"create_date": "string",
 	"last_edit_date": "string",
-	"*author_name": "string",
-	"*author_id": 0,
+	"*admin_id": 0,
 	"main_deck": [
 		{
 			"card_id": "string",
