@@ -745,12 +745,7 @@ response:
 	"*list": [
 		{
 			"_id": "string",
-<<<<<<< HEAD
-			"*author_name": "string",
-			"*author_id": 0,
-=======
 			"*admin_id": 0,
->>>>>>> eric
 			"title": "string",
 			"create_date": "string",
 			"last_edit_date": "string",
