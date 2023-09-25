@@ -63,8 +63,8 @@ request:
 
 ```json
 {
-  "*account": "string",
-  "*password": "string"
+	"*account": "string",
+	"*password": "string"
 }
 ```
 
@@ -86,10 +86,10 @@ request:
 
 ```json
 {
-  "*token": "string",
-  "*tokenReq": "string",
+	"*token": "string",
+	"*tokenReq": "string",
 
-  "_comment_tokenReq": "使用者帳號"
+	"_comment_tokenReq": "使用者帳號"
 }
 ```
 
@@ -105,10 +105,10 @@ request:
 
 ```json
 {
-  "*token": "string",
-  "*tokenReq": "string",
-  "*old_password": "string",
-  "*new_password": "string"
+	"*token": "string",
+	"*tokenReq": "string",
+	"*old_password": "string",
+	"*new_password": "string"
 }
 ```
 
@@ -124,16 +124,16 @@ request:
 
 ```json
 {
-  "*name": "string",
-  "*email": "string",
-  "*create_date": "string",
-  "*account": "string",
-  "*password": "sting",
+	"*name": "string",
+	"*email": "string",
+	"*create_date": "string",
+	"*account": "string",
+	"*password": "sting",
 
-  "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
-  "_comment_name": "length = 20",
-  "_comment_account": "length = 16",
-  "_comment_password": "max length = 16, min length = 8"
+	"_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
+	"_comment_name": "length = 20",
+	"_comment_account": "length = 16",
+	"_comment_password": "max length = 16, min length = 8"
 }
 ```
 
@@ -141,7 +141,7 @@ response:
 
 ```json
 {
-  "verify_code": "string"
+	"verify_code": "string"
 }
 ```
 
@@ -151,14 +151,14 @@ request:
 
 ```json
 {
-  "*token": "string",
-  "*tokenReq": "string",
-  "*_id": "string",
-  "*name": "string",
-  "*photo": "string",
-  "*email": "string",
+	"*token": "string",
+	"*tokenReq": "string",
+	"*_id": "string",
+	"*name": "string",
+	"*photo": "string",
+	"*email": "string",
 
-  "_comment_photo": "btoa()編碼的Base64字串"
+	"_comment_photo": "btoa()編碼的Base64字串"
 }
 ```
 
@@ -174,9 +174,9 @@ request:
 
 ```json
 {
-  "verify_code": "string",
+	"verify_code": "string",
 
-  "_comment_verify_code": "驗證碼 encode({tokenReq: string,email?:string,date: YYYY-MM-DD})"
+	"_comment_verify_code": "驗證碼 encode({tokenReq: string,email?:string,date: YYYY-MM-DD})"
 }
 ```
 
@@ -184,9 +184,9 @@ response:
 
 ```json
 {
-  "password?": "string",
+	"password?": "string",
 
-  "_comment_password": "若為忘記密碼時使用"
+	"_comment_password": "若為忘記密碼時使用"
 }
 ```
 
@@ -198,12 +198,12 @@ request:
 
 ```json
 {
-  "*token": "frontend",
-  "page": 0,
-  "limit": 0,
-  "*filter": {
-    "_id": "string"
-  }
+	"*token": "frontend",
+	"page": 0,
+	"limit": 0,
+	"*filter": {
+		"_id": "string"
+	}
 }
 ```
 
@@ -211,27 +211,27 @@ response:
 
 ```json
 {
-  "total": 0,
-  "*list": [
-    {
-      "_id": "string",
-      "title": "string",
-      "publish_date": "string",
-      "photo": "string",
-      "content": "string",
-      "status": 0,
-      "to_top": true,
-      "*author_name": "string",
-      "*author_id": "string",
-      "*tag": []
-    }
-  ],
+	"total": 0,
+	"*list": [
+		{
+			"_id": "string",
+			"title": "string",
+			"publish_date": "string",
+			"photo": "string",
+			"content": "string",
+			"status": 0,
+			"to_top": true,
+			"*author_name": "string",
+			"*author_id": "string",
+			"*tag": []
+		}
+	],
 
-  "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
-  "_comment_photo": "btoa()編碼的Base64字串",
-  "_comment_content": "副文本編輯產出的html字串",
-  "_comment_status": "0=上架中, 1=下架中",
-  "_comment_to_top": "true=置頂, false=非置頂"
+	"_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
+	"_comment_photo": "btoa()編碼的Base64字串",
+	"_comment_content": "副文本編輯產出的html字串",
+	"_comment_status": "0=上架中, 1=下架中",
+	"_comment_to_top": "true=置頂, false=非置頂"
 }
 ```
 
@@ -243,14 +243,14 @@ request:
 
 ```json
 {
-  "*token": "frontend",
-  "page": 0,
-  "limit": 0,
-  "*filter": {
-    "_id": "string"
-  },
+	"*token": "frontend",
+	"page": 0,
+	"limit": 0,
+	"*filter": {
+		"_id": "string"
+	},
 
-  "_comment_type": "0=主題牌組, 1=外掛系列"
+	"_comment_type": "0=主題牌組, 1=外掛系列"
 }
 ```
 
@@ -258,29 +258,29 @@ response:
 
 ```json
 {
-  "total": 0,
-  "*list": [
-    {
-      "_id": "string",
-      "type": 0,
-      "title": "string",
-      "publish_date": "string",
-      "photo": "string",
-      "content": "string",
-      "status": 0,
-      "to_top": true,
-      "author_name": "string",
-      "author_id": "string",
-      "tag": []
-    }
-  ],
+	"total": 0,
+	"*list": [
+		{
+			"_id": "string",
+			"type": 0,
+			"title": "string",
+			"publish_date": "string",
+			"photo": "string",
+			"content": "string",
+			"status": 0,
+			"to_top": true,
+			"author_name": "string",
+			"author_id": "string",
+			"tag": []
+		}
+	],
 
-  "_comment_type": "0=主題牌組, 1=外掛系列",
-  "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
-  "_comment_photo": "btoa()編碼的Base64字串",
-  "_comment_content": "副文本編輯產出的html字串",
-  "_comment_status": "0=上架中, 1=下架中",
-  "_comment_to_top": "true=置頂, false=非置頂"
+	"_comment_type": "0=主題牌組, 1=外掛系列",
+	"_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
+	"_comment_photo": "btoa()編碼的Base64字串",
+	"_comment_content": "副文本編輯產出的html字串",
+	"_comment_status": "0=上架中, 1=下架中",
+	"_comment_to_top": "true=置頂, false=非置頂"
 }
 ```
 
@@ -292,14 +292,14 @@ request:
 
 ```json
 {
-  "*token": "frontend",
-  "page": 0,
-  "limit": 0,
-  "*filter": {
-    "_id": "string"
-  },
+	"*token": "frontend",
+	"page": 0,
+	"limit": 0,
+	"*filter": {
+		"_id": "string"
+	},
 
-  "_comment_type": "0=單卡介紹, 1=戰術分析"
+	"_comment_type": "0=單卡介紹, 1=戰術分析"
 }
 ```
 
@@ -307,29 +307,29 @@ response:
 
 ```json
 {
-  "total": 0,
-  "*list": [
-    {
-      "_id": "string",
-      "type": 0,
-      "title": "string",
-      "publish_date": "string",
-      "photo": "string",
-      "content": "string",
-      "status": 0,
-      "to_top": true,
-      "*author_name": "string",
-      "*author_id": "string",
-      "*tag": []
-    }
-  ],
+	"total": 0,
+	"*list": [
+		{
+			"_id": "string",
+			"type": 0,
+			"title": "string",
+			"publish_date": "string",
+			"photo": "string",
+			"content": "string",
+			"status": 0,
+			"to_top": true,
+			"*author_name": "string",
+			"*author_id": "string",
+			"*tag": []
+		}
+	],
 
-  "_comment_type": "0=單卡介紹, 1=戰術分析",
-  "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
-  "_comment_photo": "btoa()編碼的Base64字串",
-  "_comment_content": "副文本編輯產出的html字串",
-  "_comment_status": "0=上架中, 1=下架中",
-  "_comment_to_top": "true=置頂, false=非置頂"
+	"_comment_type": "0=單卡介紹, 1=戰術分析",
+	"_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
+	"_comment_photo": "btoa()編碼的Base64字串",
+	"_comment_content": "副文本編輯產出的html字串",
+	"_comment_status": "0=上架中, 1=下架中",
+	"_comment_to_top": "true=置頂, false=非置頂"
 }
 ```
 
@@ -341,19 +341,19 @@ request:
 
 ```json
 {
-  "*token": "frontend",
-  "page": 0,
-  "limit": 0,
-  "*filter": {
-    "_id": "string",
-    "status": 0,
-    "subType": "string",
-    "mainType": 0
-  },
+	"*token": "frontend",
+	"page": 0,
+	"limit": 0,
+	"*filter": {
+		"_id": "string",
+		"status": 0,
+		"subType": "string",
+		"mainType": 0
+	},
 
-  "_comment_packType": "產品代號",
-  "_comment_maintype": "產品分類 0=補充包 1=Rush Duel 2=活動贈品 3=預組套牌",
-  "_comment_subtype": "產品系列名稱(PP大會包...)"
+	"_comment_packType": "產品代號",
+	"_comment_maintype": "產品分類 0=補充包 1=Rush Duel 2=活動贈品 3=預組套牌",
+	"_comment_subtype": "產品系列名稱(PP大會包...)"
 }
 ```
 
@@ -361,35 +361,35 @@ response:
 
 ```json
 {
-  "total": 0,
-  "*list": [
-    {
-      "*_id": "string",
-      "packType": "string",
-      "subType": "string",
-      "mainType": 0,
-      "name": "string",
-      "title": "string",
-      "publish_date": "string",
-      "photo": "string",
-      "content": "string",
-      "status": 0,
-      "to_top": true,
-      "*author_name": "string",
-      "*author_id": "string",
-      "*tag": []
-    }
-  ],
+	"total": 0,
+	"*list": [
+		{
+			"*_id": "string",
+			"packType": "string",
+			"subType": "string",
+			"mainType": 0,
+			"name": "string",
+			"title": "string",
+			"publish_date": "string",
+			"photo": "string",
+			"content": "string",
+			"status": 0,
+			"to_top": true,
+			"*author_name": "string",
+			"*author_id": "string",
+			"*tag": []
+		}
+	],
 
-  "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
-  "_comment_photo": "btoa()編碼的Base64字串",
-  "_comment_content": "副文本編輯產出的html字串",
-  "_comment_status": "0=上架中, 1=下架中",
-  "_comment_to_top": "true=置頂, false=非置頂",
-  "_comment_packType": "產品代號",
-  "_comment_mainType": "產品分類 0=補充包 1=Rush Duel 2=活動贈品 3=預組套牌",
-  "_comment_subType": "產品系列名稱(PP大會包...)",
-  "_comment_name": "產品名稱"
+	"_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
+	"_comment_photo": "btoa()編碼的Base64字串",
+	"_comment_content": "副文本編輯產出的html字串",
+	"_comment_status": "0=上架中, 1=下架中",
+	"_comment_to_top": "true=置頂, false=非置頂",
+	"_comment_packType": "產品代號",
+	"_comment_mainType": "產品分類 0=補充包 1=Rush Duel 2=活動贈品 3=預組套牌",
+	"_comment_subType": "產品系列名稱(PP大會包...)",
+	"_comment_name": "產品名稱"
 }
 ```
 
@@ -401,14 +401,14 @@ request:
 
 ```json
 {
-  "*token": "frontend",
-  "page": 0,
-  "limit": 0,
-  "*filter": {
-    "_id": "string"
-  },
+	"*token": "frontend",
+	"page": 0,
+	"limit": 0,
+	"*filter": {
+		"_id": "string"
+	},
 
-  "_comment_type": "0=判例, 1=禁卡表"
+	"_comment_type": "0=判例, 1=禁卡表"
 }
 ```
 
@@ -416,29 +416,29 @@ response:
 
 ```json
 {
-  "total": 0,
-  "*list": [
-    {
-      "_id": "string",
-      "type": 0,
-      "title": "string",
-      "publish_date": "string",
-      "photo": "string",
-      "content": "string",
-      "status": 0,
-      "to_top": true,
-      "*author_name": "string",
-      "*author_id": "string",
-      "*tag": []
-    }
-  ],
+	"total": 0,
+	"*list": [
+		{
+			"_id": "string",
+			"type": 0,
+			"title": "string",
+			"publish_date": "string",
+			"photo": "string",
+			"content": "string",
+			"status": 0,
+			"to_top": true,
+			"*author_name": "string",
+			"*author_id": "string",
+			"*tag": []
+		}
+	],
 
-  "_comment_type": "0=禁限卡表, 1=判例說明",
-  "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
-  "_comment_photo": "btoa()編碼的Base64字串",
-  "_comment_content": "副文本編輯產出的html字串",
-  "_comment_status": "0=上架中, 1=下架中",
-  "_comment_to_top": "true=置頂, false=非置頂"
+	"_comment_type": "0=禁限卡表, 1=判例說明",
+	"_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
+	"_comment_photo": "btoa()編碼的Base64字串",
+	"_comment_content": "副文本編輯產出的html字串",
+	"_comment_status": "0=上架中, 1=下架中",
+	"_comment_to_top": "true=置頂, false=非置頂"
 }
 ```
 
@@ -450,12 +450,12 @@ request:
 
 ```json
 {
-  "*token": "frontend",
-  "page": 0,
-  "limit": 0,
-  "*filter": {
-    "_id": "string"
-  }
+	"*token": "frontend",
+	"page": 0,
+	"limit": 0,
+	"*filter": {
+		"_id": "string"
+	}
 }
 ```
 
@@ -463,27 +463,27 @@ response:
 
 ```json
 {
-  "total": 0,
-  "*list": [
-    {
-      "*_id": "string",
-      "title": "string",
-      "publish_date": "string",
-      "photo": "string",
-      "content": "string",
-      "status": 0,
-      "to_top": true,
-      "*author_name": "string",
-      "*author_id": "string",
-      "*tag": []
-    }
-  ],
+	"total": 0,
+	"*list": [
+		{
+			"*_id": "string",
+			"title": "string",
+			"publish_date": "string",
+			"photo": "string",
+			"content": "string",
+			"status": 0,
+			"to_top": true,
+			"*author_name": "string",
+			"*author_id": "string",
+			"*tag": []
+		}
+	],
 
-  "_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
-  "_comment_photo": "btoa()編碼的Base64字串",
-  "_comment_content": "副文本編輯產出的html字串",
-  "_comment_status": "0=上架中, 1=下架中",
-  "_comment_to_top": "true=置頂, false=非置頂"
+	"_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
+	"_comment_photo": "btoa()編碼的Base64字串",
+	"_comment_content": "副文本編輯產出的html字串",
+	"_comment_status": "0=上架中, 1=下架中",
+	"_comment_to_top": "true=置頂, false=非置頂"
 }
 ```
 
@@ -495,11 +495,11 @@ request:
 
 ```json
 {
-  "*token": "frontend",
-  "*filter": {
-    "date": "string",
-    "type": 0
-  }
+	"*token": "frontend",
+	"*filter": {
+		"date": "string",
+		"type": 0
+	}
 }
 ```
 
@@ -507,19 +507,19 @@ response:
 
 ```json
 {
-  "*list": [
-    {
-      "_id": "string",
-      "title": "string",
-      "date": "string",
-      "url": "string",
-      "content": "string",
-      "type": 0
-    }
-  ],
+	"*list": [
+		{
+			"_id": "string",
+			"title": "string",
+			"date": "string",
+			"url": "string",
+			"content": "string",
+			"type": 0
+		}
+	],
 
-  "_comment_date": "格式為YYYY-MM-DD HH:mm:ss",
-  "_comment_type": "0=賽事, 1=發售日期, 2=其他相關活動"
+	"_comment_date": "格式為YYYY-MM-DD HH:mm:ss",
+	"_comment_type": "0=賽事, 1=發售日期, 2=其他相關活動"
 }
 ```
 
@@ -531,7 +531,7 @@ request:
 
 ```json
 {
-  "*token": "frontend"
+	"*token": "frontend"
 }
 ```
 
@@ -539,21 +539,21 @@ response:
 
 ```json
 {
-  "*list": [
-    {
-      "_id": "string",
-      "title": "string",
-      "subtitle": "string",
-      "date": "string",
-      "photo_pc": "string",
-      "photo_mobile": "string",
-      "url": "string"
-    }
-  ],
+	"*list": [
+		{
+			"_id": "string",
+			"title": "string",
+			"subtitle": "string",
+			"date": "string",
+			"photo_pc": "string",
+			"photo_mobile": "string",
+			"url": "string"
+		}
+	],
 
-  "_comment_date": "最後更新日期、格式為YYYY-MM-DD HH:mm:ss",
-  "_comment_photo": "btoa()編碼的Base64字串",
-  "_comment_url": "連結"
+	"_comment_date": "最後更新日期、格式為YYYY-MM-DD HH:mm:ss",
+	"_comment_photo": "btoa()編碼的Base64字串",
+	"_comment_url": "連結"
 }
 ```
 
@@ -565,14 +565,14 @@ request:
 
 ```json
 {
-  "*token": "frontend",
-  "content": "string",
-  "*article_type": 0,
-  "article_subtype": 0,
+	"*token": "frontend",
+	"content": "string",
+	"*article_type": 0,
+	"article_subtype": 0,
 
-  "_comment_content": "搜尋的文字",
-  "_comment_article_type": "0=上位卡表(metaDeck), 1=系列介紹(seriesIntroduction), 2=泛用卡介紹(usefulCardIntroduction), 3=規則相關(rules), 4=卡片故事(seriesStory)",
-  "_comment_subtype": "article_type各自的子類型"
+	"_comment_content": "搜尋的文字",
+	"_comment_article_type": "0=上位卡表(metaDeck), 1=系列介紹(seriesIntroduction), 2=泛用卡介紹(usefulCardIntroduction), 3=規則相關(rules), 4=卡片故事(seriesStory)",
+	"_comment_subtype": "article_type各自的子類型"
 }
 ```
 
@@ -584,33 +584,33 @@ request:
 
 ```json
 {
-  "*token": "frontend",
-  "page": 0,
-  "limit": 0,
-  "*filter": {
-    "id": "string",
-    "number": "string",
-    "name": "string",
-    "type": "string",
-    "star": "string",
-    "attribute": "string",
-    "rarity": "string",
-    "atk_t": 0,
-    "atk_l": 0,
-    "def_t": 0,
-    "def_l": 0,
-    "product_information_type": "string"
-  },
+	"*token": "frontend",
+	"page": 0,
+	"limit": 0,
+	"*filter": {
+		"id": "string",
+		"number": "string",
+		"name": "string",
+		"type": "string",
+		"star": "string",
+		"attribute": "string",
+		"rarity": "string",
+		"atk_t": 0,
+		"atk_l": 0,
+		"def_t": 0,
+		"def_l": 0,
+		"product_information_type": "string"
+	},
 
-  "_comment_id": "卡號",
-  "_comment_number": "卡片密碼",
-  "_comment_name": "卡名",
-  "_comment_type": "種類",
-  "_comment_star": "星數",
-  "_comment_attribute": "屬性",
-  "_comment_rarity": "稀有度、版本",
-  "_comment_product_information_type": "包裝分類name",
-  "_comment_id": "卡片密碼"
+	"_comment_id": "卡號",
+	"_comment_number": "卡片密碼",
+	"_comment_name": "卡名",
+	"_comment_type": "種類",
+	"_comment_star": "星數",
+	"_comment_attribute": "屬性",
+	"_comment_rarity": "稀有度、版本",
+	"_comment_product_information_type": "包裝分類name",
+	"_comment_id": "卡片密碼"
 }
 ```
 
@@ -618,39 +618,39 @@ response:
 
 ```json
 {
-  "*total": 0,
-  "*list": [
-    {
-      "id": "string",
-      "number": "string",
-      "name": "string",
-      "type": "string",
-      "star": "string",
-      "attribute": "string",
-      "rarity": [],
-      "atk": 0,
-      "def": 0,
-      "packType": "string",
-      "effect": "string",
-      "price_info": [
-        {
-          "time": "string",
-          "price_lowest": 0,
-          "price_avg": 0,
-          "rarity": "string"
-        }
-      ],
-      "price_yuyu": [
-        {
-          "time": "string",
-          "rarity": "string",
-          "price": 0
-        }
-      ]
-    }
-  ],
+	"*total": 0,
+	"*list": [
+		{
+			"id": "string",
+			"number": "string",
+			"name": "string",
+			"type": "string",
+			"star": "string",
+			"attribute": "string",
+			"rarity": [],
+			"atk": 0,
+			"def": 0,
+			"packType": "string",
+			"effect": "string",
+			"price_info": [
+				{
+					"time": "string",
+					"price_lowest": 0,
+					"price_avg": 0,
+					"rarity": "string"
+				}
+			],
+			"price_yuyu": [
+				{
+					"time": "string",
+					"rarity": "string",
+					"price": 0
+				}
+			]
+		}
+	],
 
-  "_comment_effect": "卡片效果"
+	"_comment_effect": "卡片效果"
 }
 ```
 
@@ -660,22 +660,22 @@ request:
 
 ```json
 {
-  "*token": "string",
-  "*tokenReq": "string",
-  "number": "string",
-  "name": "string",
-  "type": "string",
-  "star": "string",
-  "attribute": "string",
-  "rarity": [],
-  "atk": 0,
-  "def": 0,
-  "product_information_type": "string",
-  "id": 0,
-  "effect": "string",
-  "time": "string",
-  "price_info": [],
-  "price_yuyu": []
+	"*token": "string",
+	"*tokenReq": "string",
+	"number": "string",
+	"name": "string",
+	"type": "string",
+	"star": "string",
+	"attribute": "string",
+	"rarity": [],
+	"atk": 0,
+	"def": 0,
+	"product_information_type": "string",
+	"id": 0,
+	"effect": "string",
+	"time": "string",
+	"price_info": [],
+	"price_yuyu": []
 }
 ```
 
@@ -693,8 +693,8 @@ request:
 
 ```json
 {
-  "*token": "string",
-  "*tokenReq": "string"
+	"*token": "string",
+	"*tokenReq": "string"
 }
 ```
 
@@ -702,14 +702,14 @@ response:
 
 ```json
 {
-  "list": [
-    {
-      "number": "string",
-      "photo": "string",
+	"list": [
+		{
+			"number": "string",
+			"photo": "string",
 
-      "_comment_number": "卡片密碼"
-    }
-  ]
+			"_comment_number": "卡片密碼"
+		}
+	]
 }
 ```
 
@@ -721,19 +721,19 @@ request:
 
 ```json
 {
-  "*token": "frontend",
-  "page": 0,
-  "limit": 0,
-  "*filter": {
-    "_id": "string",
-    "number": "string",
-    "title": "string",
-    "last_edit_date": "string"
-  },
+	"*token": "frontend",
+	"page": 0,
+	"limit": 0,
+	"*filter": {
+		"_id": "string",
+		"admin_id": "string",
+		"title": "string",
+		"create_date": "string"
+	},
 
-  "_comment_number": "卡號",
-  "_comment_title": "牌組名稱",
-  "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss"
+	"_comment_number": "卡號",
+	"_comment_title": "牌組名稱",
+	"_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss"
 }
 ```
 
@@ -741,49 +741,56 @@ response:
 
 ```json
 {
-  "total": 0,
-  "*list": [
-    {
-      "_id": "string",
-      "*author_name": "string",
-      "*author_id": 0,
-      "title": "string",
-      "create_date": "string",
-      "last_edit_date": "string",
-      "main_deck": [
-        {
-          "id": "string",
-          "number": "string",
-          "name": "string",
-          "type": "string",
-          "star": "string",
-          "attribute": "string",
-          "rarity": "string",
-          "atk": 0,
-          "def": 0,
-          "packType": "string",
-          "effect": "string",
-          "photo": "string",
-          "price_info": [
-            {
-              "time": "string",
-              "price_lowest": 0,
-              "price_avg": 0,
-              "price_yuyu": 0,
-              "rarity": "string"
-            }
-          ]
-        }
-      ],
-      "extra_deck": [],
-      "side_deck": []
-    }
-  ],
+	"total": 0,
+	"*list": [
+		{
+			"_id": "string",
+			"*author_name": "string",
+			"*author_id": 0,
+			"title": "string",
+			"create_date": "string",
+			"last_edit_date": "string",
+			"main_deck": [
+				{
+					"id": "string",
+					"number": "string",
+					"name": "string",
+					"type": "string",
+					"star": "string",
+					"attribute": "string",
+					"rarity": "string",
+					"atk": 0,
+					"def": 0,
+					"packType": "string",
+					"effect": "string",
+					"photo": "string",
+					"price_yuyu": [
+						{
+							"time": "string",
+							"price_lowest": 0,
+							"price_avg": 0,
+							"rarity": "string"
+						}
+					],
+					"price_info": [
+						{
+							"time": "string",
+							"price_lowest": 0,
+							"price_avg": 0,
+							"rarity": "string"
+						}
+					]
+				}
+			],
+			"extra_deck": [],
+			"side_deck": []
+		}
+	],
 
-  "_comment_id": "卡號",
-  "_comment_number": "卡片密碼",
-  "_comment_create_date": "格式為YYYY-MM-DD HH:mm:ss",
-  "_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss"
+	"_comment_id": "卡號",
+	"_comment_number": "卡片密碼",
+	"_comment_create_date": "格式為YYYY-MM-DD HH:mm:ss",
+	"_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss"
 }
 ```
 
@@ -793,21 +800,31 @@ request:
 
 ```json
 {
-  "*token": "string",
-  "*tokenReq": "string",
-  "title": "string",
-  "create_date": "string",
-  "last_edit_date": "string",
-  "*author_name": "string",
-  "*author_id": 0,
-  "main_deck": [
-    {
-      "number": "string",
-      "rarity": "string"
-    }
-  ],
-  "extra_deck": [],
-  "side_deck": []
+	"*token": "string",
+	"*tokenReq": "string",
+	"title": "string",
+	"create_date": "string",
+	"last_edit_date": "string",
+	"*author_name": "string",
+	"*author_id": 0,
+	"main_deck": [
+		{
+			"card_id": "string",
+			"card_rarity": "string"
+		}
+	],
+	"extra_deck": [
+		{
+			"card_id": "string",
+			"card_rarity": "string"
+		}
+	],
+	"side_deck": [
+		{
+			"card_id": "string",
+			"card_rarity": "string"
+		}
+	]
 }
 ```
 
@@ -823,21 +840,31 @@ request:
 
 ```json
 {
-  "*token": "string",
-  "*tokenReq": "string",
-  "_id": "string",
-  "title": "string",
-  "last_edit_date": "string",
-  "*author_name": "string",
-  "*author_id": 0,
-  "main_deck": [
-    {
-      "number": "string",
-      "rarity": "string"
-    }
-  ],
-  "extra_deck": [],
-  "side_deck": []
+	"*token": "string",
+	"*tokenReq": "string",
+	"_id": "string",
+	"title": "string",
+	"last_edit_date": "string",
+	"*author_name": "string",
+	"*author_id": 0,
+	"main_deck": [
+		{
+			"card_id": "string",
+			"card_rarity": "string"
+		}
+	],
+	"extra_deck": [
+		{
+			"card_id": "string",
+			"card_rarity": "string"
+		}
+	],
+	"side_deck": [
+		{
+			"card_id": "string",
+			"card_rarity": "string"
+		}
+	]
 }
 ```
 
@@ -853,9 +880,9 @@ request:
 
 ```json
 {
-  "*token": "string",
-  "*tokenReq": "string",
-  "_id": "string"
+	"*token": "string",
+	"*tokenReq": "string",
+	"_id": "string"
 }
 ```
 
@@ -873,7 +900,7 @@ request:
 
 ```json
 {
-  "*token": "frontend"
+	"*token": "frontend"
 }
 ```
 
@@ -881,16 +908,16 @@ response:
 
 ```json
 {
-  "*list": [
-    {
-      "mainType": 0,
-      "subtypeList": [
-        {
-          "productionInformation_subtype": "string"
-        }
-      ]
-    }
-  ]
+	"*list": [
+		{
+			"mainType": 0,
+			"subtypeList": [
+				{
+					"productionInformation_subtype": "string"
+				}
+			]
+		}
+	]
 }
 ```
 
@@ -902,12 +929,12 @@ request:
 
 ```json
 {
-  "*token": "frontend",
-  "name": "string",
-  "rarity": "string",
+	"*token": "frontend",
+	"name": "string",
+	"rarity": "string",
 
-  "_comment_name": "卡號",
-  "_comment_rarity": "卡片罕貴度"
+	"_comment_name": "卡號",
+	"_comment_rarity": "卡片罕貴度"
 }
 ```
 
@@ -915,8 +942,8 @@ response:
 
 ```json
 {
-  "price": 0,
-  "time": "string",
-  "rarity": "string"
+	"price": 0,
+	"time": "string",
+	"rarity": "string"
 }
 ```
