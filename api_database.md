@@ -251,6 +251,7 @@
 	"admin_id": 0,
 	"title": "string",
 	"create_date": "string",
+	"last_edit_date": "string",
 	"main_deck": [
 		{
 			"card_id": 0,
