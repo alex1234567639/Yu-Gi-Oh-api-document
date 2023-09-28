@@ -687,14 +687,13 @@ response:
 
 ### Cards Image
 
-#### /cardsImage/cardsList
+#### /cardsImage/list
 
 request:
 
 ```json
 {
-	"*token": "string",
-	"*tokenReq": "string"
+	"*token": "frontend"
 }
 ```
 
