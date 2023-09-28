@@ -345,15 +345,8 @@ request:
 	"page": 0,
 	"limit": 0,
 	"*filter": {
-		"_id": "string",
-		"status": 0,
-		"subType": "string",
-		"mainType": 0
-	},
-
-	"_comment_packType": "產品代號",
-	"_comment_maintype": "產品分類 0=補充包 1=Rush Duel 2=活動贈品 3=預組套牌",
-	"_comment_subtype": "產品系列名稱(PP大會包...)"
+		"_id": "string"
+	}
 }
 ```
 
@@ -566,11 +559,11 @@ request:
 ```json
 {
 	"*token": "frontend",
-	"content": "string",
+	"title": "string",
 	"*article_type": 0,
 	"article_subtype": 0,
 
-	"_comment_content": "搜尋的文字",
+	"_comment_title": "搜尋標題的文字",
 	"_comment_article_type": "0=上位卡表(metaDeck), 1=系列介紹(seriesIntroduction), 2=泛用卡介紹(usefulCardIntroduction), 3=規則相關(rules), 4=卡片故事(seriesStory)",
 	"_comment_subtype": "article_type各自的子類型"
 }
@@ -727,12 +720,14 @@ request:
 		"_id": "string",
 		"admin_id": "string",
 		"title": "string",
-		"create_date": "string"
+		"begin_date": "string",
+		"end_date": "string"
 	},
 
 	"_comment_number": "卡號",
 	"_comment_title": "牌組名稱",
-	"_comment_last_edit_date": "格式為YYYY-MM-DD HH:mm:ss"
+	"_comment_begin_date": "格式為YYYY-MM-DD ",
+	"_comment_end_date": "格式為YYYY-MM-DD "
 }
 ```
 
@@ -744,7 +739,7 @@ response:
 	"*list": [
 		{
 			"_id": "string",
-			"*admin_id": 0,
+			"*admin_id": "string",
 			"title": "string",
 			"create_date": "string",
 			"last_edit_date": "string",
@@ -800,23 +795,23 @@ request:
 {
 	"*token": "string",
 	"*tokenReq": "string",
-	"title": "string",
-	"create_date": "string",
-	"last_edit_date": "string",
-	"*admin_id": 0,
-	"main_deck": [
+	"*title": "string",
+	"*create_date": "string",
+	"*last_edit_date": "string",
+	"*admin_id": "string",
+	"*main_deck": [
 		{
 			"card_id": "string",
 			"card_rarity": "string"
 		}
 	],
-	"extra_deck": [
+	"*extra_deck": [
 		{
 			"card_id": "string",
 			"card_rarity": "string"
 		}
 	],
-	"side_deck": [
+	"*side_deck": [
 		{
 			"card_id": "string",
 			"card_rarity": "string"
@@ -843,7 +838,7 @@ request:
 	"title": "string",
 	"create_date": "string",
 	"last_edit_date": "string",
-	"*admin_id": 0,
+	"*admin_id": "string",
 	"main_deck": [
 		{
 			"card_id": "string",
