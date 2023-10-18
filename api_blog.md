@@ -228,7 +228,7 @@ response:
 	],
 
 	"_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
-	"_comment_photo": "btoa()編碼的Base64字串",
+	"_comment_photo": "圖片檔名，請參考common的路徑",
 	"_comment_content": "副文本編輯產出的html字串",
 	"_comment_status": "0=上架中, 1=下架中",
 	"_comment_to_top": "true=置頂, false=非置頂"
@@ -277,7 +277,7 @@ response:
 
 	"_comment_type": "0=主題牌組, 1=外掛系列",
 	"_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
-	"_comment_photo": "btoa()編碼的Base64字串",
+	"_comment_photo": "圖片檔名，請參考common的路徑",
 	"_comment_content": "副文本編輯產出的html字串",
 	"_comment_status": "0=上架中, 1=下架中",
 	"_comment_to_top": "true=置頂, false=非置頂"
@@ -326,7 +326,7 @@ response:
 
 	"_comment_type": "0=單卡介紹, 1=戰術分析",
 	"_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
-	"_comment_photo": "btoa()編碼的Base64字串",
+	"_comment_photo": "圖片檔名，請參考common的路徑",
 	"_comment_content": "副文本編輯產出的html字串",
 	"_comment_status": "0=上架中, 1=下架中",
 	"_comment_to_top": "true=置頂, false=非置頂"
@@ -375,7 +375,7 @@ response:
 	],
 
 	"_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
-	"_comment_photo": "btoa()編碼的Base64字串",
+	"_comment_photo": "圖片檔名，請參考common的路徑",
 	"_comment_content": "副文本編輯產出的html字串",
 	"_comment_status": "0=上架中, 1=下架中",
 	"_comment_to_top": "true=置頂, false=非置頂",
@@ -428,7 +428,7 @@ response:
 
 	"_comment_type": "0=禁限卡表, 1=判例說明",
 	"_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
-	"_comment_photo": "btoa()編碼的Base64字串",
+	"_comment_photo": "圖片檔名，請參考common的路徑",
 	"_comment_content": "副文本編輯產出的html字串",
 	"_comment_status": "0=上架中, 1=下架中",
 	"_comment_to_top": "true=置頂, false=非置頂"
@@ -473,7 +473,7 @@ response:
 	],
 
 	"_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
-	"_comment_photo": "btoa()編碼的Base64字串",
+	"_comment_photo": "圖片檔名，請參考common的路徑",
 	"_comment_content": "副文本編輯產出的html字串",
 	"_comment_status": "0=上架中, 1=下架中",
 	"_comment_to_top": "true=置頂, false=非置頂"
@@ -545,7 +545,7 @@ response:
 	],
 
 	"_comment_date": "最後更新日期、格式為YYYY-MM-DD HH:mm:ss",
-	"_comment_photo": "btoa()編碼的Base64字串",
+	"_comment_photo": "圖片檔名，請參考common的路徑",
 	"_comment_url": "連結"
 }
 ```
