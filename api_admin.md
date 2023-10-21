@@ -286,8 +286,8 @@ response:
 			"content": "string",
 			"status": 0,
 			"to_top": true,
-			"author_name": "string",
-			"author_id": "string",
+			"*admin_name": "string",
+			"*admin_id": "string",
 			"tag": []
 		}
 	],
@@ -314,8 +314,7 @@ request:
 	"*publish_date": "string",
 	"*photo": "string",
 	"*content": "string",
-	"*author_name": "string",
-	"*author_id": 0,
+	"*admin_id": "string",
 	"*tag": [],
 
 	"_comment_type": "0=主題牌組, 1=外掛系列",
@@ -347,8 +346,7 @@ request:
 	"*content": "string",
 	"*status": 0,
 	"*to_top": true,
-	"*author_name": "string",
-	"*author_id": 0,
+	"*admin_id": "string",
 	"*tag": [],
 
 	"_comment_type": "0=主題牌組, 1=外掛系列",
@@ -405,8 +403,8 @@ response:
 			"content": "string",
 			"status": 0,
 			"to_top": true,
-			"*author_name": "string",
-			"*author_id": "string",
+			"*admin_name": "string",
+	        "*admin_id": "string",
 			"*tag": []
 		}
 	],
@@ -433,8 +431,7 @@ request:
 	"*publish_date": "string",
 	"*photo": "string",
 	"*content": "string",
-	"*author_name": "string",
-	"*author_id": 0,
+	"*admin_id": "string",
 	"*tag": [],
 
 	"_comment_type": "0=單卡介紹, 1=戰術分析",
@@ -466,8 +463,7 @@ request:
 	"*content": "string",
 	"*status": 0,
 	"*to_top": true,
-	"*author_name": "string",
-	"*author_id": 0,
+	"*admin_id": "string",
 	"*tag": [],
 
 	"_comment_type": "0=單卡介紹, 1=戰術分析",
@@ -519,8 +515,8 @@ response:
 			"content": "string",
 			"status": 0,
 			"to_top": true,
-			"*author_name": "string",
-			"*author_id": "string",
+			"*admin_name": "string",
+	        "*admin_id": "string",
 			"*tag": []
 		}
 	],
@@ -545,8 +541,7 @@ request:
 	"*publish_date": "string",
 	"*photo": "string",
 	"*content": "string",
-	"*author_name": "string",
-	"*author_id": 0,
+	"*admin_id": "string",
 	"*tag": [],
 
 	"_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
@@ -576,8 +571,7 @@ request:
 	"*content": "string",
 	"*status": 0,
 	"*to_top": true,
-	"*author_name": "string",
-	"*author_id": 0,
+	"*admin_id": "string",
 	"*tag": [],
 
 	"_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
@@ -635,8 +629,8 @@ response:
 			"content": "string",
 			"status": 0,
 			"to_top": true,
-			"*author_name": "string",
-			"*author_id": "string",
+			"*admin_name": "string",
+	        "*admin_id": "string",
 			"*tag": []
 		}
 	],
@@ -666,8 +660,7 @@ request:
 	"*publish_date": "string",
 	"*photo": "string",
 	"*content": "string",
-	"*author_name": "string",
-	"*author_id": 0,
+	"*admin_id": "string",
 	"*tag": [],
 
 	"_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
@@ -699,8 +692,7 @@ request:
 	"*content": "string",
 	"*status": 0,
 	"*to_top": true,
-	"*author_name": "string",
-	"*author_id": 0,
+	"*admin_id": "string",
 	"*tag": [],
 
 	"_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
@@ -786,8 +778,8 @@ response:
 			"content": "string",
 			"status": 0,
 			"to_top": true,
-			"*author_name": "string",
-			"*author_id": "string",
+			"*admin_name": "string",
+	        "*admin_id": "string",
 			"*tag": []
 		}
 	],
@@ -814,8 +806,7 @@ request:
 	"*publish_date": "string",
 	"*photo": "string",
 	"*content": "string",
-	"*author_name": "string",
-	"*author_id": 0,
+	"*admin_id": "string",
 	"*tag": [],
 
 	"_comment_type": "0=禁限卡表, 1=判例說明",
@@ -847,8 +838,7 @@ request:
 	"*content": "string",
 	"*status": 0,
 	"*to_top": true,
-	"*author_name": "string",
-	"*author_id": 0,
+	"*admin_id": "string",
 	"*tag": [],
 
 	"_comment_type": "0=禁限卡表, 1=判例說明",
@@ -900,8 +890,8 @@ response:
 			"content": "string",
 			"status": 0,
 			"to_top": true,
-			"*author_name": "string",
-			"*author_id": "string",
+			"*admin_name": "string",
+	        "*admin_id": "string",
 			"*tag": []
 		}
 	],
@@ -926,8 +916,7 @@ request:
 	"*publish_date": "string",
 	"*photo": "string",
 	"*content": "string",
-	"*author_name": "string",
-	"*author_id": 0,
+	"*admin_id": "string",
 	"*tag": [],
 
 	"_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
@@ -957,8 +946,7 @@ request:
 	"*content": "string",
 	"*status": 0,
 	"*to_top": true,
-	"*author_name": "string",
-	"*author_id": 0,
+	"*admin_id": "string",
 	"*tag": [],
 
 	"_comment_publish_date": "格式為YYYY-MM-DD HH:mm:ss",
@@ -1480,8 +1468,8 @@ response:
 			"content": "string",
 			"status": 0,
 			"to_top": true,
-			"*author_name": "string",
-			"*author_id": 0,
+			"*admin_name": "string",
+	        "*admin_id": "string",
 			"*tag": []
 		}
 	],
@@ -1508,8 +1496,7 @@ request:
 	"*publish_date": "string",
 	"*photo": "string",
 	"*content": "string",
-	"*author_name": "string",
-	"*author_id": 0,
+	"*admin_id": "string",
 	"*tag": [],
 
 	"_comment_type": "0=週報",
@@ -1541,8 +1528,7 @@ request:
 	"*content": "string",
 	"*status": 0,
 	"*to_top": true,
-	"*author_name": "string",
-	"*author_id": 0,
+	"*admin_id": "string",
 	"*tag": [],
 
 	"_comment_type": "0=週報",

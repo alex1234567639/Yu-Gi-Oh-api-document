@@ -221,8 +221,8 @@ response:
 			"content": "string",
 			"status": 0,
 			"to_top": true,
-			"*author_name": "string",
-			"*author_id": "string",
+			"*admin_name": "string",
+			"*admin_id": "string",
 			"*tag": []
 		}
 	],
@@ -269,8 +269,8 @@ response:
 			"content": "string",
 			"status": 0,
 			"to_top": true,
-			"author_name": "string",
-			"author_id": "string",
+			"*admin_name": "string",
+			"*admin_id": "string",
 			"tag": []
 		}
 	],
@@ -318,8 +318,8 @@ response:
 			"content": "string",
 			"status": 0,
 			"to_top": true,
-			"*author_name": "string",
-			"*author_id": "string",
+			"*admin_name": "string",
+			"*admin_id": "string",
 			"*tag": []
 		}
 	],
@@ -368,8 +368,8 @@ response:
 			"content": "string",
 			"status": 0,
 			"to_top": true,
-			"*author_name": "string",
-			"*author_id": "string",
+			"*admin_name": "string",
+			"*admin_id": "string",
 			"*tag": []
 		}
 	],
@@ -420,8 +420,8 @@ response:
 			"content": "string",
 			"status": 0,
 			"to_top": true,
-			"*author_name": "string",
-			"*author_id": "string",
+			"*admin_name": "string",
+			"*admin_id": "string",
 			"*tag": []
 		}
 	],
@@ -436,7 +436,6 @@ response:
 ```
 
 ### Series Story
-
 #### /seriesStory/articleList
 
 request:
@@ -466,8 +465,8 @@ response:
 			"content": "string",
 			"status": 0,
 			"to_top": true,
-			"*author_name": "string",
-			"*author_id": "string",
+			"*admin_name": "string",
+			"*admin_id": "string",
 			"*tag": []
 		}
 	],
