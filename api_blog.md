@@ -436,6 +436,7 @@ response:
 ```
 
 ### Series Story
+
 #### /seriesStory/articleList
 
 request:
@@ -562,7 +563,9 @@ request:
 	"*article_type": 0,
 	"article_subtype": 0,
 	"limit": 0,
-	"page": 0
+	"page": 0,
+	"*status" : 0,
+	"to_top": true
 
 	"_comment_title": "搜尋標題的文字",
 	"_comment_article_type": "0=上位卡表(metaDeck), 1=系列介紹(seriesIntroduction), 2=泛用卡介紹(usefulCardIntroduction), 3=規則相關(rules), 4=卡片故事(seriesStory)",
