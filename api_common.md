@@ -6,7 +6,7 @@
 
 ```json
 {
-	"data": {}
+  "data": {}
 }
 ```
 
@@ -14,8 +14,8 @@
 
 ```json
 {
-	"error_code": 0,
-	"data": {}
+  "error_code": 0,
+  "data": {}
 }
 ```
 
@@ -66,6 +66,7 @@ encrypt string 為 AES(JSON string).toString()
 | 帳號尚未申請後台使用權限 | 11004       |
 | 帳號驗證碼錯誤或過期     | 11005       |
 | 帳號或 EMAIL 驗證錯誤    | 11006       |
+| 帳號或 EMAIL 待驗證      | 11007       |
 
 ---
 
@@ -73,122 +74,122 @@ encrypt string 為 AES(JSON string).toString()
 
 ```json
 [
-	{
-		"key": "N",
-		"val": "普卡(Normal)"
-	},
-	{
-		"key": "R",
-		"val": "銀字(Rare)"
-	},
-	{
-		"key": "SR",
-		"val": "亮面(Super Rare)"
-	},
-	{
-		"key": "UR",
-		"val": "金亮(Ultra Rare)"
-	},
-	{
-		"key": "SER",
-		"val": "半鑽(Secret Rare)"
-	},
-	{
-		"key": "UTR",
-		"val": "浮雕/凸版(Ultimate Rare)"
-	},
-	{
-		"key": "HR",
-		"val": "雷射(Holographic Rare)"
-	},
-	{
-		"key": "NPR",
-		"val": "普鑽(Normal-Parallel Rare)"
-	},
-	{
-		"key": "GR",
-		"val": "黃金(Gold Rare)"
-	},
-	{
-		"key": "GSR",
-		"val": "黃金半鑽(Gold Secret Rare)"
-	},
-	{
-		"key": "ESR",
-		"val": "斜鑽(Extra Secret Rare)"
-	},
-	{
-		"key": "CR",
-		"val": "雕鑽(Collector's Rare)"
-	},
-	{
-		"key": "M",
-		"val": "千年/古文鑽(Millennium Rare)"
-	},
-	{
-		"key": "MSR",
-		"val": "千年/古文鑽 + 亮面(Millennium Super Rare)"
-	},
-	{
-		"key": "MUR",
-		"val": "千年/古文鑽 + 金亮(Millennium Ultra Rare)"
-	},
-	{
-		"key": "MSER",
-		"val": "千年/古文鑽 + 半鑽(Millennium Secret Rare)"
-	},
-	{
-		"key": "MGR",
-		"val": "千年/古文鑽 + 黃金(Millennium Gold Rare)"
-	},
-	{
-		"key": "KC",
-		"val": "KC紋"
-	},
-	{
-		"key": "KCR",
-		"val": "KC紋 + 銀字"
-	},
-	{
-		"key": "KCUR",
-		"val": "KC紋 + 金亮"
-	},
-	{
-		"key": "20thSER",
-		"val": "紅鑽(20th Secret Rare)"
-	},
-	{
-		"key": "10000SER",
-		"val": "紅鑽(10000 Secret Rare)"
-	},
-	{
-		"key": "PGR",
-		"val": "高級黃金(Premium Gold Rare)"
-	},
-	{
-		"key": "USR",
-		"val": "金碎/銀亮(Ultra-Secret Rare)"
-	},
-	{
-		"key": "SBSER",
-		"val": "藍鑽(SPECIAL BLUE Ver.)"
-	},
-	{
-		"key": "PR",
-		"val": "全鑽(Parallel Rare)"
-	},
-	{
-		"key": "GHR",
-		"val": "鬼閃(Ghost Rare)"
-	},
-	{
-		"key": "PSER",
-		"val": "白鑽(Prismatic Secret Rare)"
-	},
-	{
-		"key": "PR",
-		"val": "全鑽(Parallel Rare)"
-	}
+  {
+    "key": "N",
+    "val": "普卡(Normal)"
+  },
+  {
+    "key": "R",
+    "val": "銀字(Rare)"
+  },
+  {
+    "key": "SR",
+    "val": "亮面(Super Rare)"
+  },
+  {
+    "key": "UR",
+    "val": "金亮(Ultra Rare)"
+  },
+  {
+    "key": "SER",
+    "val": "半鑽(Secret Rare)"
+  },
+  {
+    "key": "UTR",
+    "val": "浮雕/凸版(Ultimate Rare)"
+  },
+  {
+    "key": "HR",
+    "val": "雷射(Holographic Rare)"
+  },
+  {
+    "key": "NPR",
+    "val": "普鑽(Normal-Parallel Rare)"
+  },
+  {
+    "key": "GR",
+    "val": "黃金(Gold Rare)"
+  },
+  {
+    "key": "GSR",
+    "val": "黃金半鑽(Gold Secret Rare)"
+  },
+  {
+    "key": "ESR",
+    "val": "斜鑽(Extra Secret Rare)"
+  },
+  {
+    "key": "CR",
+    "val": "雕鑽(Collector's Rare)"
+  },
+  {
+    "key": "M",
+    "val": "千年/古文鑽(Millennium Rare)"
+  },
+  {
+    "key": "MSR",
+    "val": "千年/古文鑽 + 亮面(Millennium Super Rare)"
+  },
+  {
+    "key": "MUR",
+    "val": "千年/古文鑽 + 金亮(Millennium Ultra Rare)"
+  },
+  {
+    "key": "MSER",
+    "val": "千年/古文鑽 + 半鑽(Millennium Secret Rare)"
+  },
+  {
+    "key": "MGR",
+    "val": "千年/古文鑽 + 黃金(Millennium Gold Rare)"
+  },
+  {
+    "key": "KC",
+    "val": "KC紋"
+  },
+  {
+    "key": "KCR",
+    "val": "KC紋 + 銀字"
+  },
+  {
+    "key": "KCUR",
+    "val": "KC紋 + 金亮"
+  },
+  {
+    "key": "20thSER",
+    "val": "紅鑽(20th Secret Rare)"
+  },
+  {
+    "key": "10000SER",
+    "val": "紅鑽(10000 Secret Rare)"
+  },
+  {
+    "key": "PGR",
+    "val": "高級黃金(Premium Gold Rare)"
+  },
+  {
+    "key": "USR",
+    "val": "金碎/銀亮(Ultra-Secret Rare)"
+  },
+  {
+    "key": "SBSER",
+    "val": "藍鑽(SPECIAL BLUE Ver.)"
+  },
+  {
+    "key": "PR",
+    "val": "全鑽(Parallel Rare)"
+  },
+  {
+    "key": "GHR",
+    "val": "鬼閃(Ghost Rare)"
+  },
+  {
+    "key": "PSER",
+    "val": "白鑽(Prismatic Secret Rare)"
+  },
+  {
+    "key": "PR",
+    "val": "全鑽(Parallel Rare)"
+  }
 ]
 ```
 

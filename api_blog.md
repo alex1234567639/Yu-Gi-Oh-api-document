@@ -192,6 +192,28 @@ response:
 }
 ```
 
+#### /member/reSend
+
+request:
+
+```json
+{
+  "*email": "string",
+  "*account": "string",
+
+  "_comment_account": "length = 16"
+}
+```
+
+response:
+
+```json
+{
+  "*email": "string",
+  "*account": "string"
+}
+```
+
 ### Meta Deck
 
 #### /metaDeck/articleList
