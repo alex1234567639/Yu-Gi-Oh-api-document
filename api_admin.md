@@ -1011,7 +1011,7 @@ request:
 	"*tokenReq": "string",
 	"*title": "string",
 	"*date": "string",
-	"*url": "string",
+	"url": "string",
 	"*content": "string",
 	"*type": 0,
 
